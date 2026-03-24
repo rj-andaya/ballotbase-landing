@@ -199,8 +199,8 @@ nav {
 }
 .stat-item { text-align: center; }
 .stat-number { font-family: 'DM Sans', sans-serif; font-size: 36px; font-weight: 800; color: white; }
-.stat-number span { color: var(--blue); }
-.stat-label { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 4px; letter-spacing: 0.06em; text-transform: uppercase; }
+.stat-number span { color: #60a5fa; }
+.stat-label { font-size: 12px; color: rgba(255,255,255,0.3); margin-top: 4px; letter-spacing: 0.06em; text-transform: uppercase; }
 
 /* FEATURES */
 .features { padding: 96px 48px; max-width: 1200px; margin: 0 auto; }
