@@ -4,263 +4,116 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>BallotBase — Campaign Intelligence Platform</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<style>
-:root {
-  --blue: #1a56db;
-  --blue-dark: #1341a8;
-  --green: #0e9f6e;
-  --navy: #0f172a;
-  --gray: #64748b;
-  --light: #f8fafc;
-  --white: #ffffff;
-  --border: #e2e8f0;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: 'DM Sans', sans-serif; background: var(--white); color: var(--navy); overflow-x: hidden; }
-
-/* NAV */
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 48px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
-.nav-logo { display: flex; align-items: center; gap: 10px; }
-.nav-logo-text { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--navy); }
-.nav-logo-text span { color: var(--blue); }
-.nav-tagline { font-size: 11px; color: var(--gray); letter-spacing: 0.05em; }
-.nav-cta { background: var(--blue); color: white; padding: 10px 22px; border-radius: 8px; font-size: 14px; font-weight: 500; text-decoration: none; transition: background 0.2s; }
-.nav-cta:hover { background: var(--blue-dark); }
-
-/* HERO */
-.hero { padding: 160px 48px 100px; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-.hero-left { }
-.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: #eff6ff; color: var(--blue); font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 20px; margin-bottom: 24px; letter-spacing: 0.05em; }
-.hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
-@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-.hero-title { font-family: 'Playfair Display', serif; font-size: 56px; font-weight: 800; line-height: 1.1; color: var(--navy); margin-bottom: 20px; }
-.hero-title span { color: var(--blue); }
-.hero-sub { font-size: 18px; color: var(--gray); line-height: 1.7; margin-bottom: 36px; font-weight: 300; }
-.hero-form { display: flex; gap: 10px; margin-bottom: 20px; }
-.hero-form input { flex: 1; padding: 14px 18px; border: 1.5px solid var(--border); border-radius: 10px; font-size: 15px; font-family: 'DM Sans', sans-serif; outline: none; transition: border-color 0.2s; }
-.hero-form input:focus { border-color: var(--blue); }
-.hero-form button { background: var(--blue); color: white; padding: 14px 28px; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s; white-space: nowrap; }
-.hero-form button:hover { background: var(--blue-dark); }
-.hero-note { font-size: 13px; color: var(--gray); }
-.hero-note strong { color: var(--green); }
-.success-msg { display: none; background: #f0fdf4; border: 1px solid #bbf7d0; color: #059669; padding: 12px 18px; border-radius: 8px; font-size: 14px; font-weight: 500; }
-
-/* DASHBOARD PREVIEW */
-.hero-right { position: relative; }
-.dashboard-preview { background: var(--white); border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 20px 60px rgba(0,0,0,0.12), 0 4px 16px rgba(0,0,0,0.06); overflow: hidden; transform: perspective(1200px) rotateY(-8deg) rotateX(2deg); transition: transform 0.4s ease; }
-.dashboard-preview:hover { transform: perspective(1200px) rotateY(-4deg) rotateX(1deg); }
-.db-topbar { background: var(--navy); padding: 10px 16px; display: flex; align-items: center; gap: 8px; }
-.db-dot { width: 10px; height: 10px; border-radius: 50%; }
-.db-dot.red { background: #ff5f57; }
-.db-dot.yellow { background: #febc2e; }
-.db-dot.green { background: #28c840; }
-.db-url { flex: 1; background: rgba(255,255,255,0.1); border-radius: 6px; padding: 4px 12px; font-size: 11px; color: rgba(255,255,255,0.5); margin-left: 8px; }
-.db-content { padding: 16px; }
-.db-header { margin-bottom: 12px; }
-.db-name { font-size: 14px; font-weight: 700; color: var(--navy); }
-.db-meta { display: flex; gap: 6px; margin-top: 4px; }
-.db-badge { font-size: 10px; padding: 2px 8px; border-radius: 10px; font-weight: 500; }
-.db-badge.blue { background: #eff6ff; color: var(--blue); }
-.db-badge.purple { background: #faf5ff; color: #7c3aed; }
-.db-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 12px; }
-.db-stat { background: var(--light); border-radius: 8px; padding: 10px; border-left: 2px solid var(--blue); }
-.db-stat-label { font-size: 9px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
-.db-stat-value { font-size: 16px; font-weight: 700; color: var(--navy); }
-.db-stat-sub { font-size: 9px; color: var(--green); margin-top: 2px; }
-.db-table-header { font-size: 10px; font-weight: 600; color: var(--navy); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
-.db-row { display: flex; align-items: center; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--light); font-size: 11px; }
-.db-row:last-child { border-bottom: none; }
-.db-row-state { font-weight: 500; color: var(--navy); width: 80px; }
-.db-row-amount { color: var(--navy); font-weight: 600; }
-.db-row-bar-wrap { flex: 1; margin: 0 10px; height: 4px; background: var(--light); border-radius: 2px; overflow: hidden; }
-.db-row-bar { height: 100%; background: var(--blue); border-radius: 2px; }
-.db-row-pct { color: var(--gray); width: 30px; text-align: right; }
-
-/* GRADIENT LINE */
-.gradient-line { height: 3px; background: linear-gradient(90deg, var(--blue), var(--green)); }
-
-/* STATS BAND */
-.stats-band { background: var(--navy); padding: 48px; display: flex; justify-content: center; gap: 80px; }
-.stat-item { text-align: center; }
-.stat-number { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 800; color: var(--white); }
-.stat-number span { color: var(--blue); }
-.stat-label { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 4px; letter-spacing: 0.05em; }
-
-/* FEATURES */
-.features { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
-.section-label { font-size: 12px; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
-.section-title { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 800; color: var(--navy); margin-bottom: 16px; line-height: 1.2; }
-.section-sub { font-size: 17px; color: var(--gray); max-width: 560px; line-height: 1.7; margin-bottom: 60px; font-weight: 300; }
-.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.feature-card { background: var(--light); border-radius: 14px; padding: 28px; border: 1px solid var(--border); transition: transform 0.2s, box-shadow 0.2s; }
-.feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
-.feature-icon { width: 44px; height: 44px; border-radius: 10px; background: linear-gradient(135deg, var(--blue), var(--green)); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 20px; }
-.feature-title { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
-.feature-desc { font-size: 14px; color: var(--gray); line-height: 1.6; }
-.feature-tag { display: inline-block; font-size: 10px; font-weight: 600; color: var(--blue); background: #eff6ff; padding: 3px 8px; border-radius: 6px; margin-top: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
-.feature-tag.addon { color: #c2410c; background: #fff7ed; }
-
-/* HOW IT WORKS */
-.how { background: var(--light); padding: 100px 48px; }
-.how-inner { max-width: 1200px; margin: 0 auto; }
-.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 60px; }
-.step { text-align: center; }
-.step-number { width: 48px; height: 48px; border-radius: 50%; background: var(--blue); color: white; font-size: 18px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-family: 'Playfair Display', serif; }
-.step-title { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
-.step-desc { font-size: 14px; color: var(--gray); line-height: 1.6; }
-
-/* PRICING */
-.pricing { padding: 100px 48px; max-width: 1200px; margin: 0 auto; text-align: center; }
-.pricing-grid { display: grid; grid-template-columns: repeat(2, 380px); gap: 24px; justify-content: center; margin-top: 60px; }
-.pricing-card { border-radius: 16px; padding: 36px; text-align: left; border: 1px solid var(--border); }
-.pricing-card.featured { background: var(--navy); border-color: var(--navy); }
-.pricing-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
-.pricing-card:not(.featured) .pricing-label { color: var(--blue); }
-.pricing-card.featured .pricing-label { color: var(--green); }
-.pricing-price { font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 800; margin-bottom: 4px; }
-.pricing-card:not(.featured) .pricing-price { color: var(--navy); }
-.pricing-card.featured .pricing-price { color: var(--white); }
-.pricing-period { font-size: 14px; margin-bottom: 20px; }
-.pricing-card:not(.featured) .pricing-period { color: var(--gray); }
-.pricing-card.featured .pricing-period { color: rgba(255,255,255,0.5); }
-.pricing-divider { height: 1px; margin: 20px 0; }
-.pricing-card:not(.featured) .pricing-divider { background: var(--border); }
-.pricing-card.featured .pricing-divider { background: rgba(255,255,255,0.1); }
-.pricing-feature { display: flex; align-items: center; gap: 10px; font-size: 14px; margin-bottom: 12px; }
-.pricing-card:not(.featured) .pricing-feature { color: var(--navy); }
-.pricing-card.featured .pricing-feature { color: rgba(255,255,255,0.85); }
-.pricing-check { width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; flex-shrink: 0; }
-.pricing-card:not(.featured) .pricing-check { background: #f0fdf4; color: var(--green); }
-.pricing-card.featured .pricing-check { background: rgba(14,159,110,0.2); color: var(--green); }
-.pricing-btn { display: block; text-align: center; padding: 14px; border-radius: 10px; font-size: 15px; font-weight: 600; text-decoration: none; margin-top: 24px; transition: all 0.2s; }
-.pricing-card:not(.featured) .pricing-btn { background: var(--blue); color: white; }
-.pricing-card:not(.featured) .pricing-btn:hover { background: var(--blue-dark); }
-.pricing-card.featured .pricing-btn { background: white; color: var(--navy); }
-.pricing-card.featured .pricing-btn:hover { background: #f1f5f9; }
-
-/* CTA */
-.cta { background: linear-gradient(135deg, var(--navy) 0%, #1e3a8a 100%); padding: 100px 48px; text-align: center; position: relative; overflow: hidden; }
-.cta::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 30% 50%, rgba(26,86,219,0.15) 0%, transparent 50%), radial-gradient(circle at 70% 50%, rgba(14,159,110,0.1) 0%, transparent 50%); }
-.cta-inner { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
-.cta-title { font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 800; color: white; margin-bottom: 16px; line-height: 1.2; }
-.cta-sub { font-size: 17px; color: rgba(255,255,255,0.65); margin-bottom: 36px; line-height: 1.7; font-weight: 300; }
-.cta-form { display: flex; gap: 10px; max-width: 440px; margin: 0 auto 16px; }
-.cta-form input { flex: 1; padding: 14px 18px; border: none; border-radius: 10px; font-size: 15px; font-family: 'DM Sans', sans-serif; outline: none; }
-.cta-form button { background: var(--green); color: white; padding: 14px 24px; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background 0.2s; white-space: nowrap; }
-.cta-form button:hover { background: #0d8f63; }
-.cta-note { font-size: 13px; color: rgba(255,255,255,0.4); }
-
-/* FOOTER */
-footer { background: var(--navy); border-top: 1px solid rgba(255,255,255,0.05); padding: 32px 48px; display: flex; align-items: center; justify-content: space-between; }
-.footer-logo { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: white; }
-.footer-logo span { color: var(--blue); }
-.footer-links { display: flex; gap: 24px; }
-.footer-links a { font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
-.footer-links a:hover { color: white; }
-.footer-copy { font-size: 12px; color: rgba(255,255,255,0.2); }
-
-/* ANIMATIONS */
-@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-.hero-left > * { animation: fadeUp 0.6s ease forwards; opacity: 0; }
-.hero-badge { animation-delay: 0.1s; }
-.hero-title { animation-delay: 0.2s; }
-.hero-sub { animation-delay: 0.3s; }
-.hero-form { animation-delay: 0.4s; }
-.hero-note { animation-delay: 0.5s; }
-.hero-right { animation: fadeUp 0.8s ease 0.3s forwards; opacity: 0; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
 <nav>
   <div class="nav-logo">
-    <div>
-      <div class="nav-logo-text">Ballot<span>Base</span></div>
-      <div class="nav-tagline">CAMPAIGN INTELLIGENCE</div>
-    </div>
+    <img src="ballot-base-full-logo.png" alt="BallotBase" />
   </div>
-  <a href="#beta" class="nav-cta">Join Beta →</a>
+  <div class="nav-right">
+    <a href="#features" class="nav-link">Features</a>
+    <a href="#pricing" class="nav-link">Pricing</a>
+    <a href="mailto:rj@ballotbase.io" class="nav-link">Contact</a>
+    <a href="#beta" class="nav-cta">Request Beta Access</a>
+  </div>
 </nav>
 
 <div class="hero">
   <div class="hero-left">
     <div class="hero-badge">
       <div class="hero-badge-dot"></div>
-      NOW TAKING BETA USERS
+      Now Taking Beta Users
     </div>
     <h1 class="hero-title">Campaign intelligence for every race, <span>every level.</span></h1>
     <p class="hero-sub">Turn your FEC data into actionable insights — automatically. Donor geography, fundraising efficiency, spend analysis, and competitive intelligence. Built for campaigns that need to do more with less.</p>
     <div class="hero-form" id="hero-form">
-      <input type="email" id="hero-email" placeholder="Enter your work email" />
-      <button onclick="submitEmail('hero')">Request Beta Access</button>
+      <input type="email" id="hero-email" placeholder="Your work email" />
+      <button onclick="submitEmail('hero')">Request Access →</button>
     </div>
-    <div class="success-msg" id="hero-success">🎉 You're on the list! We'll be in touch shortly.</div>
-    <p class="hero-note"><strong>Limited beta spots available.</strong> Campaign managers and political consultants only.</p>
+    <div class="success-msg" id="hero-success">🎉 You're on the list! We'll reach out within 24 hours.</div>
+    <p class="hero-note"><strong>Limited beta spots.</strong> Campaign managers and political consultants only.</p>
   </div>
   <div class="hero-right">
     <div class="dashboard-preview">
-      <div class="db-topbar">
-        <div class="db-dot red"></div>
-        <div class="db-dot yellow"></div>
-        <div class="db-dot green"></div>
+      <div class="db-accent"></div>
+      <div class="db-header-bar">
+        <div class="db-dot r"></div>
+        <div class="db-dot y"></div>
+        <div class="db-dot g"></div>
         <div class="db-url">ballotbase.io/dashboard/C00639591</div>
       </div>
-      <div class="db-content">
-        <div class="db-header">
-          <div class="db-name">ALEXANDRIA OCASIO-CORTEZ FOR CONGRESS</div>
-          <div class="db-meta">
-            <span class="db-badge blue">Federal · House · NY-14</span>
-            <span class="db-badge purple">DEM</span>
+      <div class="db-body">
+        <div class="db-sidebar">
+          <div class="db-sidebar-logo">
+            <div class="db-sidebar-title">BallotBase</div>
+            <div class="db-sidebar-sub">CAMPAIGN INTELLIGENCE</div>
           </div>
+          <div class="db-nav-item active"><div class="db-nav-dot"></div> Overview</div>
+          <div class="db-nav-item"><div class="db-nav-dot"></div> Donors</div>
+          <div class="db-nav-item"><div class="db-nav-dot"></div> Geography</div>
+          <div class="db-nav-item"><div class="db-nav-dot"></div> Spend</div>
+          <div class="db-nav-item"><div class="db-nav-dot"></div> Competitive</div>
         </div>
-        <div class="db-stats">
-          <div class="db-stat">
-            <div class="db-stat-label">Total Raised</div>
-            <div class="db-stat-value">$9.4M</div>
-            <div class="db-stat-sub">+22% vs prior cycle</div>
+        <div class="db-content">
+          <div class="db-committee">
+            <div>
+              <div class="db-committee-name">ALEXANDRIA OCASIO-CORTEZ FOR CONGRESS</div>
+              <div class="db-committee-meta">C00639591 · Federal · House · NY-14 · DEM</div>
+            </div>
+            <div class="db-live"><div class="db-live-dot"></div> Live FEC data</div>
           </div>
-          <div class="db-stat">
-            <div class="db-stat-label">Total Donors</div>
-            <div class="db-stat-value">67,842</div>
-            <div class="db-stat-sub">+18% vs prior</div>
+          <div class="db-stats">
+            <div class="db-stat">
+              <div class="db-stat-label">Total Raised</div>
+              <div class="db-stat-val">$9.4M</div>
+              <div class="db-stat-sub">+22% vs prior</div>
+            </div>
+            <div class="db-stat">
+              <div class="db-stat-label">Donors</div>
+              <div class="db-stat-val">67,842</div>
+              <div class="db-stat-sub">+18% vs prior</div>
+            </div>
+            <div class="db-stat">
+              <div class="db-stat-label">Cost / $1</div>
+              <div class="db-stat-val">$0.16</div>
+              <div class="db-stat-sub">vs $0.26 avg</div>
+            </div>
+            <div class="db-stat">
+              <div class="db-stat-label">Avg. Gift</div>
+              <div class="db-stat-val">$21</div>
+              <div class="db-stat-sub">Small-dollar</div>
+            </div>
           </div>
-          <div class="db-stat">
-            <div class="db-stat-label">Cost to Raise $1</div>
-            <div class="db-stat-value">$0.16</div>
-            <div class="db-stat-sub">vs $0.26 avg</div>
+          <div class="db-geo">
+            <div class="db-geo-title">Donors by State</div>
+            <div class="db-geo-row">
+              <div class="db-geo-state">New York</div>
+              <div class="db-geo-amount">$2.1M</div>
+              <div class="db-geo-bar-bg"><div class="db-geo-bar" style="width:100%"></div></div>
+              <div class="db-geo-pct">22%</div>
+            </div>
+            <div class="db-geo-row">
+              <div class="db-geo-state">California</div>
+              <div class="db-geo-amount">$1.9M</div>
+              <div class="db-geo-bar-bg"><div class="db-geo-bar" style="width:88%"></div></div>
+              <div class="db-geo-pct">19%</div>
+            </div>
+            <div class="db-geo-row">
+              <div class="db-geo-state">Massachusetts</div>
+              <div class="db-geo-amount">$580K</div>
+              <div class="db-geo-bar-bg"><div class="db-geo-bar" style="width:40%"></div></div>
+              <div class="db-geo-pct">6%</div>
+            </div>
+            <div class="db-geo-row">
+              <div class="db-geo-state">Pennsylvania</div>
+              <div class="db-geo-amount">$112K</div>
+              <div class="db-geo-bar-bg"><div class="db-geo-bar" style="width:9%"></div></div>
+              <div class="db-geo-pct">1.2%</div>
+            </div>
           </div>
-          <div class="db-stat">
-            <div class="db-stat-label">Avg. Gift</div>
-            <div class="db-stat-value">$21</div>
-            <div class="db-stat-sub">Small-dollar</div>
-          </div>
-        </div>
-        <div class="db-table-header">Donors by State</div>
-        <div class="db-row">
-          <div class="db-row-state">New York</div>
-          <div class="db-row-amount">$2.1M</div>
-          <div class="db-row-bar-wrap"><div class="db-row-bar" style="width:100%"></div></div>
-          <div class="db-row-pct">22%</div>
-        </div>
-        <div class="db-row">
-          <div class="db-row-state">California</div>
-          <div class="db-row-amount">$1.9M</div>
-          <div class="db-row-bar-wrap"><div class="db-row-bar" style="width:90%"></div></div>
-          <div class="db-row-pct">19%</div>
-        </div>
-        <div class="db-row">
-          <div class="db-row-state">Massachusetts</div>
-          <div class="db-row-amount">$580K</div>
-          <div class="db-row-bar-wrap"><div class="db-row-bar" style="width:42%"></div></div>
-          <div class="db-row-pct">6%</div>
-        </div>
-        <div class="db-row">
-          <div class="db-row-state">Pennsylvania</div>
-          <div class="db-row-amount">$112K</div>
-          <div class="db-row-bar-wrap"><div class="db-row-bar" style="width:10%"></div></div>
-          <div class="db-row-pct">1.2%</div>
         </div>
       </div>
     </div>
@@ -272,115 +125,115 @@ footer { background: var(--navy); border-top: 1px solid rgba(255,255,255,0.05); 
 <div class="stats-band">
   <div class="stat-item">
     <div class="stat-number">500<span>K+</span></div>
-    <div class="stat-label">ELECTED POSITIONS IN THE US</div>
+    <div class="stat-label">Elected Positions in the US</div>
   </div>
   <div class="stat-item">
     <div class="stat-number">$<span>15.9B</span></div>
-    <div class="stat-label">SPENT ON 2024 FEDERAL ELECTIONS</div>
+    <div class="stat-label">Spent on 2024 Federal Elections</div>
   </div>
   <div class="stat-item">
     <div class="stat-number">0</div>
-    <div class="stat-label">AFFORDABLE ANALYTICS TOOLS EXISTED</div>
+    <div class="stat-label">Affordable Analytics Tools Existed</div>
   </div>
 </div>
 
-<div class="features">
-  <div class="section-label">What BallotBase does</div>
+<div class="features" id="features">
+  <div class="section-eyebrow">What BallotBase does</div>
   <h2 class="section-title">The analysis that used to take weeks.<br>Now takes seconds.</h2>
-  <p class="section-sub">Enter any FEC committee ID. BallotBase does the rest — pulling, processing, and presenting your campaign data in a clean, actionable dashboard.</p>
+  <p class="section-sub">Enter any FEC committee ID. BallotBase pulls, processes, and presents your campaign data in a clean, actionable dashboard.</p>
   <div class="features-grid">
     <div class="feature-card">
-      <div class="feature-icon">📍</div>
+      <div class="feature-icon-wrap">📍</div>
       <div class="feature-title">Donor Geography</div>
-      <div class="feature-desc">Map where your donors are coming from — by state, city, and ZIP. See donors per 100k residents to find untapped markets.</div>
-      <span class="feature-tag">Base</span>
+      <div class="feature-desc">Map where your donors come from — by state, city, and ZIP. See donors per 100k residents to find untapped markets.</div>
+      <span class="feature-pill">Base</span>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">💰</div>
+      <div class="feature-icon-wrap">💰</div>
       <div class="feature-title">Fundraising Efficiency</div>
-      <div class="feature-desc">Know your real cost to raise $1. See spend breakdown by category — advertising, payroll, consulting, events, and more.</div>
-      <span class="feature-tag">Base</span>
+      <div class="feature-desc">Know your real cost to raise $1. See spend breakdown by category — advertising, payroll, consulting, and events.</div>
+      <span class="feature-pill">Base</span>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">🔄</div>
+      <div class="feature-icon-wrap">🔄</div>
       <div class="feature-title">Donor Retention</div>
       <div class="feature-desc">Track new vs. repeat donors. Identify dormant donors from prior cycles and calculate your reactivation opportunity.</div>
-      <span class="feature-tag">Base</span>
+      <span class="feature-pill">Base</span>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">📈</div>
+      <div class="feature-icon-wrap">📈</div>
       <div class="feature-title">Historical Cycles</div>
       <div class="feature-desc">Compare performance across every cycle your committee has been active. See exactly where momentum is building or fading.</div>
-      <span class="feature-tag">Base</span>
+      <span class="feature-pill">Base</span>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">🔍</div>
+      <div class="feature-icon-wrap">🔍</div>
       <div class="feature-title">Competitive Intelligence</div>
       <div class="feature-desc">See what your opponents are raising, spending, and where they're buying broadcast ads — before they deploy it against you.</div>
-      <span class="feature-tag addon">Add-on</span>
+      <span class="feature-pill addon">Add-on</span>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">🤖</div>
+      <div class="feature-icon-wrap">🤖</div>
       <div class="feature-title">AI Insights</div>
       <div class="feature-desc">BallotBase analyzes your data and surfaces the top opportunities — prioritized and actionable. No consultant required.</div>
-      <span class="feature-tag addon">Coming Soon</span>
+      <span class="feature-pill addon">Coming Soon</span>
     </div>
   </div>
 </div>
 
 <div class="how">
   <div class="how-inner">
-    <div class="section-label">How it works</div>
+    <div class="section-eyebrow">How it works</div>
     <h2 class="section-title">Three steps to campaign intelligence.</h2>
     <div class="steps">
       <div class="step">
-        <div class="step-number">1</div>
+        <div class="step-num">1</div>
         <div class="step-title">Enter your committee ID</div>
         <div class="step-desc">Every FEC-registered campaign has a committee ID. Enter yours and BallotBase connects to the FEC API instantly.</div>
       </div>
       <div class="step">
-        <div class="step-number">2</div>
+        <div class="step-num">2</div>
         <div class="step-title">BallotBase processes your data</div>
         <div class="step-desc">We pull receipts, disbursements, and filing history — then run every analysis automatically. No spreadsheets required.</div>
       </div>
       <div class="step">
-        <div class="step-number">3</div>
+        <div class="step-num">3</div>
         <div class="step-title">Make smarter decisions</div>
-        <div class="step-desc">See exactly where to focus your outreach, which donors to reactivate, and how your spending compares to benchmarks.</div>
+        <div class="step-desc">See where to focus outreach, which donors to reactivate, and how your spending compares to benchmarks.</div>
       </div>
     </div>
   </div>
 </div>
 
 <div class="pricing" id="pricing">
-  <div class="section-label">Pricing</div>
+  <div class="section-eyebrow">Pricing</div>
   <h2 class="section-title">Built for campaigns of every size.</h2>
-  <p class="section-sub" style="margin: 0 auto 60px;">No contracts. No setup fees. Cancel anytime.</p>
+  <p class="section-sub">No contracts. No setup fees. Cancel anytime.</p>
   <div class="pricing-grid">
     <div class="pricing-card">
-      <div class="pricing-label">Base</div>
-      <div class="pricing-price">$99</div>
-      <div class="pricing-period">per month</div>
-      <div class="pricing-divider"></div>
-      <div class="pricing-feature"><div class="pricing-check">✓</div> FEC receipt analytics</div>
-      <div class="pricing-feature"><div class="pricing-check">✓</div> Spend breakdown (Schedule B)</div>
-      <div class="pricing-feature"><div class="pricing-check">✓</div> Donor geography mapping</div>
-      <div class="pricing-feature"><div class="pricing-check">✓</div> Historical cycle comparison</div>
-      <div class="pricing-feature"><div class="pricing-check">✓</div> Fundraising efficiency score</div>
-      <div class="pricing-feature"><div class="pricing-check">✓</div> Donor retention analytics</div>
+      <div class="pricing-eyebrow">Base</div>
+      <div class="pricing-amount">$99</div>
+      <div class="pricing-per">per month</div>
+      <div class="pricing-hr"></div>
+      <div class="pricing-item"><div class="pricing-check">✓</div> FEC receipt analytics</div>
+      <div class="pricing-item"><div class="pricing-check">✓</div> Spend breakdown (Schedule B)</div>
+      <div class="pricing-item"><div class="pricing-check">✓</div> Donor geography mapping</div>
+      <div class="pricing-item"><div class="pricing-check">✓</div> Historical cycle comparison</div>
+      <div class="pricing-item"><div class="pricing-check">✓</div> Fundraising efficiency score</div>
+      <div class="pricing-item"><div class="pricing-check">✓</div> Donor retention analytics</div>
       <a href="#beta" class="pricing-btn">Request Beta Access</a>
     </div>
     <div class="pricing-card featured">
-      <div class="pricing-label">Base + Competitive</div>
-      <div class="pricing-price">$248</div>
-      <div class="pricing-period">per month</div>
-      <div class="pricing-divider"></div>
-      <div class="pricing-feature"><div class="pricing-check">✓</div> Everything in Base</div>
-      <div class="pricing-feature"><div class="pricing-check">✓</div> Opponent FEC tracking</div>
-      <div class="pricing-feature"><div class="pricing-check">✓</div> Side-by-side spend comparison</div>
-      <div class="pricing-feature"><div class="pricing-check">✓</div> FCC broadcast ad intelligence</div>
-      <div class="pricing-feature"><div class="pricing-check">✓</div> Market-level ad spend tracking</div>
-      <div class="pricing-feature"><div class="pricing-check">✓</div> AI-generated opportunity insights</div>
+      <div class="pricing-eyebrow">Base + Competitive</div>
+      <div class="pricing-amount">$248</div>
+      <div class="pricing-per">per month</div>
+      <div class="pricing-hr"></div>
+      <div class="pricing-item"><div class="pricing-check">✓</div> Everything in Base</div>
+      <div class="pricing-item"><div class="pricing-check">✓</div> Opponent FEC tracking</div>
+      <div class="pricing-item"><div class="pricing-check">✓</div> Side-by-side spend comparison</div>
+      <div class="pricing-item"><div class="pricing-check">✓</div> FCC broadcast ad intelligence</div>
+      <div class="pricing-item"><div class="pricing-check">✓</div> Market-level ad spend tracking</div>
+      <div class="pricing-item"><div class="pricing-check">✓</div> AI-generated opportunity insights</div>
       <a href="#beta" class="pricing-btn">Request Beta Access</a>
     </div>
   </div>
@@ -390,27 +243,32 @@ footer { background: var(--navy); border-top: 1px solid rgba(255,255,255,0.05); 
   <div class="cta-inner">
     <h2 class="cta-title">Find your path. Win your race.</h2>
     <p class="cta-sub">BallotBase is now accepting beta users. Limited spots available for the 2026 midterm cycle. Get early access and founding user pricing.</p>
-    <div class="cta-form">
+    <div class="cta-form" id="cta-form">
       <input type="email" id="cta-email" placeholder="Your work email" />
       <button onclick="submitEmail('cta')">Get Beta Access</button>
     </div>
-    <div class="success-msg" id="cta-success" style="display:none; background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: white;">🎉 You're on the list! We'll be in touch shortly.</div>
+    <div class="cta-success" id="cta-success">🎉 You're on the list! We'll reach out within 24 hours.</div>
     <p class="cta-note">No credit card required. We'll reach out personally within 24 hours.</p>
   </div>
 </div>
 
 <footer>
-  <div class="footer-logo">Ballot<span>Base</span></div>
+  <div class="footer-logo">
+    <img src="ballot-base-full-logo.png" alt="BallotBase" />
+  </div>
   <div class="footer-links">
+    <a href="#features">Features</a>
     <a href="#pricing">Pricing</a>
     <a href="mailto:rj@ballotbase.io">Contact</a>
-    <a href="#">Privacy</a>
   </div>
   <div class="footer-copy">© 2026 BallotBase. All rights reserved.</div>
 </footer>
 
 <script>
-function submitEmail(source) {
+const SUPABASE_URL = 'https://mvyrtnhkebnxnpmlhzlk.supabase.co';
+const SUPABASE_KEY = 'YOUR_ANON_KEY_HERE';
+
+async function submitEmail(source) {
   const input = document.getElementById(source + '-email');
   const email = input.value.trim();
   if (!email || !email.includes('@')) {
@@ -418,18 +276,27 @@ function submitEmail(source) {
     setTimeout(() => input.style.borderColor = '', 2000);
     return;
   }
-  const form = source === 'hero' ? document.getElementById('hero-form') : document.querySelector('.cta-form');
+  try {
+    await fetch(`${SUPABASE_URL}/rest/v1/beta_signups`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_KEY,
+        'Authorization': `Bearer ${SUPABASE_KEY}`,
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ email, source })
+    });
+  } catch(e) { console.log(e); }
+  const form = document.getElementById(source === 'hero' ? 'hero-form' : 'cta-form');
   const success = document.getElementById(source + '-success');
   if (form) form.style.display = 'none';
   if (success) success.style.display = 'block';
-  console.log('Beta signup:', email);
 }
+
 document.querySelectorAll('input[type="email"]').forEach(input => {
-  input.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-      const source = this.id.replace('-email', '');
-      submitEmail(source);
-    }
+  input.addEventListener('keypress', e => {
+    if (e.key === 'Enter') submitEmail(input.id.replace('-email', ''));
   });
 });
 </script>
