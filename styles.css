@@ -59,7 +59,7 @@ nav {
 }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
 .hero-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 42px; font-weight: 700;
   line-height: 1.15; color: var(--navy);
   margin-bottom: 18px; letter-spacing: -0.01em;
@@ -142,7 +142,7 @@ nav {
   border-bottom: 1px solid rgba(255,255,255,0.06);
   margin-bottom: 10px;
 }
-.db-sidebar-title { font-size: 12px; font-weight: 600; color: white; font-family: 'Syne', sans-serif; }
+.db-sidebar-title { font-size: 12px; font-weight: 600; color: white; font-family: 'Inter', sans-serif; }
 .db-sidebar-sub { font-size: 9px; color: rgba(255,255,255,0.3); margin-top: 1px; }
 .db-nav-item {
   display: flex; align-items: center; gap: 8px;
@@ -172,7 +172,7 @@ nav {
   border-left: 2px solid var(--blue);
 }
 .db-stat-label { font-size: 7px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 3px; }
-.db-stat-val { font-size: 13px; font-weight: 700; color: var(--navy); font-family: 'Syne', sans-serif; }
+.db-stat-val { font-size: 13px; font-weight: 700; color: var(--navy); font-family: 'Inter', sans-serif; }
 .db-stat-sub { font-size: 7px; color: var(--green); margin-top: 1px; }
 .db-geo { background: white; border-radius: 6px; padding: 10px; border: 1px solid var(--border); }
 .db-geo-title { font-size: 8px; font-weight: 600; color: var(--navy); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
@@ -198,7 +198,7 @@ nav {
   display: flex; justify-content: center; gap: 80px;
 }
 .stat-item { text-align: center; }
-.stat-number { font-family: 'Syne', sans-serif; font-size: 36px; font-weight: 800; color: white; }
+.stat-number { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 800; color: white; }
 .stat-number span { color: var(--blue); }
 .stat-label { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 4px; letter-spacing: 0.06em; text-transform: uppercase; }
 
@@ -206,7 +206,7 @@ nav {
 .features { padding: 96px 48px; max-width: 1200px; margin: 0 auto; }
 .section-eyebrow { font-size: 11px; font-weight: 600; color: var(--blue); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
 .section-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 32px; font-weight: 700;
   color: var(--navy); margin-bottom: 14px;
   line-height: 1.2; letter-spacing: -0.01em;
@@ -245,7 +245,7 @@ nav {
   background: var(--blue); color: white;
   font-size: 16px; font-weight: 700;
   display: flex; align-items: center; justify-content: center;
-  margin-bottom: 14px; font-family: 'Syne', sans-serif;
+  margin-bottom: 14px; font-family: 'Inter', sans-serif;
 }
 .step-title { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
 .step-desc { font-size: 13px; color: var(--gray); line-height: 1.6; }
@@ -258,7 +258,7 @@ nav {
 .pricing-eyebrow { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
 .pricing-card:not(.featured) .pricing-eyebrow { color: var(--blue); }
 .pricing-card.featured .pricing-eyebrow { color: var(--green); }
-.pricing-amount { font-family: 'Syne', sans-serif; font-size: 40px; font-weight: 800; margin-bottom: 2px; }
+.pricing-amount { font-family: 'Inter', sans-serif; font-size: 40px; font-weight: 800; margin-bottom: 2px; }
 .pricing-card:not(.featured) .pricing-amount { color: var(--navy); }
 .pricing-card.featured .pricing-amount { color: white; }
 .pricing-per { font-size: 13px; margin-bottom: 20px; }
@@ -302,7 +302,7 @@ nav {
               radial-gradient(ellipse at 80% 50%, rgba(14,159,110,0.08) 0%, transparent 60%);
 }
 .cta-inner { position: relative; z-index: 1; max-width: 560px; margin: 0 auto; }
-.cta-title { font-family: 'Syne', sans-serif; font-size: 40px; font-weight: 800; color: white; margin-bottom: 14px; line-height: 1.15; letter-spacing: -0.01em; }
+.cta-title { font-family: 'Inter', sans-serif; font-size: 40px; font-weight: 800; color: white; margin-bottom: 14px; line-height: 1.15; letter-spacing: -0.01em; }
 .cta-sub { font-size: 16px; color: rgba(255,255,255,0.55); margin-bottom: 32px; line-height: 1.7; font-weight: 300; }
 .cta-form { display: flex; gap: 8px; max-width: 420px; margin: 0 auto 12px; }
 .cta-form input {
