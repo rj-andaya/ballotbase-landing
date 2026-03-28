@@ -215,6 +215,23 @@ async function submitEmail(source) {
 document.querySelectorAll('input[type="email"]').forEach(input => {
   input.addEventListener('keypress', e => { if (e.key === 'Enter') submitEmail('cta'); });
 });
+
+(function() {
+  var dropdown = document.querySelector('.nav-dropdown');
+  if (!dropdown) return;
+  var menu = dropdown.querySelector('.nav-dropdown-menu');
+  var submenu = dropdown.querySelector('.nav-dropdown-submenu');
+  var panel = submenu ? submenu.querySelector('.nav-submenu-panel') : null;
+  var dropTimer, subTimer;
+  dropdown.addEventListener('mouseenter', function() { clearTimeout(dropTimer); menu.style.display = 'block'; });
+  dropdown.addEventListener('mouseleave', function() {
+    dropTimer = setTimeout(function() { menu.style.display = ''; if (panel) panel.style.display = ''; }, 150);
+  });
+  if (submenu && panel) {
+    submenu.addEventListener('mouseenter', function() { clearTimeout(subTimer); panel.style.display = 'block'; });
+    submenu.addEventListener('mouseleave', function() { subTimer = setTimeout(function() { panel.style.display = ''; }, 150); });
+  }
+})();
 </script>
 </body>
 </html>

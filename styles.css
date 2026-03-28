@@ -50,7 +50,7 @@ nav {
 .nav-dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 12px);
+  top: calc(100% + 8px);
   left: 0;
   background: white;
   border: 1px solid var(--border);
@@ -60,7 +60,15 @@ nav {
   z-index: 200;
   padding: 4px;
 }
-.nav-dropdown:hover .nav-dropdown-menu { display: block; }
+/* Invisible bridge above the menu so mouse doesn't fall through the gap */
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  height: 8px;
+}
 .nav-dropdown-item {
   display: flex; align-items: center; justify-content: space-between;
   padding: 8px 12px;
@@ -89,7 +97,15 @@ div.nav-dropdown-item:hover { background: var(--light); }
   z-index: 300;
   padding: 4px;
 }
-.nav-dropdown-submenu:hover .nav-submenu-panel { display: block; }
+/* Invisible bridge to the left of the submenu panel */
+.nav-submenu-panel::before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+}
 
 /* CA NOTE BANNER */
 .ca-note-banner {
