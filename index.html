@@ -15,7 +15,23 @@
   </div>
   <div class="nav-right">
     <a href="#features" class="nav-link">Features</a>
-   
+
+    <!-- Solutions dropdown -->
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-trigger">Solutions ▾</button>
+      <div class="nav-dropdown-menu">
+        <a href="/solutions/federal/" class="nav-dropdown-item">Federal</a>
+        <div class="nav-dropdown-submenu">
+          <div class="nav-dropdown-item">State &amp; Local ›</div>
+          <div class="nav-submenu-panel">
+            <a href="/solutions/california/" class="nav-dropdown-item">California</a>
+            <span class="nav-dropdown-item disabled">Texas — Coming Soon</span>
+            <span class="nav-dropdown-item disabled">New York — Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <a href="mailto:rj@ballotbase.io" class="nav-link">Contact</a>
     <a href="#beta" class="nav-cta">Request Beta Access</a>
   </div>
@@ -28,7 +44,7 @@
       Now Taking Beta Users
     </div>
     <h1 class="hero-title">Campaign intelligence for every race, <span>every level.</span></h1>
-    <p class="hero-sub">Turn your FEC data into actionable insights — automatically. Donor geography, fundraising efficiency, spend analysis, and competitive intelligence. Built for campaigns that need to do more with less.</p>
+    <p class="hero-sub">Turn federal and state election data into actionable insights — for every race, every level.</p>
     <div class="hero-form" id="hero-form">
       <input type="email" id="hero-email" placeholder="Your work email" />
       <button onclick="submitEmail('hero')">Request Access →</button>
@@ -120,6 +136,10 @@
   </div>
 </div>
 
+<div class="ca-note-banner">
+  <strong>California state and local data now available.</strong> More states coming soon. &nbsp;·&nbsp; <a href="/solutions/california/" style="color:inherit;font-weight:600;">Learn more →</a>
+</div>
+
 <div class="gradient-line"></div>
 
 <div class="stats-band">
@@ -133,14 +153,14 @@
   </div>
   <div class="stat-item">
     <div class="stat-number">0</div>
-    <div class="stat-label">Affordable Analytics Tools Existed</div>
+    <div class="stat-label">Affordable Analytics Tools Existed — Until Now</div>
   </div>
 </div>
 
 <div class="features" id="features">
   <div class="section-eyebrow">What BallotBase does</div>
   <h2 class="section-title">The analysis that used to take weeks.<br>Now takes seconds.</h2>
-  <p class="section-sub">Enter any FEC committee ID. BallotBase pulls, processes, and presents your campaign data in a clean, actionable dashboard.</p>
+  <p class="section-sub">Enter any committee ID or filer ID. BallotBase pulls, processes, and presents your campaign data in a clean, actionable dashboard.</p>
   <div class="features-grid">
     <div class="feature-card">
       <div class="feature-icon-wrap">📍</div>
@@ -188,8 +208,8 @@
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
-        <div class="step-title">Enter your committee ID</div>
-        <div class="step-desc">Every FEC-registered campaign has a committee ID. Enter yours and BallotBase connects to the FEC API instantly.</div>
+        <div class="step-title">Enter your committee ID or Filer ID</div>
+        <div class="step-desc">BallotBase automatically detects whether it's a federal or state committee and connects to the right data source. California now available. More states coming soon.</div>
       </div>
       <div class="step">
         <div class="step-num">2</div>
@@ -204,8 +224,6 @@
     </div>
   </div>
 </div>
-
-
 
 <div class="cta" id="beta">
   <div class="cta-inner">
@@ -226,7 +244,8 @@
   </div>
   <div class="footer-links">
     <a href="#features">Features</a>
- 
+    <a href="/solutions/federal/">Federal</a>
+    <a href="/solutions/california/">California</a>
     <a href="mailto:rj@ballotbase.io">Contact</a>
   </div>
   <div class="footer-copy">© 2026 BallotBase. All rights reserved.</div>

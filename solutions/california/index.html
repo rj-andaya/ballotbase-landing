@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>California Campaign Finance Analytics — BallotBase</title>
+<meta name="description" content="Cal-Access data made accessible. Analyze California Assembly, Senate, IE committee, and local race campaign finance — without wrestling with Cal-Access yourself."/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../../styles.css"/>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <a href="/"><img src="../../ballotbase-web-logo.png" alt="BallotBase" /></a>
+  </div>
+  <div class="nav-right">
+    <a href="/#features" class="nav-link">Features</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-trigger">Solutions ▾</button>
+      <div class="nav-dropdown-menu">
+        <a href="/solutions/federal/" class="nav-dropdown-item">Federal</a>
+        <div class="nav-dropdown-submenu">
+          <div class="nav-dropdown-item">State &amp; Local ›</div>
+          <div class="nav-submenu-panel">
+            <a href="/solutions/california/" class="nav-dropdown-item">California</a>
+            <span class="nav-dropdown-item disabled">Texas — Coming Soon</span>
+            <span class="nav-dropdown-item disabled">New York — Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="mailto:rj@ballotbase.io" class="nav-link">Contact</a>
+    <a href="/#beta" class="nav-cta">Request Beta Access</a>
+  </div>
+</nav>
+
+<div class="sol-hero">
+  <div class="sol-eyebrow california">California State &amp; Local</div>
+  <h1>Cal-Access Data,<br>Finally Usable</h1>
+  <p>California campaign finance data is notoriously difficult to work with. BallotBase fixes that — clean dashboards for Assembly races, Senate campaigns, IE committees, and local elections.</p>
+  <div class="sol-hero-btns">
+    <a href="/#beta" class="sol-btn-primary">Request Beta Access →</a>
+    <a href="https://ballotbase.io/ca/1465228" class="sol-btn-secondary">See a Live Example</a>
+  </div>
+</div>
+
+<div class="sol-problem">
+  <div class="sol-problem-inner">
+    <div class="sol-problem-grid">
+      <div>
+        <div class="sol-problem-eyebrow bad">The problem</div>
+        <h3>Cal-Access is notoriously difficult to use</h3>
+        <ul class="sol-problem-list">
+          <li><span class="icon" style="color:#f87171">✕</span> Opaque interface designed for regulators, not researchers</li>
+          <li><span class="icon" style="color:#f87171">✕</span> Data spread across dozens of tables with inconsistent formatting</li>
+          <li><span class="icon" style="color:#f87171">✕</span> Amendment filings create duplicate rows without clear audit trails</li>
+          <li><span class="icon" style="color:#f87171">✕</span> No built-in analytics — just raw transaction exports</li>
+          <li><span class="icon" style="color:#f87171">✕</span> Schedule D and F496 data inflate totals if naively summed</li>
+        </ul>
+      </div>
+      <div>
+        <div class="sol-problem-eyebrow good">The BallotBase solution</div>
+        <h3>We do the hard work for you</h3>
+        <ul class="sol-problem-list">
+          <li><span class="icon" style="color:#34d399">✓</span> Clean, visual dashboards built directly on Cal-Access data</li>
+          <li><span class="icon" style="color:#34d399">✓</span> Amendment deduplication — only the latest filing version counts</li>
+          <li><span class="icon" style="color:#34d399">✓</span> Correct totals: Schedule E only for expenditures, F460 only for receipts</li>
+          <li><span class="icon" style="color:#34d399">✓</span> Automatic committee type detection — candidate vs. IE</li>
+          <li><span class="icon" style="color:#34d399">✓</span> Enter a filer ID and your dashboard is ready in seconds</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sol-preview-wrap">
+  <div class="sol-preview-label">Live dashboard example — Keeping Californians Working (IE committee)</div>
+  <div class="sol-preview-card">
+    <div class="db-accent"></div>
+    <div class="sol-preview-header">
+      <div>
+        <div class="sol-preview-name">KEEPING CALIFORNIANS WORKING</div>
+        <div class="sol-preview-meta">Independent Expenditure Committee · Cal-Access · 2024 Cycle</div>
+      </div>
+      <span class="sol-preview-badge california">Cal-Access Data</span>
+    </div>
+    <div class="sol-preview-stats">
+      <div class="sol-preview-stat">
+        <div class="sol-preview-stat-label">Total Raised</div>
+        <div class="sol-preview-stat-val">$2.2M</div>
+      </div>
+      <div class="sol-preview-stat">
+        <div class="sol-preview-stat-label">Total Spent</div>
+        <div class="sol-preview-stat-val">$2.9M</div>
+      </div>
+      <div class="sol-preview-stat">
+        <div class="sol-preview-stat-label">Top Donor Industry</div>
+        <div class="sol-preview-stat-val">Labor</div>
+      </div>
+      <div class="sol-preview-stat">
+        <div class="sol-preview-stat-label">Candidates Supported</div>
+        <div class="sol-preview-stat-val">12</div>
+      </div>
+    </div>
+    <div class="sol-preview-body">
+      <div class="sol-preview-body-title">Spend by Target</div>
+      <div class="sol-preview-geo-row">
+        <span class="sol-preview-geo-name">Liz Ortega (AD-20)</span>
+        <span class="sol-preview-geo-amt">$1.1M</span>
+        <div class="sol-preview-bar-bg"><div class="sol-preview-bar green" style="width:100%"></div></div>
+        <span class="sol-preview-geo-pct">38%</span>
+      </div>
+      <div class="sol-preview-geo-row">
+        <span class="sol-preview-geo-name">Ash Kalra (AD-27)</span>
+        <span class="sol-preview-geo-amt">$640K</span>
+        <div class="sol-preview-bar-bg"><div class="sol-preview-bar green" style="width:58%"></div></div>
+        <span class="sol-preview-geo-pct">22%</span>
+      </div>
+      <div class="sol-preview-geo-row">
+        <span class="sol-preview-geo-name">Other candidates</span>
+        <span class="sol-preview-geo-amt">$1.2M</span>
+        <div class="sol-preview-bar-bg"><div class="sol-preview-bar green" style="width:42%"></div></div>
+        <span class="sol-preview-geo-pct">40%</span>
+      </div>
+    </div>
+    <div class="sol-preview-footer">
+      <a href="https://ballotbase.io/ca/1465228">Open full dashboard →</a>
+    </div>
+  </div>
+  <div class="sol-preview-note">Data sourced directly from Cal-Access. Amendment deduplication and schedule filtering applied automatically.</div>
+</div>
+
+<div class="sol-features">
+  <div class="section-eyebrow">What's covered</div>
+  <h2 class="section-title">Built for the full California ballot.</h2>
+  <p class="section-sub">From statewide races to local city council contests — if it's in Cal-Access, BallotBase can analyze it.</p>
+  <div class="sol-features-grid">
+    <div class="sol-feature-card">
+      <div class="sol-feature-icon">🏛️</div>
+      <div class="sol-feature-title">Assembly &amp; Senate Races</div>
+      <div class="sol-feature-desc">Track any California state legislative candidate. Donor geography, fundraising momentum, and contribution size breakdown for every district.</div>
+    </div>
+    <div class="sol-feature-card">
+      <div class="sol-feature-icon">⚡</div>
+      <div class="sol-feature-title">Independent Expenditure Committees</div>
+      <div class="sol-feature-desc">See exactly which candidates and ballot measures IE committees are supporting or opposing — and how much they're spending on each.</div>
+    </div>
+    <div class="sol-feature-card">
+      <div class="sol-feature-icon">🗺️</div>
+      <div class="sol-feature-title">Donor Concentration</div>
+      <div class="sol-feature-desc">Understand where campaign money is coming from. In-district vs. out-of-district ratios, top donor cities, and industry breakdowns for IE committees.</div>
+    </div>
+    <div class="sol-feature-card">
+      <div class="sol-feature-icon">💰</div>
+      <div class="sol-feature-title">Spend by Target</div>
+      <div class="sol-feature-desc">For IE committees, a full breakdown of which candidates and measures received support or opposition — by dollar amount and percentage of total spend.</div>
+    </div>
+    <div class="sol-feature-card">
+      <div class="sol-feature-icon">📊</div>
+      <div class="sol-feature-title">Expense Type Analytics</div>
+      <div class="sol-feature-desc">Analyze how campaigns are spending — TV/radio, digital, mail, consulting, salaries, and more. Built from Cal-Access expenditure codes.</div>
+    </div>
+    <div class="sol-feature-card">
+      <div class="sol-feature-icon">🗳️</div>
+      <div class="sol-feature-title">Ballot Measures</div>
+      <div class="sol-feature-desc">Ballot measure committee analytics coming soon — track initiative and referendum campaigns the same way you track candidates.</div>
+      <span class="sol-feature-soon">Coming Soon</span>
+    </div>
+  </div>
+</div>
+
+<div class="sol-race-types">
+  <div class="sol-race-types-inner">
+    <h2>Supported race types</h2>
+    <p>BallotBase automatically identifies the race type and applies the right analytics.</p>
+    <div class="sol-pills">
+      <span class="sol-pill">State Assembly</span>
+      <span class="sol-pill">State Senate</span>
+      <span class="sol-pill">Governor</span>
+      <span class="sol-pill">Lt. Governor</span>
+      <span class="sol-pill">Attorney General</span>
+      <span class="sol-pill">Secretary of State</span>
+      <span class="sol-pill">Controller</span>
+      <span class="sol-pill">Treasurer</span>
+      <span class="sol-pill">Superintendent of Public Instruction</span>
+      <span class="sol-pill">Mayor</span>
+      <span class="sol-pill">City Council</span>
+      <span class="sol-pill">IE Committees</span>
+    </div>
+  </div>
+</div>
+
+<div class="sol-uses">
+  <div class="sol-uses-inner">
+    <div class="section-eyebrow">Who it's for</div>
+    <h2 class="section-title">Built for everyone who covers California politics.</h2>
+    <div class="sol-uses-grid">
+      <div class="sol-use-card">
+        <div class="sol-use-title">State Campaign Staff</div>
+        <div class="sol-use-desc">Stop wrestling with Cal-Access raw data. Get your full fundraising picture — donor cities, repeat givers, spending breakdown — in one dashboard.</div>
+      </div>
+      <div class="sol-use-card">
+        <div class="sol-use-title">Political Consultants</div>
+        <div class="sol-use-desc">Pull California competitive intelligence in minutes for any district. No Cal-Access account needed. No manual data cleaning required.</div>
+      </div>
+      <div class="sol-use-card">
+        <div class="sol-use-title">Journalists &amp; Researchers</div>
+        <div class="sol-use-desc">Track IE committee spending in state legislative races. Instantly see which committees are targeting which candidates — and how much.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta">
+  <div class="cta-inner">
+    <h2 class="cta-title">Ready to analyze a California committee?</h2>
+    <p class="cta-sub">Join the beta. Enter any Cal-Access filer ID and get a full analytics dashboard — no Cal-Access account needed.</p>
+    <div class="cta-form" id="cta-form">
+      <input type="email" id="cta-email" placeholder="Your work email" />
+      <button onclick="submitEmail('cta')">Get Beta Access</button>
+    </div>
+    <div class="cta-success" id="cta-success">🎉 You're on the list! We'll reach out within 24 hours.</div>
+    <p class="cta-note">No credit card required. We'll reach out personally within 24 hours.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo"></div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/#features">Features</a>
+    <a href="/solutions/federal/">Federal</a>
+    <a href="mailto:rj@ballotbase.io">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 BallotBase. All rights reserved.</div>
+</footer>
+
+<script>
+const SUPABASE_URL = 'https://mvyrtnhkebnxnpmlhzlk.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_6vCYy76ka4tlVPalGU_tag_qw72BVPd';
+async function submitEmail(source) {
+  const input = document.getElementById(source + '-email');
+  const email = input.value.trim();
+  if (!email || !email.includes('@')) {
+    input.style.borderColor = '#ef4444';
+    setTimeout(() => input.style.borderColor = '', 2000);
+    return;
+  }
+  try {
+    await fetch(`${SUPABASE_URL}/rest/v1/beta_signups`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}`, 'Prefer': 'return=minimal' },
+      body: JSON.stringify({ email, source: 'california-' + source })
+    });
+  } catch(e) { console.log(e); }
+  document.getElementById('cta-form').style.display = 'none';
+  document.getElementById('cta-success').style.display = 'block';
+}
+document.querySelectorAll('input[type="email"]').forEach(input => {
+  input.addEventListener('keypress', e => { if (e.key === 'Enter') submitEmail('cta'); });
+});
+</script>
+</body>
+</html>

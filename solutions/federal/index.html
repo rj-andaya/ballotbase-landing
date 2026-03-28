@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Federal Campaign Finance Analytics — BallotBase</title>
+<meta name="description" content="Analyze FEC data for any House, Senate, or presidential campaign. Donor geography, fundraising efficiency, PAC tracking, and competitive intelligence."/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../../styles.css"/>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <a href="/"><img src="../../ballotbase-web-logo.png" alt="BallotBase" /></a>
+  </div>
+  <div class="nav-right">
+    <a href="/#features" class="nav-link">Features</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-trigger">Solutions ▾</button>
+      <div class="nav-dropdown-menu">
+        <a href="/solutions/federal/" class="nav-dropdown-item">Federal</a>
+        <div class="nav-dropdown-submenu">
+          <div class="nav-dropdown-item">State &amp; Local ›</div>
+          <div class="nav-submenu-panel">
+            <a href="/solutions/california/" class="nav-dropdown-item">California</a>
+            <span class="nav-dropdown-item disabled">Texas — Coming Soon</span>
+            <span class="nav-dropdown-item disabled">New York — Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="mailto:rj@ballotbase.io" class="nav-link">Contact</a>
+    <a href="/#beta" class="nav-cta">Request Beta Access</a>
+  </div>
+</nav>
+
+<div class="sol-hero">
+  <div class="sol-eyebrow federal">Federal</div>
+  <h1>Campaign Finance Intelligence<br>for Federal Races</h1>
+  <p>Instant access to FEC data for any House, Senate, or presidential campaign — plus PACs and Super PACs. No spreadsheets, no data team, no guesswork.</p>
+  <div class="sol-hero-btns">
+    <a href="/#beta" class="sol-btn-primary">Request Beta Access →</a>
+    <a href="https://ballotbase.io/dashboard/C00698928" class="sol-btn-secondary">See a Live Example</a>
+  </div>
+</div>
+
+<div class="sol-preview-wrap">
+  <div class="sol-preview-label">Live dashboard example — Alexandria Ocasio-Cortez for Congress</div>
+  <div class="sol-preview-card">
+    <div class="db-accent"></div>
+    <div class="sol-preview-header">
+      <div>
+        <div class="sol-preview-name">ALEXANDRIA OCASIO-CORTEZ FOR CONGRESS</div>
+        <div class="sol-preview-meta">C00698928 · Federal · U.S. House · NY-14 · Democrat</div>
+      </div>
+      <span class="sol-preview-badge federal">Live FEC Data</span>
+    </div>
+    <div class="sol-preview-stats">
+      <div class="sol-preview-stat">
+        <div class="sol-preview-stat-label">Total Raised</div>
+        <div class="sol-preview-stat-val">$9.4M</div>
+      </div>
+      <div class="sol-preview-stat">
+        <div class="sol-preview-stat-label">Total Donors</div>
+        <div class="sol-preview-stat-val">67,842</div>
+      </div>
+      <div class="sol-preview-stat">
+        <div class="sol-preview-stat-label">Cost per $1 Raised</div>
+        <div class="sol-preview-stat-val">$0.16</div>
+      </div>
+      <div class="sol-preview-stat">
+        <div class="sol-preview-stat-label">Avg. Contribution</div>
+        <div class="sol-preview-stat-val">$21</div>
+      </div>
+    </div>
+    <div class="sol-preview-body">
+      <div class="sol-preview-body-title">Top Donor States</div>
+      <div class="sol-preview-geo-row">
+        <span class="sol-preview-geo-name">New York</span>
+        <span class="sol-preview-geo-amt">$2.1M</span>
+        <div class="sol-preview-bar-bg"><div class="sol-preview-bar blue" style="width:100%"></div></div>
+        <span class="sol-preview-geo-pct">22%</span>
+      </div>
+      <div class="sol-preview-geo-row">
+        <span class="sol-preview-geo-name">California</span>
+        <span class="sol-preview-geo-amt">$1.9M</span>
+        <div class="sol-preview-bar-bg"><div class="sol-preview-bar blue" style="width:88%"></div></div>
+        <span class="sol-preview-geo-pct">19%</span>
+      </div>
+      <div class="sol-preview-geo-row">
+        <span class="sol-preview-geo-name">Massachusetts</span>
+        <span class="sol-preview-geo-amt">$580K</span>
+        <div class="sol-preview-bar-bg"><div class="sol-preview-bar blue" style="width:40%"></div></div>
+        <span class="sol-preview-geo-pct">6%</span>
+      </div>
+      <div class="sol-preview-geo-row">
+        <span class="sol-preview-geo-name">Pennsylvania</span>
+        <span class="sol-preview-geo-amt">$112K</span>
+        <div class="sol-preview-bar-bg"><div class="sol-preview-bar blue" style="width:9%"></div></div>
+        <span class="sol-preview-geo-pct">1.2%</span>
+      </div>
+    </div>
+    <div class="sol-preview-footer">
+      <a href="https://ballotbase.io/dashboard/C00698928">Open full dashboard →</a>
+    </div>
+  </div>
+  <div class="sol-preview-note">Data sourced directly from FEC filings. Updated with each filing cycle.</div>
+</div>
+
+<div class="sol-features">
+  <div class="section-eyebrow">What's covered</div>
+  <h2 class="section-title">Everything the FEC reports — made readable.</h2>
+  <p class="section-sub">BallotBase pulls directly from FEC filings and transforms them into clear, visual analytics.</p>
+  <div class="sol-features-grid">
+    <div class="sol-feature-card">
+      <div class="sol-feature-icon">🏛️</div>
+      <div class="sol-feature-title">House &amp; Senate Campaigns</div>
+      <div class="sol-feature-desc">Track any congressional candidate committee. Compare incumbents and challengers in the same district.</div>
+    </div>
+    <div class="sol-feature-card">
+      <div class="sol-feature-icon">🏦</div>
+      <div class="sol-feature-title">PACs &amp; Super PACs</div>
+      <div class="sol-feature-desc">Analyze independent expenditure committees — what they're spending, who they're targeting, and who's funding them.</div>
+    </div>
+    <div class="sol-feature-card">
+      <div class="sol-feature-icon">🗺️</div>
+      <div class="sol-feature-title">Donor Geography</div>
+      <div class="sol-feature-desc">Map contributions by city, state, and congressional district. See in-district vs. out-of-district support at a glance.</div>
+    </div>
+    <div class="sol-feature-card">
+      <div class="sol-feature-icon">📈</div>
+      <div class="sol-feature-title">Fundraising Efficiency</div>
+      <div class="sol-feature-desc">Calculate cost-per-dollar raised across filing periods. Identify campaigns that are lean vs. burning through cash.</div>
+    </div>
+    <div class="sol-feature-card">
+      <div class="sol-feature-icon">📊</div>
+      <div class="sol-feature-title">Contribution Size Distribution</div>
+      <div class="sol-feature-desc">Break down small-dollar, mid-range, and large contributions. Understand the grassroots depth of any campaign.</div>
+    </div>
+    <div class="sol-feature-card">
+      <div class="sol-feature-icon">🔍</div>
+      <div class="sol-feature-title">Competitive Intelligence</div>
+      <div class="sol-feature-desc">Benchmark any committee against opponents in the same race. Spot fundraising gaps and momentum shifts early.</div>
+    </div>
+  </div>
+</div>
+
+<div class="sol-uses">
+  <div class="sol-uses-inner">
+    <div class="section-eyebrow">Who it's for</div>
+    <h2 class="section-title">Built for everyone who follows the money.</h2>
+    <div class="sol-uses-grid">
+      <div class="sol-use-card">
+        <div class="sol-use-title">Campaign Staff</div>
+        <div class="sol-use-desc">Monitor your committee's health, identify your best donor markets, and track opponent fundraising — without a data analyst.</div>
+      </div>
+      <div class="sol-use-card">
+        <div class="sol-use-title">Political Consultants</div>
+        <div class="sol-use-desc">Pull competitive fundraising intelligence for clients in minutes. Present clean, visual data instead of raw CSV exports.</div>
+      </div>
+      <div class="sol-use-card">
+        <div class="sol-use-title">Journalists &amp; Researchers</div>
+        <div class="sol-use-desc">Surface the story behind FEC filings. Donor geography, spending patterns, and trend analysis at your fingertips.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta">
+  <div class="cta-inner">
+    <h2 class="cta-title">Ready to analyze a federal committee?</h2>
+    <p class="cta-sub">Join the beta. Enter any FEC committee ID and get a full analytics dashboard — donor geography, efficiency, spend, and more.</p>
+    <div class="cta-form" id="cta-form">
+      <input type="email" id="cta-email" placeholder="Your work email" />
+      <button onclick="submitEmail('cta')">Get Beta Access</button>
+    </div>
+    <div class="cta-success" id="cta-success">🎉 You're on the list! We'll reach out within 24 hours.</div>
+    <p class="cta-note">No credit card required. We'll reach out personally within 24 hours.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo"></div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/#features">Features</a>
+    <a href="/solutions/california/">California</a>
+    <a href="mailto:rj@ballotbase.io">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 BallotBase. All rights reserved.</div>
+</footer>
+
+<script>
+const SUPABASE_URL = 'https://mvyrtnhkebnxnpmlhzlk.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_6vCYy76ka4tlVPalGU_tag_qw72BVPd';
+async function submitEmail(source) {
+  const input = document.getElementById(source + '-email');
+  const email = input.value.trim();
+  if (!email || !email.includes('@')) {
+    input.style.borderColor = '#ef4444';
+    setTimeout(() => input.style.borderColor = '', 2000);
+    return;
+  }
+  try {
+    await fetch(`${SUPABASE_URL}/rest/v1/beta_signups`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}`, 'Prefer': 'return=minimal' },
+      body: JSON.stringify({ email, source: 'federal-' + source })
+    });
+  } catch(e) { console.log(e); }
+  document.getElementById('cta-form').style.display = 'none';
+  document.getElementById('cta-success').style.display = 'block';
+}
+document.querySelectorAll('input[type="email"]').forEach(input => {
+  input.addEventListener('keypress', e => { if (e.key === 'Enter') submitEmail('cta'); });
+});
+</script>
+</body>
+</html>
