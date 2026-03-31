@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWWDM8RP');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blog — BallotBase</title>
+<meta name="description" content="Insights on campaign finance, political data, and election analytics from the BallotBase team."/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../styles.css"/>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWWDM8RP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav>
+  <div class="nav-logo">
+    <a href="/"><img src="../ballotbase-web-logo.png" alt="BallotBase" /></a>
+  </div>
+  <div class="nav-right">
+    <a href="/#features" class="nav-link">Features</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-trigger">Solutions ▾</button>
+      <div class="nav-dropdown-menu">
+        <a href="/solutions/federal/" class="nav-dropdown-item">Federal</a>
+        <div class="nav-dropdown-submenu">
+          <div class="nav-dropdown-item">State &amp; Local ›</div>
+          <div class="nav-submenu-panel">
+            <a href="/solutions/california/" class="nav-dropdown-item">California</a>
+            <span class="nav-dropdown-item disabled">Texas — Coming Soon</span>
+            <span class="nav-dropdown-item disabled">New York — Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="mailto:rj@ballotbase.io" class="nav-link">Contact</a>
+    <a href="/#beta" class="nav-cta">Request Beta Access</a>
+  </div>
+</nav>
+
+<div class="blog-index-hero">
+  <div class="section-eyebrow">BallotBase Blog</div>
+  <h1 class="blog-index-title">Campaign finance, political data,<br>and the tools that actually matter.</h1>
+</div>
+
+<div class="blog-index-grid">
+  <a href="/blog/why-cal-access-is-the-most-important-database-nobody-can-use/" class="blog-card">
+    <div class="blog-card-meta">California · April 2026</div>
+    <h2 class="blog-card-title">Why Cal-Access Is the Most Important Database Nobody Can Use</h2>
+    <p class="blog-card-excerpt">It tracks every dollar raised and spent in California politics. Campaigns are legally required to file into it. In theory, it's the source of truth. In practice, almost nobody can actually use it.</p>
+    <span class="blog-card-read">Read →</span>
+  </a>
+</div>
+
+<footer>
+  <div class="footer-logo"></div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/#features">Features</a>
+    <a href="/solutions/federal/">Federal</a>
+    <a href="/solutions/california/">California</a>
+    <a href="/blog/">Blog</a>
+    <a href="mailto:rj@ballotbase.io">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 BallotBase. All rights reserved.</div>
+</footer>
+
+<script>
+(function() {
+  var dropdown = document.querySelector('.nav-dropdown');
+  if (!dropdown) return;
+  var menu = dropdown.querySelector('.nav-dropdown-menu');
+  var submenu = dropdown.querySelector('.nav-dropdown-submenu');
+  var panel = submenu ? submenu.querySelector('.nav-submenu-panel') : null;
+  var dropTimer, subTimer;
+  dropdown.addEventListener('mouseenter', function() { clearTimeout(dropTimer); menu.style.display = 'block'; });
+  dropdown.addEventListener('mouseleave', function() {
+    dropTimer = setTimeout(function() { menu.style.display = ''; if (panel) panel.style.display = ''; }, 150);
+  });
+  if (submenu && panel) {
+    submenu.addEventListener('mouseenter', function() { clearTimeout(subTimer); panel.style.display = 'block'; });
+    submenu.addEventListener('mouseleave', function() { subTimer = setTimeout(function() { panel.style.display = ''; }, 150); });
+  }
+})();
+</script>
+</body>
+</html>
