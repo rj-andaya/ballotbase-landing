@@ -38,6 +38,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="nav-logo">
     <a href="/"><img src="../../ballotbase-web-logo.png" alt="BallotBase" /></a>
   </div>
+  <button class="nav-hamburger" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
   <div class="nav-right">
     <a href="/#features" class="nav-link">Features</a>
     <div class="nav-dropdown">
@@ -159,15 +162,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var submenu = dropdown.querySelector('.nav-dropdown-submenu');
   var panel = submenu ? submenu.querySelector('.nav-submenu-panel') : null;
   var dropTimer, subTimer;
-  dropdown.addEventListener('mouseenter', function() { clearTimeout(dropTimer); menu.style.display = 'block'; });
+  function isMobile() { return window.innerWidth <= 768; }
+
+  dropdown.addEventListener('mouseenter', function() { if (isMobile()) return; clearTimeout(dropTimer); menu.style.display = 'block'; });
   dropdown.addEventListener('mouseleave', function() {
+    if (isMobile()) return;
     dropTimer = setTimeout(function() { menu.style.display = ''; if (panel) panel.style.display = ''; }, 150);
   });
+  dropdown.querySelector('.nav-dropdown-trigger').addEventListener('click', function(e) {
+    if (!isMobile()) return;
+    e.stopPropagation();
+    menu.style.display = menu.style.display === 'block' ? '' : 'block';
+  });
   if (submenu && panel) {
-    submenu.addEventListener('mouseenter', function() { clearTimeout(subTimer); panel.style.display = 'block'; });
-    submenu.addEventListener('mouseleave', function() { subTimer = setTimeout(function() { panel.style.display = ''; }, 150); });
+    submenu.addEventListener('mouseenter', function() { if (isMobile()) return; clearTimeout(subTimer); panel.style.display = 'block'; });
+    submenu.addEventListener('mouseleave', function() { if (isMobile()) return; subTimer = setTimeout(function() { panel.style.display = ''; }, 150); });
+    submenu.querySelector('.nav-dropdown-item').addEventListener('click', function(e) {
+      if (!isMobile()) return;
+      e.stopPropagation();
+      panel.style.display = panel.style.display === 'block' ? '' : 'block';
+    });
   }
 })();
+
+function toggleMobileNav() {
+  var nav = document.querySelector('nav');
+  var isOpen = nav.classList.toggle('nav-open');
+  if (!isOpen) {
+    var menu = document.querySelector('.nav-dropdown-menu');
+    var panel = document.querySelector('.nav-submenu-panel');
+    if (menu) menu.style.display = '';
+    if (panel) panel.style.display = '';
+  }
+}
+document.addEventListener('click', function(e) {
+  var nav = document.querySelector('nav');
+  if (nav && nav.classList.contains('nav-open') && !nav.contains(e.target)) {
+    nav.classList.remove('nav-open');
+  }
+});
 
 // Lightbox
 (function() {
