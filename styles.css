@@ -28,17 +28,23 @@ nav {
 .nav-hamburger {
   display: none;
   background: none; border: none; cursor: pointer;
-  padding: 4px; flex-direction: column; gap: 5px;
+  padding: 4px; flex-direction: row; align-items: center; gap: 6px;
   flex-shrink: 0;
 }
-.nav-hamburger span {
+.nav-menu-label {
+  display: none;
+  font-size: 10px; font-weight: 600; letter-spacing: 0.06em;
+  color: var(--gray); font-family: 'DM Sans', sans-serif;
+}
+.nav-bars { display: flex; flex-direction: column; gap: 5px; }
+.nav-bars span {
   display: block; width: 22px; height: 2px;
   background: var(--navy); border-radius: 2px;
   transition: transform 0.2s, opacity 0.2s;
 }
-nav.nav-open .nav-hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-nav.nav-open .nav-hamburger span:nth-child(2) { opacity: 0; }
-nav.nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+nav.nav-open .nav-bars span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+nav.nav-open .nav-bars span:nth-child(2) { opacity: 0; }
+nav.nav-open .nav-bars span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 .nav-logo img { height: 40px; width: auto; }
 .nav-right { display: flex; align-items: center; gap: 24px; }
 .nav-link { font-size: 14px; color: var(--gray); text-decoration: none; font-weight: 400; transition: color 0.2s; }
@@ -522,6 +528,10 @@ footer {
     display: flex;
   }
 
+  .nav-menu-label {
+    display: block;
+  }
+
   .nav-right {
     display: none;
     position: absolute;
@@ -599,7 +609,7 @@ footer {
   }
 
   .hero {
-    padding: 140px 16px 56px;
+    padding: 88px 16px 56px;
     gap: 28px;
   }
 
@@ -744,6 +754,9 @@ footer {
     align-items: flex-start;
   }
 
+  .sol-features-grid { grid-template-columns: 1fr; }
+  .sol-uses-grid { grid-template-columns: 1fr; }
+
   .footer-links {
     flex-wrap: wrap;
     gap: 12px 16px;
@@ -790,7 +803,9 @@ footer {
   .ca-note-banner { padding: 10px 16px; }
 
   /* Solution pages */
-  .sol-hero { padding: 100px 24px 60px; }
+  .sol-hero { padding: 88px 24px 56px; }
+  .sol-features-grid { grid-template-columns: 1fr; }
+  .sol-uses-grid { grid-template-columns: 1fr; }
   .sol-hero h1 { font-size: 32px; }
   .sol-hero p { font-size: 16px; }
   .sol-hero-btns { flex-direction: column; align-items: center; }
@@ -974,10 +989,11 @@ footer {
 .blog-post-cta-text { font-size: 17px; color: var(--navy); font-weight: 500; margin-bottom: 20px; }
 
 @media (max-width: 640px) {
-  .blog-index-hero { padding: 48px 20px 32px; }
+  .blog-index-hero { padding: 88px 20px 32px; }
   .blog-index-title { font-size: 26px; }
   .blog-index-grid { padding: 0 20px 60px; }
-  .blog-post { padding: 0 20px 60px; }
+  .blog-post { padding: 80px 20px 60px; }
+  .blog-post-header { padding-top: 16px; }
   .blog-post-title { font-size: 28px; }
   .blog-post-subtitle { font-size: 16px; }
   .blog-post-body { font-size: 16px; }
@@ -1142,7 +1158,7 @@ footer {
   .feat-method-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 768px) {
-  .feat-hero { padding: 100px 24px 56px; }
+  .feat-hero { padding: 88px 24px 48px; }
   .feat-hero h1 { font-size: 32px; }
   .feat-hero p { font-size: 16px; }
   .feat-section { padding: 64px 24px; }
