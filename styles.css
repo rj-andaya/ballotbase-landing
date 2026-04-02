@@ -1171,4 +1171,8 @@ footer {
   .feat-mock-compare-row { grid-template-columns: 1fr 80px 80px; }
   .sol-features-grid { grid-template-columns: 1fr; }
   .sol-uses-grid { grid-template-columns: 1fr; }
+  .sol-preview-card { width: 100%; box-sizing: border-box; }
+  .sol-preview-geo-name { width: 100px; }
+  .sol-preview-geo-amt { width: 40px; font-size: 11px; }
+  .sol-preview-stat-val { font-size: 18px; }
 }
