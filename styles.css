@@ -1169,4 +1169,6 @@ footer {
   .feat-coverage { padding: 64px 24px; }
   .feat-coverage-grid { grid-template-columns: 1fr; }
   .feat-mock-compare-row { grid-template-columns: 1fr 80px 80px; }
+  .sol-features-grid { grid-template-columns: 1fr; }
+  .sol-uses-grid { grid-template-columns: 1fr; }
 }
