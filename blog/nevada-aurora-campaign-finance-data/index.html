@@ -10,18 +10,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Why Cal-Access Is the Most Important Database Nobody Can Use — BallotBase</title>
-<meta name="description" content="Cal-Access tracks every dollar in California politics. Campaigns are legally required to file into it. So why does almost nobody actually use it?"/>
+<title>Nevada Campaign Finance Data Is Public. Actually Getting It Is Another Story. — BallotBase</title>
+<meta name="description" content="Nevada's AURORA system tracks every dollar in state politics. It's public. But getting the data means registering an account, submitting a manual request, and waiting for files to arrive by email. Here's what that looks like in practice."/>
 <meta name="author" content="RJ Andaya"/>
-<meta property="article:published_time" content="2026-03-31"/>
+<meta property="article:published_time" content="2026-04-03"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Why Cal-Access Is the Most Important Database Nobody Can Use",
-  "description": "Cal-Access tracks every dollar in California politics. Campaigns are legally required to file into it. So why does almost nobody actually use it?",
+  "headline": "Nevada Campaign Finance Data Is Public. Actually Getting It Is Another Story.",
+  "description": "Nevada's AURORA system tracks every dollar in state politics. It's public. But getting the data means registering an account, submitting a manual request, and waiting for files to arrive by email.",
   "author": { "@type": "Person", "name": "RJ Andaya" },
-  "datePublished": "2026-03-31",
+  "datePublished": "2026-04-03",
   "publisher": { "@type": "Organization", "name": "BallotBase", "url": "https://ballotbase.io" }
 }
 </script>
@@ -69,70 +69,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="blog-post-inner">
 
     <header class="blog-post-header">
-      <div class="blog-card-meta">California · April 2026</div>
-      <h1 class="blog-post-title">Why Cal-Access Is the Most Important Database Nobody Can Use</h1>
-      <p class="blog-post-subtitle">It tracks every dollar raised and spent in California politics. Campaigns are legally required to file into it. So why does almost nobody actually use it?</p>
+      <div class="blog-card-meta">Nevada · April 2026</div>
+      <h1 class="blog-post-title">Nevada Campaign Finance Data Is Public. Actually Getting It Is Another Story.</h1>
+      <p class="blog-post-subtitle">Nevada's AURORA system tracks every dollar in state politics and it's all technically public record. But accessing it means registering an account, submitting a manual request, and waiting for files to arrive by email. Here's what that looks like in practice.</p>
     </header>
 
     <div class="blog-post-body">
 
-      <p>Cal-Access exists. It is public. And it matters.</p>
-      <p>It is also, for most people, basically unusable.</p>
+      <p>Nevada campaign finance data is public.</p>
+      <p>It is also, for most people, completely out of reach.</p>
 
-      <h2>What Cal-Access Actually Is</h2>
-      <p>Cal-Access is California's campaign finance disclosure system. Every dollar raised and spent in state politics lives here: every contribution, every independent expenditure, every payment to consultants, media buyers, and vendors. If money is moving through California politics, it is being reported into Cal-Access.</p>
-      <p>This is not optional. Campaigns are legally required to file it. Which means this is not just a useful dataset. It is the source of truth.</p>
+      <h2>What AURORA Actually Is</h2>
+      <p>AURORA is Nevada's campaign finance disclosure system, maintained by the Secretary of State's office. Every contribution made to a Nevada candidate, PAC, or committee. Every expenditure. Every independent expenditure. It is all in there, and it is all public record.</p>
+      <p>This is not optional. Candidates and committees are legally required to file. Which means this is not just a useful dataset — it is the authoritative source of truth for Nevada political money.</p>
+      <p>If you want to understand how Nevada campaigns are funded, who is donating, how money is being deployed in a race, and where candidates are spending — this is the only place that data lives.</p>
 
-      <h2>Why It Matters</h2>
-      <p>California is one of the most expensive political environments in the country. Legislative races alone can see over $100 million in combined spending across State Assembly, State Senate, ballot measures, and the independent expenditure committees operating alongside candidates.</p>
-      <p>All of that money flows through Cal-Access.</p>
-      <p>Which means if you want to understand how campaigns actually operate, where donors are concentrated, how money is being deployed across markets, how competitive a race really is, this is where you look. This is where California political money lives.</p>
+      <h2>Why It Is Effectively Inaccessible</h2>
+      <p>The problem is not that the data is hidden. The problem is how you have to go get it.</p>
+      <p>AURORA does not have a public download link. It does not have an API. To get bulk data, you have to register an account with the Nevada Secretary of State's office, navigate a separate data request portal, select which datasets you want — and then wait. Files are delivered by email or FTP, on the state's timeline, not yours.</p>
+      <p>Once the files arrive, you have six separate CSV tables: candidates, groups, reports, contacts, contributions, and expenditures. They are relational — meaning a contribution record references a contact ID, which you have to join to the contacts table to get a name and address. An expenditure references a payee ID. Reports link back to either a candidate or a group. Nothing is pre-joined or pre-aggregated. It is raw data, and it expects you to know what to do with it.</p>
+      <p>There is no built-in analytics layer. No trending. No geographic breakdowns. No way to answer "how much has this candidate raised from in-district donors" without building that logic yourself.</p>
+      <p>And every time you want fresh data, you go through the process again. There is no webhook. No automatic refresh. No way to stay current without manually repeating the request cycle.</p>
 
-      <h2>Why Nobody Can Use It</h2>
-      <p>On paper, this should be one of the most powerful datasets in politics. In practice, it is a mess.</p>
-      <p>The Cal-Access portal is built for compliance, not analysis. Searches are limited, slow, and often inconsistent. Bulk data is technically available, but it comes as large, fragmented files that require real engineering work just to make usable. You are not opening a dashboard. You are downloading raw exports and trying to stitch them together yourself.</p>
-      <figure class="blog-post-figure">
-        <img src="cal-access-raw-file-download.png" alt="Cal-Access bulk data download page showing raw zip file exports for California campaign finance data, with no documentation or guidance for working with the files" />
-        <figcaption>This is what "accessing the data" looks like in Cal-Access. Good luck.</figcaption>
-      </figure>
+      <h2>What That Process Actually Looks Like</h2>
+      <p>Let's say you are working a Nevada Assembly race and you want a basic competitive read: how much have the two candidates raised, where is the money coming from, and how are they spending?</p>
+      <p>In a world where the data is just accessible, that is a five-minute question. In Nevada's current system, here is what you are actually doing:</p>
+      <p>You register an account. You navigate to the bulk data portal. You add the datasets you need to a request queue — there is literally a shopping cart interface, for free public data. You submit. You wait for an email. You download the files when they arrive. You write or find code to join six tables. You filter for the candidates you care about. You figure out what the totals actually mean. You build the comparison yourself.</p>
+      <p>That is a process that takes hours, assuming you already know how the schema works. For a consultant managing five races at once, or a campaign staffer who just needs answers before a donor call, this is not a realistic workflow.</p>
 
-      <p>And even once you have the data, the problems compound. When a campaign amends a filing, Cal-Access does not replace the original. It adds a new row. If you naively sum contributions across a committee's history, you are double-counting every corrected transaction. Figuring out which version of a filing is authoritative requires tracking amendment chains manually.</p>
-      <p>There is also a schedule problem. Cal-Access stores different financial activity across different schedule types. Expenditures live in Schedule E. But Schedule D and F496 data, if included without filtering, will inflate your totals. Most people working with the raw data do not know this until their numbers are already wrong.</p>
-      <p>City names do not match. Donor records are not standardized. Nothing is pre-aggregated in a way that is useful for decision-making.</p>
-      <p>What should be a five-minute question, "Where are this candidate's donors coming from?", turns into a one-to-two hour manual process. And that is assuming you already know what you are doing.</p>
+      <h2>Who Gets Left Behind</h2>
+      <p>Well-resourced campaigns and established consultants can absorb this friction. They have staff who have done it before. They have scrapers and pipelines they have already built. The upfront investment has been amortized across multiple cycles.</p>
+      <p>Everyone else is working without the data. Challengers, local races, campaigns without a full-time data person — they are making fundraising decisions, allocation calls, and spending choices without a real picture of what is happening in the race. Not because the information does not exist. Because the process of getting to it is genuinely prohibitive.</p>
+      <p>Nevada has become an increasingly competitive swing state. Its state legislative races have drawn serious money and serious outside attention. The campaigns operating in that environment deserve access to the same information their opponents may already have.</p>
 
-      <figure class="blog-post-figure">
-        <img src="cal-access-portal.png" alt="Screenshot of the Cal-Access campaign finance portal showing its outdated search interface, fragmented navigation, and compliance-focused design that makes data analysis difficult" />
-        <figcaption>The Cal-Access portal. Built for regulators, not campaigns.</figcaption>
-      </figure>
-
-      <p>To make it worse, the system has been in the middle of a replacement effort for years. A modernization project that has cost tens of millions of dollars is still not fully delivered. <a href="https://calmatters.org" target="_blank" rel="noopener">CalMatters has documented</a> the delays, cost overruns, and ongoing usability issues. The data exists. The infrastructure around it has not kept up.</p>
-
-      <h2>What That Means in Practice</h2>
-      <p>This gap shows up in how campaigns actually operate.</p>
-      <p>Consultants either spend hours manually pulling and cleaning data, or they skip it entirely. Campaign teams rarely have the time or technical resources to dig into raw filings. So decisions get made another way.</p>
-      <p>Budget allocation. Donor targeting. Media strategy. Competitive positioning. These are often million-dollar decisions, and they are frequently driven by gut feel, past experience, or incomplete snapshots of the data.</p>
-      <p>The information exists. The insights do not.</p>
-      <p>The campaigns that can operationalize this data, quickly understanding donor trends, spending efficiency, and competitive positioning, have a real advantage. Not because they have better instincts, but because they have better access to usable information.</p>
-
-      <h2>Who Gets Hurt Most</h2>
-      <p>Well-funded campaigns and major political committees can absorb this friction. They hire data analysts. They contract with vendors who have already built the infrastructure to clean and normalize Cal-Access exports. The cost is real, but it is manageable when you are running a $10 million race.</p>
-      <p>For everyone else, the playing field is not level. Challengers, local candidates, and smaller legislative campaigns rarely have that kind of support. They are making budget decisions, donor outreach calls, and media buys based on gut instinct and whatever a consultant can pull together in a few hours. Not because the data does not exist. Because working with it directly is genuinely out of reach.</p>
-      <p>The result is that the campaigns with the least resources are also the ones flying the most blind. Which is exactly backwards from how it should work.</p>
-
-      <h2>The Fix to Start Using Campaign Finance Data</h2>
-      <p>The problem is not the data. It is the usability.</p>
-      <p>That is the gap BallotBase is built to solve. Instead of raw filings and manual exports, the goal is simple: turn Cal-Access data into something campaigns can actually use. Clean, structured, and immediately actionable. No spreadsheets. No data engineering. Just answers. You can see exactly how it works on the <a href="/solutions/california/">California campaign finance analytics page</a>.</p>
+      <h2>BallotBase Nevada</h2>
+      <p>We built the Nevada pipeline so you do not have to navigate it yourself.</p>
+      <p>BallotBase indexes the full AURORA dataset — contributions, expenditures, donors, spend breakdowns — and keeps it current on Nevada's filing schedule. Enter any Nevada candidate or committee and get a full analytics dashboard: total raised, total spent, donor geography, spend by category, monthly trends, and where the money is going by city.</p>
+      <p>No AURORA account. No manual requests. No waiting for files by email. Just answers.</p>
 
       <figure class="blog-post-figure">
-        <img src="jaron-brandon-state-senate-2026-dashboard-1.png" alt="BallotBase California campaign finance dashboard showing total raised, total spent, cash on hand, and monthly fundraising trends for a 2026 State Senate campaign, all sourced from Cal-Access data" />
-        <figcaption>The same data. A completely different experience.</figcaption>
+        <img src="../../solutions/nevada/nevada-screenshot.png" alt="BallotBase Nevada campaign finance dashboard showing total raised, total spent, donor geography, and spend analytics from Nevada AURORA data" />
+        <figcaption>Nevada AURORA data, without the runaround.</figcaption>
       </figure>
 
-      <figure class="blog-post-figure">
-        <img src="jaron-brandon-state-senate-2026-dashboard-2.png" alt="BallotBase California donor analytics dashboard showing top donors, contribution size distribution, repeat vs new donor breakdown, and geographic donor map for a 2026 State Senate campaign" />
-        <figcaption>Donor analytics: geography, contribution size, and trends. Instantly.</figcaption>
-      </figure>
+      <p>You can see the full feature set on the <a href="/solutions/nevada/">Nevada campaign finance analytics page</a>.</p>
 
       <div class="blog-share">
         <span class="blog-share-label">Share this post</span>
@@ -153,7 +133,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div class="blog-post-cta">
-        <p class="blog-post-cta-text">Want to see your committee's data without spending hours pulling it yourself?</p>
+        <p class="blog-post-cta-text">Working a Nevada race and need to see what the data actually says?</p>
         <a href="/#beta" class="sol-btn-primary">Get a Live Demo →</a>
       </div>
 
@@ -168,6 +148,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="/features/">Features</a>
     <a href="/solutions/federal/">Federal</a>
     <a href="/solutions/california/">California</a>
+    <a href="/solutions/nevada/">Nevada</a>
     <a href="/blog/">Blog</a>
     <a href="mailto:rj@ballotbase.io">Contact</a>
   </div>
@@ -225,7 +206,7 @@ document.addEventListener('click', function(e) {
 // Social share
 (function() {
   var url = encodeURIComponent(window.location.href);
-  var title = encodeURIComponent('Why Cal-Access Is the Most Important Database Nobody Can Use');
+  var title = encodeURIComponent('Nevada Campaign Finance Data Is Public. Actually Getting It Is Another Story.');
   document.getElementById('share-x').href =
     'https://twitter.com/intent/tweet?url=' + url + '&text=' + title + '&via=BallotBase';
   document.getElementById('share-linkedin').href =
