@@ -70,42 +70,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <header class="blog-post-header">
       <div class="blog-card-meta">Nevada · April 2026</div>
-      <h1 class="blog-post-title">Nevada Campaign Finance Data Is Public. Actually Getting It Is Another Story.</h1>
-      <p class="blog-post-subtitle">Nevada's AURORA system tracks every dollar in state politics and it's all technically public record. But accessing it means registering an account, submitting a manual request, and waiting for files to arrive by email. Here's what that looks like in practice.</p>
+      <h1 class="blog-post-title">Nevada Campaigns Have Been Making Million-Dollar Decisions Without the Data</h1>
+      <p class="blog-post-subtitle">Nevada's AURORA system is the authoritative source of truth for every dollar in state politics. For years, the campaigns with the resources to navigate it had a real edge. BallotBase changes that.</p>
     </header>
 
     <div class="blog-post-body">
 
-      <p>Nevada campaign finance data is public.</p>
-      <p>It is also, for most people, completely out of reach.</p>
+      <p>In Nevada politics, access to campaign finance data has never been equal.</p>
+      <p>Not because the data is secret. It is all public record. But the process of getting to it — registering accounts, submitting manual requests, waiting for files to arrive by email — has historically filtered out everyone except the campaigns and consultants who already had the infrastructure to deal with it.</p>
+      <p>That gap has a cost. Campaigns that cannot quickly answer basic questions about their own fundraising, their donor base, and their opponent's spending make worse allocation decisions. They miss opportunities in underperforming districts. They spend money in the wrong places. They walk into competitive races without the situational awareness that should be table stakes.</p>
 
-      <h2>What AURORA Actually Is</h2>
-      <p>AURORA is Nevada's campaign finance disclosure system, maintained by the Secretary of State's office. Every contribution made to a Nevada candidate, PAC, or committee. Every expenditure. Every independent expenditure. It is all in there, and it is all public record.</p>
-      <p>This is not optional. Candidates and committees are legally required to file. Which means this is not just a useful dataset — it is the authoritative source of truth for Nevada political money.</p>
-      <p>If you want to understand how Nevada campaigns are funded, who is donating, how money is being deployed in a race, and where candidates are spending — this is the only place that data lives.</p>
+      <h2>What the Data Actually Contains</h2>
+      <p>AURORA is Nevada's campaign finance disclosure system, maintained by the Secretary of State's office. Every contribution made to a Nevada candidate, PAC, or committee. Every expenditure. Every independent expenditure. It is the authoritative source of truth for Nevada political money — candidates are legally required to file into it.</p>
+      <p>The data answers questions campaigns pay to answer: Where are my donors concentrated? Which cities am I underperforming in? How is my opponent spending? What is my burn rate compared to cash on hand? Is my fundraising improving or plateauing?</p>
+      <p>These are not nice-to-haves. They are the inputs to decisions that determine whether a race is winnable.</p>
 
-      <h2>Why It Is Effectively Inaccessible</h2>
-      <p>The problem is not that the data is hidden. The problem is how you have to go get it.</p>
-      <p>AURORA does not have a public download link. It does not have an API. To get bulk data, you have to register an account with the Nevada Secretary of State's office, navigate a separate data request portal, select which datasets you want — and then wait. Files are delivered by email or FTP, on the state's timeline, not yours.</p>
-      <p>Once the files arrive, you have six separate CSV tables: candidates, groups, reports, contacts, contributions, and expenditures. They are relational — meaning a contribution record references a contact ID, which you have to join to the contacts table to get a name and address. An expenditure references a payee ID. Reports link back to either a candidate or a group. Nothing is pre-joined or pre-aggregated. It is raw data, and it expects you to know what to do with it.</p>
-      <p>There is no built-in analytics layer. No trending. No geographic breakdowns. No way to answer "how much has this candidate raised from in-district donors" without building that logic yourself.</p>
-      <p>And every time you want fresh data, you go through the process again. There is no webhook. No automatic refresh. No way to stay current without manually repeating the request cycle.</p>
+      <h2>Why Most Campaigns Never See It</h2>
+      <p>AURORA does not have a public download link or an API. To get bulk data, you register an account, navigate a separate request portal, add datasets to what is literally a shopping cart — for free public data — submit, and wait for files to arrive by email or FTP.</p>
+      <p>When the files arrive, you have six relational CSV tables with no documentation and no analytics layer. Joining them, filtering for the right candidates, and turning the raw transactions into actionable numbers is a multi-hour engineering task. Every data refresh starts the process over.</p>
+      <p>For well-resourced campaigns and established consulting firms, this friction is manageable. They have staff and pipelines built across multiple cycles. The upfront investment has already been made.</p>
+      <p>For everyone else — challengers, local races, first-time candidates, consultants adding Nevada to their book — the data is effectively out of reach. Decisions get made on gut feel, past experience, or whatever can be assembled in a few hours before the next call.</p>
 
-      <h2>What That Process Actually Looks Like</h2>
-      <p>Let's say you are working a Nevada Assembly race and you want a basic competitive read: how much have the two candidates raised, where is the money coming from, and how are they spending?</p>
-      <p>In a world where the data is just accessible, that is a five-minute question. In Nevada's current system, here is what you are actually doing:</p>
-      <p>You register an account. You navigate to the bulk data portal. You add the datasets you need to a request queue — there is literally a shopping cart interface, for free public data. You submit. You wait for an email. You download the files when they arrive. You write or find code to join six tables. You filter for the candidates you care about. You figure out what the totals actually mean. You build the comparison yourself.</p>
-      <p>That is a process that takes hours, assuming you already know how the schema works. For a consultant managing five races at once, or a campaign staffer who just needs answers before a donor call, this is not a realistic workflow.</p>
-
-      <h2>Who Gets Left Behind</h2>
-      <p>Well-resourced campaigns and established consultants can absorb this friction. They have staff who have done it before. They have scrapers and pipelines they have already built. The upfront investment has been amortized across multiple cycles.</p>
-      <p>Everyone else is working without the data. Challengers, local races, campaigns without a full-time data person — they are making fundraising decisions, allocation calls, and spending choices without a real picture of what is happening in the race. Not because the information does not exist. Because the process of getting to it is genuinely prohibitive.</p>
-      <p>Nevada has become an increasingly competitive swing state. Its state legislative races have drawn serious money and serious outside attention. The campaigns operating in that environment deserve access to the same information their opponents may already have.</p>
-
-      <h2>BallotBase Nevada</h2>
-      <p>We built the Nevada pipeline so you do not have to navigate it yourself.</p>
-      <p>BallotBase indexes the full AURORA dataset — contributions, expenditures, donors, spend breakdowns — and keeps it current on Nevada's filing schedule. Enter any Nevada candidate or committee and get a full analytics dashboard: total raised, total spent, donor geography, spend by category, monthly trends, and where the money is going by city.</p>
-      <p>No AURORA account. No manual requests. No waiting for files by email. Just answers.</p>
+      <h2>What Changes Now</h2>
+      <p>BallotBase indexes the full AURORA dataset and keeps it current on Nevada's filing schedule. Enter any Nevada candidate or committee and get a complete analytics dashboard — total raised, total spent, donor geography, spend by category, monthly trends, and where the money is going by city. No AURORA account. No manual requests. No waiting for files.</p>
+      <p>The campaigns that have historically had the data advantage built it through years of infrastructure investment. BallotBase makes that same intelligence available to any campaign in the state — in seconds, not hours.</p>
+      <p>Nevada is a genuine swing state with competitive legislative races drawing serious outside money. The campaigns operating there should be making decisions with the same information their opponents have. Now they can.</p>
 
       <figure class="blog-post-figure">
         <img src="../../solutions/nevada/nevada-screenshot.png" alt="BallotBase Nevada campaign finance dashboard showing total raised, total spent, donor geography, and spend analytics from Nevada AURORA data" />
