@@ -835,6 +835,7 @@ footer {
 }
 .sol-eyebrow.federal { background: var(--blue-light); color: var(--blue); }
 .sol-eyebrow.california { background: var(--green-light); color: var(--green); }
+.sol-eyebrow.nevada { background: #f3e8ff; color: #7c3aed; }
 .sol-hero h1 {
   font-family: 'DM Sans', sans-serif;
   font-size: 44px; font-weight: 700; line-height: 1.15;
