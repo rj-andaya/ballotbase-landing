@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWWDM8RP');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Introducing the BallotBase Filing Tracker: Built for California Treasurers — BallotBase</title>
+<meta name="description" content="BallotBase now tells California campaign treasurers exactly what to file, when to file it, and what's missing — before the deadline hits."/>
+<meta name="author" content="RJ Andaya"/>
+<meta property="article:published_time" content="2026-04-16"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Introducing the BallotBase Filing Tracker: Built for California Treasurers",
+  "description": "BallotBase now tells California campaign treasurers exactly what to file, when to file it, and what's missing — before the deadline hits.",
+  "author": { "@type": "Person", "name": "RJ Andaya" },
+  "datePublished": "2026-04-16",
+  "publisher": { "@type": "Organization", "name": "BallotBase", "url": "https://ballotbase.io" }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../../styles.css"/>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWWDM8RP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav>
+  <div class="nav-logo">
+    <a href="/"><img src="../../ballotbase-web-logo.png" alt="BallotBase" /></a>
+  </div>
+  <button class="nav-hamburger" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+    <span class="nav-menu-label">MENU</span>
+  <span class="nav-bars"><span></span><span></span><span></span></span>
+  </button>
+  <div class="nav-right">
+    <a href="/features/" class="nav-link">Features</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-trigger">Solutions ▾</button>
+      <div class="nav-dropdown-menu">
+        <a href="/solutions/federal/" class="nav-dropdown-item">Federal</a>
+        <div class="nav-dropdown-submenu">
+          <div class="nav-dropdown-item">State &amp; Local ›</div>
+          <div class="nav-submenu-panel">
+            <a href="/solutions/california/" class="nav-dropdown-item">California</a>
+            <a href="/solutions/nevada/" class="nav-dropdown-item">Nevada</a>
+            <span class="nav-dropdown-item disabled">Texas — Coming Soon</span>
+            <span class="nav-dropdown-item disabled">New York — Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="/blog/" class="nav-link">Blog</a>
+    <a href="mailto:rj@ballotbase.io" class="nav-link">Contact</a>
+    <a href="/#beta" class="nav-cta">Get a Live Demo</a>
+  </div>
+</nav>
+
+<article class="blog-post">
+  <div class="blog-post-inner">
+
+    <header class="blog-post-header">
+      <div class="blog-card-meta">Product · April 2026</div>
+      <h1 class="blog-post-title">Introducing the BallotBase Filing Tracker: Built for California Treasurers</h1>
+      <p class="blog-post-subtitle">Most campaign finance tools help you understand your data. This one helps you stay out of trouble with it.</p>
+    </header>
+
+    <div class="blog-post-body">
+
+      <p>BallotBase started as an analytics platform — a way to understand what the data inside FEC and Cal-Access actually means. Who your donors are. How your spending compares. Where your money is coming from.</p>
+      <p>That is still the core. But there is another side of campaign finance that nobody has solved well, and it is the one that actually keeps treasurers up at night.</p>
+      <p>Filing correctly. On time. With nothing missing.</p>
+
+      <h2>The Problem with Filing</h2>
+      <p>California FPPC compliance is not complicated in theory. Log your contributions. Log your expenditures. File on time. But in practice, there are enough rules, thresholds, and deadlines layered on top of each other that doing it manually is genuinely error-prone.</p>
+      <p>The threshold rules alone create constant friction. Contributions of $100 or more require employer and occupation. Contributions of $1,000 or more within 90 days of an election trigger Form 497, which must be filed within 24 hours of receipt. Independent expenditures in that same window trigger Form 496. And none of this is surfaced automatically in any existing tool — treasurers either know the rules cold, or they find out they missed something after the fact.</p>
+      <p>The cost of getting it wrong is real. FPPC fines are not trivial. Late filings become public record. And for smaller campaigns without professional compliance support, there is no safety net. You either know the rules or you do not.</p>
+
+      <h2>What We Built</h2>
+      <p>The BallotBase Filing Tracker is a California-first compliance layer built directly into the platform. It is not a generic spreadsheet with some formulas. It is a system that actually understands what the FPPC requires, applied in real time as you log transactions.</p>
+      <p>Here is what it does:</p>
+      <p><strong>Automatic form assignment.</strong> Every transaction is classified automatically. A standard contribution in a non-election window goes on Form 460. A $1,500 contribution logged 60 days before the election gets flagged as a Form 497 trigger — and the system tells you the 24-hour filing clock has started.</p>
+      <p><strong>Threshold-aware validation.</strong> The system knows that employer and occupation are only required for contributions of $100 or more. Below that threshold, those fields are optional. At $100 and above, they are required — and the form tells you so before you save.</p>
+      <p><strong>Inline compliance flags.</strong> Entries with missing required fields are highlighted directly in the transaction list. You can see at a glance which records are incomplete, fix them inline, and clear the flag without losing your work. Nothing gets deleted, nothing gets blocked mid-entry — you log it, fix it when you have the information, and export when it is clean.</p>
+      <p><strong>Export gated on compliance.</strong> The .CAL file export does not run until all required fields are present. If there are blocking errors, the export button tells you exactly how many records need attention. When everything is valid, you export and you are done.</p>
+
+      <h2>Why We Designed It This Way</h2>
+      <p>We thought a lot about whether to block entry entirely when required fields are missing. The answer is no, for a reason that matters in the real world.</p>
+      <p>Treasurers do not always have complete information at the moment of entry. You might receive a check at a fundraiser and not have the donor's employer on hand until you follow up later. Blocking the entry entirely would force you to either skip the record and risk forgetting it, or track it separately until you can come back. Neither is better than just logging what you have and completing it before export.</p>
+      <p>The system is designed to reflect how campaign finance actually works: fast intake, clean output. Log everything. Fix what is incomplete. Gate the export. That workflow maps directly to how a treasurer operates under real campaign pressure.</p>
+
+      <h2>What Is Coming Next</h2>
+      <p>This release covers the core Form 460 and Form 497 workflow for California recipient committees. That handles the majority of transactions a typical local or state campaign will log.</p>
+      <p>Next up is Form 496 for independent expenditures, loan handling, non-monetary contributions, and the pre-election reporting window logic that dynamically adjusts based on your election date. After that, we will expand to Form 461 for major donor committees and eventually add amendment support.</p>
+      <p>The longer-term goal is to make this the compliance layer for every state we support. California is the template. Nevada and Oregon are next.</p>
+
+      <h2>Who This Is For</h2>
+      <p>This is primarily built for California local campaigns — city council, county races, state legislative challengers — that do not have a dedicated compliance consultant and are managing their own filings. The candidates and treasurers who are doing this themselves, late at night, before a deadline, without a safety net.</p>
+      <p>If that is you, this is for you. And we want to hear exactly where it is falling short.</p>
+
+      <div class="blog-share">
+        <span class="blog-share-label">Share this post</span>
+        <div class="blog-share-buttons">
+          <a class="blog-share-btn" id="share-x" href="#" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Share on X
+          </a>
+          <a class="blog-share-btn" id="share-linkedin" href="#" target="_blank" rel="noopener">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Share on LinkedIn
+          </a>
+          <button class="blog-share-btn" id="share-copy" onclick="copyPostLink()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+            <span id="copy-label">Copy link</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="blog-post-cta">
+        <p class="blog-post-cta-text">Running a California campaign and managing your own compliance? We want to show you what this looks like for your committee.</p>
+        <a href="/#beta" class="sol-btn-primary">Get a Live Demo →</a>
+      </div>
+
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="footer-logo"></div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/features/">Features</a>
+    <a href="/solutions/federal/">Federal</a>
+    <a href="/solutions/california/">California</a>
+    <a href="/solutions/nevada/">Nevada</a>
+    <a href="/blog/">Blog</a>
+    <a href="mailto:rj@ballotbase.io">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 BallotBase. All rights reserved.</div>
+</footer>
+
+<script>
+(function() {
+  var dropdown = document.querySelector('.nav-dropdown');
+  if (!dropdown) return;
+  var menu = dropdown.querySelector('.nav-dropdown-menu');
+  var submenu = dropdown.querySelector('.nav-dropdown-submenu');
+  var panel = submenu ? submenu.querySelector('.nav-submenu-panel') : null;
+  var dropTimer, subTimer;
+  function isMobile() { return window.innerWidth <= 768; }
+
+  dropdown.addEventListener('mouseenter', function() { if (isMobile()) return; clearTimeout(dropTimer); menu.style.display = 'block'; });
+  dropdown.addEventListener('mouseleave', function() {
+    if (isMobile()) return;
+    dropTimer = setTimeout(function() { menu.style.display = ''; if (panel) panel.style.display = ''; }, 150);
+  });
+  dropdown.querySelector('.nav-dropdown-trigger').addEventListener('click', function(e) {
+    if (!isMobile()) return;
+    e.stopPropagation();
+    menu.style.display = menu.style.display === 'block' ? '' : 'block';
+  });
+  if (submenu && panel) {
+    submenu.addEventListener('mouseenter', function() { if (isMobile()) return; clearTimeout(subTimer); panel.style.display = 'block'; });
+    submenu.addEventListener('mouseleave', function() { if (isMobile()) return; subTimer = setTimeout(function() { panel.style.display = ''; }, 150); });
+    submenu.querySelector('.nav-dropdown-item').addEventListener('click', function(e) {
+      if (!isMobile()) return;
+      e.stopPropagation();
+      panel.style.display = panel.style.display === 'block' ? '' : 'block';
+    });
+  }
+})();
+
+function toggleMobileNav() {
+  var nav = document.querySelector('nav');
+  var isOpen = nav.classList.toggle('nav-open');
+  if (!isOpen) {
+    var menu = document.querySelector('.nav-dropdown-menu');
+    var panel = document.querySelector('.nav-submenu-panel');
+    if (menu) menu.style.display = '';
+    if (panel) panel.style.display = '';
+  }
+}
+document.addEventListener('click', function(e) {
+  var nav = document.querySelector('nav');
+  if (nav && nav.classList.contains('nav-open') && !nav.contains(e.target)) {
+    nav.classList.remove('nav-open');
+  }
+});
+
+var postUrl = window.location.href;
+document.getElementById('share-x').href = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(postUrl) + '&text=' + encodeURIComponent('BallotBase just launched a California filing tracker that tells you exactly what to file, when, and what\'s missing. Built for treasurers running their own compliance.');
+document.getElementById('share-linkedin').href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(postUrl);
+
+function copyPostLink() {
+  navigator.clipboard.writeText(postUrl).then(function() {
+    document.getElementById('copy-label').textContent = 'Copied!';
+    setTimeout(function() { document.getElementById('copy-label').textContent = 'Copy link'; }, 2000);
+  });
+}
+</script>
+</body>
+</html>
