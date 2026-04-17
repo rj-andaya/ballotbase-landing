@@ -87,11 +87,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <h2>What We Built</h2>
       <p>The BallotBase Filing Tracker is a California-first compliance layer built directly into the platform. It is not a generic spreadsheet with some formulas. It is a system that actually understands what the FPPC requires, applied in real time as you log transactions.</p>
+
+      <figure class="blog-post-figure">
+        <img src="../../solutions/california/ca-filing-screenshot.png" alt="BallotBase California Filing Tracker showing a transaction ledger with Form 460 and Form 497 badges, inline compliance error flags for missing employer and occupation fields, and an export button blocked until all required fields are complete" />
+        <figcaption>The filing tracker in action — form assignment, inline validation flags, and a compliance summary before export.</figcaption>
+      </figure>
+
       <p>Here is what it does:</p>
-      <p><strong>Automatic form assignment.</strong> Every transaction is classified automatically. A standard contribution in a non-election window goes on Form 460. A $1,500 contribution logged 60 days before the election gets flagged as a Form 497 trigger — and the system tells you the 24-hour filing clock has started.</p>
-      <p><strong>Threshold-aware validation.</strong> The system knows that employer and occupation are only required for contributions of $100 or more. Below that threshold, those fields are optional. At $100 and above, they are required — and the form tells you so before you save.</p>
-      <p><strong>Inline compliance flags.</strong> Entries with missing required fields are highlighted directly in the transaction list. You can see at a glance which records are incomplete, fix them inline, and clear the flag without losing your work. Nothing gets deleted, nothing gets blocked mid-entry — you log it, fix it when you have the information, and export when it is clean.</p>
-      <p><strong>Export gated on compliance.</strong> The .CAL file export does not run until all required fields are present. If there are blocking errors, the export button tells you exactly how many records need attention. When everything is valid, you export and you are done.</p>
+      <p><strong>Automatic form assignment.</strong> Every transaction is classified automatically. A standard contribution in a non-election window goes on Form 460. A $1,500 contribution logged 60 days before the election gets flagged as a Form 497 trigger — and the system tells you the 24-hour filing clock has started. Each entry displays its form badge (F460, F497, F496) directly in the ledger so you always know what you are looking at.</p>
+      <p><strong>Threshold-aware validation.</strong> The system knows that employer and occupation are only required for contributions of $100 or more. Below that threshold, the fields are optional and labeled as such. At $100 and above, they flip to required — and the form shows a red asterisk before you save, not after. The validation logic is running as you type, not at export time.</p>
+      <p><strong>Inline compliance flags.</strong> Entries with missing required fields are highlighted directly in the transaction list — a red tint on the row and specific error labels underneath the entry name. You can see at a glance which records are incomplete. A compliance summary bar above the list shows the total error count, warning count, and any Form 497 triggers across all entries, so nothing hides in a long list.</p>
+      <p><strong>Edit without losing your work.</strong> Every entry has an edit button that opens a pre-filled form. Fix the missing field, save, and the compliance flag clears immediately. No re-entry, no lost data. The workflow is: log fast, fill in what you have, come back and complete it later.</p>
+      <p><strong>Export gated on compliance.</strong> The .CAL file export does not run until all required fields are present. If there are blocking errors, the export button relabels itself to show exactly how many records need attention. When everything is valid, you export and you are done — a properly formatted Cal-Access .CAL file, ready to submit.</p>
 
       <h2>Why We Designed It This Way</h2>
       <p>We thought a lot about whether to block entry entirely when required fields are missing. The answer is no, for a reason that matters in the real world.</p>
