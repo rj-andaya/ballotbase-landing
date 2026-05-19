@@ -30,6 +30,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="../../styles.css"/>
+<style>
+  .blog-post-inner { max-width: 900px; }
+  .blog-post-inner figure { margin-left: calc(50% - 50vw + 48px); margin-right: calc(50% - 50vw + 48px); }
+  @media (max-width: 768px) {
+    .blog-post-inner figure { margin-left: -20px; margin-right: -20px; }
+  }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -166,11 +173,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <p>This is the kind of analysis BallotBase is built for: turning raw campaign finance filings into readable political intelligence.</p>
 
-    </div>
+      <p style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid #e5e7eb;font-size:0.8rem;color:#9ca3af;font-style:italic;">All data sourced directly from California Secretary of State campaign finance filings via BallotBase. We pull from the same raw data exports as Cal-Access — typically updated before the official website reflects new filings. Data current as of May 2026.</p>
 
-    <footer class="blog-post-footer">
-      <p>All data sourced directly from California Secretary of State campaign finance filings via BallotBase. We pull from the same raw data exports as Cal-Access — typically updated before the official website reflects new filings. Data current as of May 2026.</p>
-    </footer>
+    </div>
 
   </div>
 </article>
