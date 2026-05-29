@@ -958,7 +958,7 @@ footer {
 .blog-card-read { font-size: 13px; font-weight: 600; color: var(--blue); }
 
 .blog-post { padding: 48px 48px 80px; }
-.blog-post-inner { max-width: 680px; margin: 0 auto; }
+.blog-post-inner { max-width: 850px; margin: 0 auto; }
 .blog-post-header { padding: 64px 0 40px; border-bottom: 1px solid var(--border); margin-bottom: 48px; }
 .blog-post-title { font-family: 'DM Sans', sans-serif; font-size: 38px; font-weight: 800; color: var(--navy); line-height: 1.15; margin: 12px 0 16px; }
 .blog-post-subtitle { font-size: 18px; color: var(--gray); line-height: 1.6; }
