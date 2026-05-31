@@ -15,16 +15,15 @@
     '      <div class="nav-dropdown-menu">',
     '        <div class="nav-dropdown-section-label">By Role</div>',
     '        <a href="/solutions/political-consultants/" class="nav-dropdown-item">For Political Consultants</a>',
+    '        <span class="nav-dropdown-item disabled">For Campaign Managers — Coming Soon</span>',
+    '        <span class="nav-dropdown-item disabled">For Journalists — Coming Soon</span>',
+    '        <div class="nav-dropdown-divider"></div>',
+    '        <div class="nav-dropdown-section-label">Data Coverage</div>',
     '        <a href="/solutions/federal/" class="nav-dropdown-item">Federal</a>',
-    '        <div class="nav-dropdown-submenu">',
-    '          <div class="nav-dropdown-item">State &amp; Local ›</div>',
-    '          <div class="nav-submenu-panel">',
-    '            <a href="/solutions/california/" class="nav-dropdown-item">California</a>',
-    '            <a href="/solutions/nevada/" class="nav-dropdown-item">Nevada</a>',
-    '            <span class="nav-dropdown-item disabled">Texas — Coming Soon</span>',
-    '            <span class="nav-dropdown-item disabled">New York — Coming Soon</span>',
-    '          </div>',
-    '        </div>',
+    '        <a href="/solutions/california/" class="nav-dropdown-item">California</a>',
+    '        <a href="/solutions/nevada/" class="nav-dropdown-item">Nevada</a>',
+    '        <span class="nav-dropdown-item disabled">Texas — Coming Soon</span>',
+    '        <span class="nav-dropdown-item disabled">New York — Coming Soon</span>',
     '      </div>',
     '    </div>',
     '    <a href="/blog/" class="nav-link">Blog</a>',
@@ -39,30 +38,19 @@
   var dropdown = document.querySelector('.nav-dropdown');
   if (!dropdown) return;
   var menu = dropdown.querySelector('.nav-dropdown-menu');
-  var submenu = dropdown.querySelector('.nav-dropdown-submenu');
-  var panel = submenu ? submenu.querySelector('.nav-submenu-panel') : null;
-  var dropTimer, subTimer;
+  var dropTimer;
   function isMobile() { return window.innerWidth <= 768; }
 
   dropdown.addEventListener('mouseenter', function () { if (isMobile()) return; clearTimeout(dropTimer); menu.style.display = 'block'; });
   dropdown.addEventListener('mouseleave', function () {
     if (isMobile()) return;
-    dropTimer = setTimeout(function () { menu.style.display = ''; if (panel) panel.style.display = ''; }, 150);
+    dropTimer = setTimeout(function () { menu.style.display = ''; }, 150);
   });
   dropdown.querySelector('.nav-dropdown-trigger').addEventListener('click', function (e) {
     if (!isMobile()) return;
     e.stopPropagation();
     menu.style.display = menu.style.display === 'block' ? '' : 'block';
   });
-  if (submenu && panel) {
-    submenu.addEventListener('mouseenter', function () { if (isMobile()) return; clearTimeout(subTimer); panel.style.display = 'block'; });
-    submenu.addEventListener('mouseleave', function () { if (isMobile()) return; subTimer = setTimeout(function () { panel.style.display = ''; }, 150); });
-    submenu.querySelector('.nav-dropdown-item').addEventListener('click', function (e) {
-      if (!isMobile()) return;
-      e.stopPropagation();
-      panel.style.display = panel.style.display === 'block' ? '' : 'block';
-    });
-  }
 
   document.addEventListener('click', function (e) {
     var nav = document.querySelector('nav');
@@ -77,8 +65,6 @@ window.toggleMobileNav = function () {
   var isOpen = nav.classList.toggle('nav-open');
   if (!isOpen) {
     var menu = document.querySelector('.nav-dropdown-menu');
-    var panel = document.querySelector('.nav-submenu-panel');
     if (menu) menu.style.display = '';
-    if (panel) panel.style.display = '';
   }
 };

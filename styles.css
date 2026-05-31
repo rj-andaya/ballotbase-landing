@@ -104,6 +104,7 @@ div.nav-dropdown-item:hover { background: var(--light); }
 .nav-dropdown-item.disabled { color: var(--gray-light); cursor: default; }
 .nav-dropdown-item.disabled:hover { background: none; }
 .nav-dropdown-section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-light); padding: 8px 12px 2px; pointer-events: none; }
+.nav-dropdown-divider { height: 1px; background: var(--border); margin: 6px 12px; }
 .nav-dropdown-submenu { position: relative; }
 .nav-submenu-panel {
   display: none;
