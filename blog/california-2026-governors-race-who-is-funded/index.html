@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <!-- Google Tag Manager -->
@@ -44,38 +44,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<nav>
-  <div class="nav-logo">
-    <a href="/"><img src="../../ballotbase-web-logo.png" alt="BallotBase" /></a>
-  </div>
-  <button class="nav-hamburger" onclick="toggleMobileNav()" aria-label="Toggle navigation">
-    <span class="nav-menu-label">MENU</span>
-    <span class="nav-bars"><span></span><span></span><span></span></span>
-  </button>
-  <div class="nav-right">
-    <a href="/features/" class="nav-link">Features</a>
-    <div class="nav-dropdown">
-      <button class="nav-dropdown-trigger">Solutions ▾</button>
-      <div class="nav-dropdown-menu">
-        <div class="nav-dropdown-section-label">By Role</div>
-        <a href="/solutions/political-consultants/" class="nav-dropdown-item">For Political Consultants</a>
-        <a href="/solutions/federal/" class="nav-dropdown-item">Federal</a>
-        <div class="nav-dropdown-submenu">
-          <div class="nav-dropdown-item">State &amp; Local ›</div>
-          <div class="nav-submenu-panel">
-            <a href="/solutions/california/" class="nav-dropdown-item">California</a>
-            <a href="/solutions/nevada/" class="nav-dropdown-item">Nevada</a>
-            <span class="nav-dropdown-item disabled">Texas — Coming Soon</span>
-            <span class="nav-dropdown-item disabled">New York — Coming Soon</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a href="/blog/" class="nav-link">Blog</a>
-    <a href="mailto:rj@ballotbase.io" class="nav-link">Contact</a>
-    <a href="/#beta" class="nav-cta">Get a Live Demo</a>
-  </div>
-</nav>
+<script src="/nav.js"></script>
 
 <article class="blog-post">
   <div class="blog-post-inner">
@@ -184,11 +153,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </article>
 
-<script>
-function toggleMobileNav() {
-  document.querySelector('.nav-right').classList.toggle('open');
-}
-</script>
 
 </body>
 </html>
