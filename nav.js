@@ -16,7 +16,7 @@
     '        <div class="nav-dropdown-section-label">By Role</div>',
     '        <a href="/solutions/political-consultants/" class="nav-dropdown-item">For Political Consultants</a>',
     '        <a href="/solutions/campaign-managers/" class="nav-dropdown-item">For Campaign Managers</a>',
-    '        <span class="nav-dropdown-item disabled">For Journalists — Coming Soon</span>',
+    '        <a href="/solutions/journalists/" class="nav-dropdown-item">For Journalists</a>',
     '        <div class="nav-dropdown-divider"></div>',
     '        <div class="nav-dropdown-section-label">Data Coverage</div>',
     '        <a href="/solutions/federal/" class="nav-dropdown-item">Federal</a>',
