@@ -68,3 +68,30 @@ window.toggleMobileNav = function () {
     if (menu) menu.style.display = '';
   }
 };
+
+document.addEventListener('DOMContentLoaded', function () {
+  var shots = document.querySelectorAll('.ca-screenshot-frame img');
+  if (!shots.length) return;
+
+  var overlay = document.createElement('div');
+  overlay.className = 'img-lightbox-overlay';
+  overlay.innerHTML = '<button class="img-lightbox-close" aria-label="Close">&times;</button><img />';
+  document.body.appendChild(overlay);
+  var overlayImg = overlay.querySelector('img');
+
+  function close() { overlay.classList.remove('active'); }
+
+  overlay.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') close();
+  });
+
+  shots.forEach(function (img) {
+    img.addEventListener('click', function (e) {
+      e.stopPropagation();
+      overlayImg.src = img.src;
+      overlayImg.alt = img.alt;
+      overlay.classList.add('active');
+    });
+  });
+});
