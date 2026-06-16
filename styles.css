@@ -437,6 +437,11 @@ div.nav-dropdown-item:hover { background: var(--light); }
 }
 .wf-img-wrap img {
   display: block; width: 100%; height: auto; border-radius: 10px;
+  cursor: zoom-in;
+}
+.wf-zoom-hint {
+  font-size: 11px; color: var(--gray-light);
+  text-align: center; margin-top: 7px;
 }
 .wf-img-badge {
   position: absolute; bottom: 10px; right: 10px;

@@ -70,7 +70,7 @@ window.toggleMobileNav = function () {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-  var shots = document.querySelectorAll('.ca-screenshot-frame img');
+  var shots = document.querySelectorAll('.ca-screenshot-frame img, .wf-img-wrap img');
   if (!shots.length) return;
 
   var overlay = document.createElement('div');
