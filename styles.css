@@ -572,12 +572,10 @@ footer {
    2026 REFRESH — display type, product doors, node motif, legislation band
    ========================= */
 
-/* Syne for display headings — distinct brand voice at large sizes only */
+/* Display headings — DM Sans throughout, tightened tracking */
 .hero-title, .section-title, .workflow-title, .cta-title, .sol-hero h1 {
-  font-family: 'Syne', 'DM Sans', sans-serif;
   letter-spacing: -0.015em;
 }
-.stat-number { font-family: 'Syne', 'DM Sans', sans-serif; }
 
 /* Node-graph motif — the money-network brand element */
 .hero {
@@ -606,7 +604,7 @@ footer {
 .door-eyebrow { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
 .door-card.campaigns .door-eyebrow { color: var(--blue); }
 .door-card.legislation .door-eyebrow { color: var(--green); }
-.door-title { font-family: 'Syne', 'DM Sans', sans-serif; font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 12px; line-height: 1.2; }
+.door-title { font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 12px; line-height: 1.2; }
 .door-desc { font-size: 14.5px; color: var(--gray); line-height: 1.7; margin-bottom: 18px; }
 .door-points { list-style: none; margin: 0 0 22px; padding: 0; }
 .door-points li { font-size: 13.5px; color: var(--navy-2); padding: 4px 0 4px 22px; position: relative; }
@@ -630,7 +628,7 @@ footer {
 }
 .leg-band-inner { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; }
 .leg-band-eyebrow { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--green); margin-bottom: 14px; }
-.leg-band-title { font-family: 'Syne', 'DM Sans', sans-serif; font-size: 36px; font-weight: 700; color: white; line-height: 1.2; margin-bottom: 14px; max-width: 640px; }
+.leg-band-title { font-size: 36px; font-weight: 700; color: white; line-height: 1.2; margin-bottom: 14px; max-width: 640px; }
 .leg-band-sub { font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.75; max-width: 640px; margin-bottom: 36px; }
 .leg-band-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 36px; }
 .leg-band-card {
