@@ -569,6 +569,116 @@ footer {
 .hero-right { animation: fadeUp 0.6s ease 0.25s forwards; opacity: 0; }
 
 /* =========================
+   2026 REFRESH — display type, product doors, node motif, legislation band
+   ========================= */
+
+/* Syne for display headings — distinct brand voice at large sizes only */
+.hero-title, .section-title, .workflow-title, .cta-title, .sol-hero h1 {
+  font-family: 'Syne', 'DM Sans', sans-serif;
+  letter-spacing: -0.015em;
+}
+.stat-number { font-family: 'Syne', 'DM Sans', sans-serif; }
+
+/* Node-graph motif — the money-network brand element */
+.hero {
+  background-image:
+    radial-gradient(circle at 88% 12%, rgba(26,86,219,0.05) 0%, transparent 32%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='320' viewBox='0 0 420 320'%3E%3Cg stroke='%231a56db' stroke-opacity='0.10' fill='none'%3E%3Cpath d='M60 240 L160 170 L290 210 L370 110'/%3E%3Cpath d='M160 170 L240 80 L370 110'/%3E%3Cpath d='M60 240 L240 80'/%3E%3C/g%3E%3Cg fill='%231a56db' fill-opacity='0.16'%3E%3Ccircle cx='60' cy='240' r='5'/%3E%3Ccircle cx='160' cy='170' r='7'/%3E%3Ccircle cx='290' cy='210' r='4'/%3E%3Ccircle cx='240' cy='80' r='6'/%3E%3Ccircle cx='370' cy='110' r='5'/%3E%3C/g%3E%3Cg fill='%230e9f6e' fill-opacity='0.22'%3E%3Ccircle cx='160' cy='170' r='3'/%3E%3Ccircle cx='240' cy='80' r='2.5'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: top -30px right -60px;
+}
+
+/* Product doors — the two lines of the platform */
+.doors { padding: 72px 48px 24px; max-width: 1200px; margin: 0 auto; }
+.doors-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.door-card {
+  border: 1px solid var(--border); border-radius: 14px;
+  padding: 36px 32px; background: var(--white);
+  position: relative; overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+}
+.door-card:hover { box-shadow: 0 12px 40px rgba(15,23,42,0.08); transform: translateY(-2px); border-color: #c7d7f5; }
+.door-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+}
+.door-card.campaigns::before { background: linear-gradient(90deg, var(--blue), #60a5fa); }
+.door-card.legislation::before { background: linear-gradient(90deg, var(--green), #34d399); }
+.door-eyebrow { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+.door-card.campaigns .door-eyebrow { color: var(--blue); }
+.door-card.legislation .door-eyebrow { color: var(--green); }
+.door-title { font-family: 'Syne', 'DM Sans', sans-serif; font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 12px; line-height: 1.2; }
+.door-desc { font-size: 14.5px; color: var(--gray); line-height: 1.7; margin-bottom: 18px; }
+.door-points { list-style: none; margin: 0 0 22px; padding: 0; }
+.door-points li { font-size: 13.5px; color: var(--navy-2); padding: 4px 0 4px 22px; position: relative; }
+.door-points li::before { content: '→'; position: absolute; left: 0; font-weight: 600; }
+.door-card.campaigns .door-points li::before { color: var(--blue); }
+.door-card.legislation .door-points li::before { color: var(--green); }
+.door-link { display: inline-block; font-size: 14px; font-weight: 600; text-decoration: none; }
+.door-card.campaigns .door-link { color: var(--blue); }
+.door-card.legislation .door-link { color: var(--green); }
+.door-link:hover { text-decoration: underline; }
+
+/* Legislation band on the homepage — dark section between campaign content */
+.leg-band {
+  background: var(--navy); position: relative; overflow: hidden;
+  padding: 88px 48px;
+}
+.leg-band::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 15% 20%, rgba(14,159,110,0.14) 0%, transparent 55%),
+              radial-gradient(ellipse at 85% 80%, rgba(26,86,219,0.12) 0%, transparent 55%);
+}
+.leg-band-inner { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; }
+.leg-band-eyebrow { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--green); margin-bottom: 14px; }
+.leg-band-title { font-family: 'Syne', 'DM Sans', sans-serif; font-size: 36px; font-weight: 700; color: white; line-height: 1.2; margin-bottom: 14px; max-width: 640px; }
+.leg-band-sub { font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.75; max-width: 640px; margin-bottom: 36px; }
+.leg-band-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 36px; }
+.leg-band-card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px; padding: 20px 18px;
+}
+.leg-band-card-title { font-size: 14px; font-weight: 600; color: white; margin-bottom: 6px; }
+.leg-band-card-desc { font-size: 12.5px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+.leg-band-cta {
+  display: inline-block; background: var(--green); color: white;
+  font-size: 14px; font-weight: 500; padding: 12px 26px; border-radius: 8px;
+  text-decoration: none; transition: background 0.2s;
+}
+.leg-band-cta:hover { background: #0d8f63; }
+.leg-band-cta-secondary { font-size: 14px; color: rgba(255,255,255,0.7); text-decoration: none; margin-left: 20px; }
+.leg-band-cta-secondary:hover { color: white; }
+
+/* Money-network chain diagram (legislation page) */
+.chain { display: flex; align-items: stretch; gap: 0; justify-content: center; flex-wrap: wrap; margin: 40px 0; }
+.chain-node {
+  background: var(--white); border: 1px solid var(--border); border-radius: 12px;
+  padding: 18px 20px; min-width: 150px; max-width: 190px; text-align: center;
+  box-shadow: 0 2px 12px rgba(15,23,42,0.04);
+}
+.chain-node-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-light); margin-bottom: 6px; }
+.chain-node-value { font-size: 14px; font-weight: 600; color: var(--navy); line-height: 1.35; }
+.chain-node-sub { font-size: 11.5px; color: var(--gray); margin-top: 4px; }
+.chain-arrow { display: flex; align-items: center; padding: 0 10px; color: var(--green); font-size: 18px; font-weight: 700; }
+
+/* 3-tier pricing */
+.pricing-grid.three { grid-template-columns: repeat(3, 1fr); max-width: 1100px; margin-left: auto; margin-right: auto; }
+.pricing-header { text-align: center; max-width: 640px; margin: 0 auto; }
+
+@media (max-width: 1024px) {
+  .leg-band-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .doors { padding: 48px 24px 12px; }
+  .doors-grid { grid-template-columns: 1fr; }
+  .leg-band { padding: 64px 24px; }
+  .leg-band-title { font-size: 28px; }
+  .pricing-grid.three { grid-template-columns: 1fr; }
+  .chain { flex-direction: column; align-items: center; gap: 4px; }
+  .chain-arrow { transform: rotate(90deg); padding: 6px 0; }
+  .hero { background-image: none; }
+}
+
+/* =========================
    MOBILE / TABLET RESPONSIVE
    ========================= */
 

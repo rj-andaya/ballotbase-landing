@@ -11,6 +11,41 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ballotbase.io/legislation/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/pricing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/solutions/lobbyists/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/solutions/advocacy/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/solutions/political-consultants/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/solutions/campaign-managers/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/solutions/journalists/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ballotbase.io/solutions/federal/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -37,6 +72,31 @@
   </url>
   <url>
     <loc>https://ballotbase.io/blog/why-cal-access-is-the-most-important-database-nobody-can-use/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/blog/california-filing-tracker/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/blog/california-2026-governors-race-who-is-funded/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/blog/follow-the-money-campaign-finance-signal/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/blog/independent-expenditures-explained/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/blog/money-moves-before-people-do-most-people-miss-it/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
