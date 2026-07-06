@@ -77,6 +77,9 @@
 .guide-why h2 { font-size: 19px; margin: 28px 0 8px; }
 .guide-why .guide-plain { margin: 0 0 18px; }
 .guide-why .guide-explain { margin-top: 18px; }
+.guide-back { margin-top: 22px; font-size: 14px; }
+.guide-back a { color: var(--blue); text-decoration: none; font-weight: 500; }
+.guide-back a:hover { text-decoration: underline; }
 .guide-cov { margin: 18px 0 4px; display: flex; flex-direction: column; gap: 8px; }
 .guide-cov-row { font-size: 14.5px; line-height: 1.55; color: var(--gray); }
 .guide-cov-row a { color: var(--blue); font-weight: 600; text-decoration: none; }
