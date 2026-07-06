@@ -96,6 +96,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ballotbase.io/blog/the-money-went-back-to-work/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ballotbase.io/blog/money-moves-before-people-do-most-people-miss-it/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
