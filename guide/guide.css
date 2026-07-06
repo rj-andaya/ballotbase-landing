@@ -75,6 +75,8 @@
 .guide-issue-quote { font-size: 13px; color: var(--gray); font-style: italic; margin-top: 6px; }
 .guide-why { max-width: 760px; margin-top: 34px; border-top: 1px solid #e5eaf1; padding-top: 8px; }
 .guide-why h2 { font-size: 19px; margin: 28px 0 8px; }
+.guide-why .guide-plain { margin: 0 0 18px; }
+.guide-why .guide-explain { margin-top: 18px; }
 .guide-omni { position: relative; margin: 22px 0 6px; }
 .guide-omni input { width: 100%; box-sizing: border-box; padding: 16px 20px; font-size: 17px; font-family: inherit; border: 2px solid #d7dfe9; border-radius: 14px; }
 .guide-omni input:focus { outline: none; border-color: var(--blue); box-shadow: 0 6px 24px rgba(26,86,219,.1); }
@@ -84,10 +86,10 @@
 .guide-omni-drop a:hover { background: #f0f5ff; }
 .guide-omni-drop a span { font-size: 12.5px; color: var(--gray-light); white-space: nowrap; }
 .guide-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 26px 0; }
-.guide-path { display: block; border: 1.5px solid #e5eaf1; border-radius: 16px; padding: 26px 28px; text-decoration: none; color: inherit; transition: border-color .15s, box-shadow .15s; }
+.guide-path { display: block; border: 1.5px solid #e5eaf1; border-radius: 16px; padding: 0; overflow: hidden; text-decoration: none; color: inherit; transition: border-color .15s, box-shadow .15s; }
 .guide-path:hover { border-color: var(--blue); box-shadow: 0 8px 28px rgba(26,86,219,.1); }
-.guide-path-icon { width: 44px; height: 44px; border-radius: 12px; background: #eff6ff; color: var(--blue); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
-.guide-path-icon svg { width: 24px; height: 24px; }
+.guide-path-img { display: block; width: 100%; height: auto; border-bottom: 1px solid #eef2f7; }
+.guide-path-body { padding: 20px 28px 26px; }
 .guide-path-title { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
 .guide-path p { font-size: 14.5px; line-height: 1.6; color: var(--gray); margin: 0 0 14px; }
 .guide-path-cta { font-size: 14px; font-weight: 600; color: var(--blue); }
