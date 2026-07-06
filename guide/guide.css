@@ -73,10 +73,12 @@
 .guide-issue-tag { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--blue); font-weight: 600; }
 .guide-issue-stance { font-size: 14.5px; line-height: 1.5; margin-top: 4px; }
 .guide-issue-quote { font-size: 13px; color: var(--gray); font-style: italic; margin-top: 6px; }
-.guide-why { max-width: 760px; margin-top: 34px; border-top: 1px solid #e5eaf1; padding-top: 8px; }
+.guide-why { margin-top: 34px; border-top: 1px solid #e5eaf1; padding-top: 8px; }
 .guide-why h2 { font-size: 19px; margin: 28px 0 8px; }
+.guide-why .guide-plain, .guide-why .guide-explain { max-width: 760px; }
 .guide-why .guide-plain { margin: 0 0 18px; }
 .guide-why .guide-explain { margin-top: 18px; }
+#state-waitlist { margin-top: 26px; }
 .guide-back { margin-top: 22px; font-size: 14px; }
 .guide-back a { color: var(--blue); text-decoration: none; font-weight: 500; }
 .guide-back a:hover { text-decoration: underline; }
