@@ -32,6 +32,7 @@
     '    <a href="/pricing/" class="nav-link">Pricing</a>',
     '    <a href="/blog/" class="nav-link">Blog</a>',
     '    <a href="mailto:rj@ballotbase.io" class="nav-link">Contact</a>',
+    '    <a href="/guide/" class="nav-cta-ghost">Voter Guide</a>',
     '    <a href="/#beta" class="nav-cta">Get a Live Demo</a>',
     '  </div>',
     '</nav>'
