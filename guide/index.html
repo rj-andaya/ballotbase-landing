@@ -35,7 +35,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="guide-now">
     Right now:
     <span><b>14</b> measures headed for the ballot</span>
-    <span><b>7</b> bills moving in the Legislature</span>
+    <span><b>6</b> bills moving in the Legislature</span>
     <span><b>2,828</b> candidates running for Congress</span>
   </div>
 
@@ -67,6 +67,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <p class="guide-coverage">Coverage today: congressional candidates nationwide · California bills &amp; ballot
   measures · Sacramento city &amp; county races. More states on the way.</p>
+
+  <div class="guide-waitlist">
+      <b>We're expanding state by state.</b> Want yours next? Leave your email and we'll tell you the moment it's live.
+      <div class="guide-waitlist-form" id="wl-form">
+        <input type="email" id="wl-email" placeholder="you@email.com"/>
+        <select id="wl-state"><option value="">Your state…</option><option value="Alabama">Alabama</option><option value="Alaska">Alaska</option><option value="American Samoa">American Samoa</option><option value="Arizona">Arizona</option><option value="Arkansas">Arkansas</option><option value="Colorado">Colorado</option><option value="Connecticut">Connecticut</option><option value="Delaware">Delaware</option><option value="District of Columbia">District of Columbia</option><option value="Florida">Florida</option><option value="Georgia">Georgia</option><option value="Guam">Guam</option><option value="Hawaii">Hawaii</option><option value="Idaho">Idaho</option><option value="Illinois">Illinois</option><option value="Indiana">Indiana</option><option value="Iowa">Iowa</option><option value="Kansas">Kansas</option><option value="Kentucky">Kentucky</option><option value="Louisiana">Louisiana</option><option value="Maine">Maine</option><option value="Maryland">Maryland</option><option value="Massachusetts">Massachusetts</option><option value="Michigan">Michigan</option><option value="Minnesota">Minnesota</option><option value="Mississippi">Mississippi</option><option value="Missouri">Missouri</option><option value="Montana">Montana</option><option value="Nebraska">Nebraska</option><option value="Nevada">Nevada</option><option value="New Hampshire">New Hampshire</option><option value="New Jersey">New Jersey</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option><option value="Northern Mariana Islands">Northern Mariana Islands</option><option value="Ohio">Ohio</option><option value="Oklahoma">Oklahoma</option><option value="Oregon">Oregon</option><option value="Pennsylvania">Pennsylvania</option><option value="Puerto Rico">Puerto Rico</option><option value="Rhode Island">Rhode Island</option><option value="South Carolina">South Carolina</option><option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option><option value="Texas">Texas</option><option value="U.S. Virgin Islands">U.S. Virgin Islands</option><option value="Utah">Utah</option><option value="Vermont">Vermont</option><option value="Virginia">Virginia</option><option value="Washington">Washington</option><option value="West Virginia">West Virginia</option><option value="Wisconsin">Wisconsin</option><option value="Wyoming">Wyoming</option></select>
+        <button id="wl-btn">Notify me</button>
+      </div>
+      <div id="wl-done" style="display:none">Got it — we'll email you the moment your state goes live.</div>
+    </div>
 
   <div class="guide-why">
     <h2>Why we built this</h2>
@@ -127,6 +137,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') drop.style.display = 'none';
+  });
+})();
+
+(function () {
+  var wlBtn = document.getElementById('wl-btn');
+  if (wlBtn) wlBtn.addEventListener('click', function () {
+    var email = document.getElementById('wl-email').value.trim();
+    var state = document.getElementById('wl-state').value;
+    if (!email || email.indexOf('@') === -1 || !state) return;
+    fetch('https://mvyrtnhkebnxnpmlhzlk.supabase.co/rest/v1/beta_signups', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'apikey': 'sb_publishable_6vCYy76ka4tlVPalGU_tag_qw72BVPd', 'Authorization': 'Bearer sb_publishable_6vCYy76ka4tlVPalGU_tag_qw72BVPd', 'Prefer': 'return=minimal' },
+      body: JSON.stringify({ email: email, source: 'guide-waitlist-' + state })
+    }).catch(function () {});
+    document.getElementById('wl-form').style.display = 'none';
+    document.getElementById('wl-done').style.display = '';
   });
 })();
 </script>
