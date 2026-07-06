@@ -9,7 +9,7 @@
     '    <span class="nav-bars"><span></span><span></span><span></span></span>',
     '  </button>',
     '  <div class="nav-right">',
-    '    <a href="/features/" class="nav-link">Features</a>',
+    '    <a href="/features/" class="nav-link">Campaigns</a>',
     '    <a href="/legislation/" class="nav-link">Legislation</a>',
     '    <div class="nav-dropdown">',
     '      <button class="nav-dropdown-trigger">Solutions ▾</button>',
