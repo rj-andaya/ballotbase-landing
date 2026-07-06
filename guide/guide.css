@@ -1,0 +1,48 @@
+/* BallotBase Voter Guide */
+.guide-wrap { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+.guide-hub { max-width: 880px; }
+.guide-crumb { font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--gray-light); margin-bottom: 14px; }
+.guide-crumb a { color: var(--blue); text-decoration: none; }
+.guide-wrap h1 { font-size: 34px; line-height: 1.15; margin: 0 0 10px; }
+.guide-wrap h2 { font-size: 19px; margin: 36px 0 8px; }
+.guide-sub { color: var(--gray); font-size: 15.5px; margin: 0 0 6px; }
+.guide-hub-sub { max-width: 640px; }
+.guide-status { font-size: 13.5px; color: var(--gray-light); margin: 0; }
+.guide-plain { font-size: 16.5px; line-height: 1.65; }
+.guide-explain { font-size: 13.5px; color: var(--gray); margin: 0 0 12px; }
+.guide-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 26px 0 8px; }
+.guide-stat { background: #f6f8fb; border: 1px solid #e5eaf1; border-radius: 10px; padding: 14px 16px; }
+.guide-stat-num { font-size: 21px; font-weight: 600; }
+.guide-stat-label { font-size: 12px; color: var(--gray-light); margin-top: 2px; }
+.guide-split-bar { display: flex; height: 26px; border-radius: 7px; overflow: hidden; }
+.guide-split-ind { background: #16a34a; }
+.guide-split-org { background: #1a56db; }
+.guide-split-legend { display: flex; gap: 22px; font-size: 13px; margin-top: 8px; color: var(--gray); }
+.guide-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; }
+.guide-dot.ind { background: #16a34a; } .guide-dot.org { background: #1a56db; }
+.guide-donors { display: flex; flex-direction: column; gap: 8px; }
+.guide-donor { display: flex; justify-content: space-between; gap: 16px; background: #f6f8fb; border: 1px solid #e5eaf1; border-radius: 9px; padding: 11px 15px; font-size: 14.5px; }
+.guide-donor b { white-space: nowrap; }
+.guide-mechanics { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 15.5px; line-height: 1.55; }
+.guide-sides { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.guide-side { border: 1px solid #e5eaf1; border-radius: 12px; padding: 16px 18px; }
+.guide-side-label { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--gray-light); }
+.guide-side-total { font-size: 26px; font-weight: 600; margin: 4px 0 12px; }
+.guide-side-top { font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--gray-light); margin-bottom: 6px; }
+.guide-note { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 14px 18px; font-size: 14px; line-height: 1.55; margin-top: 40px; }
+.guide-sources { margin-top: 26px; border-top: 1px solid #e5eaf1; padding-top: 18px; font-size: 13px; color: var(--gray); }
+.guide-sources-label { font-size: 11.5px; letter-spacing: .07em; text-transform: uppercase; color: var(--gray-light); margin-bottom: 6px; }
+.guide-sources ul { padding-left: 18px; margin: 0 0 10px; display: flex; flex-direction: column; gap: 5px; }
+.guide-search { width: 100%; padding: 13px 18px; font-size: 15.5px; border: 1.5px solid #d7dfe9; border-radius: 10px; margin: 26px 0 8px; font-family: inherit; }
+.guide-search:focus { outline: none; border-color: var(--blue); }
+.guide-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.guide-card { display: block; border: 1px solid #e5eaf1; border-radius: 12px; padding: 16px 18px; text-decoration: none; color: inherit; transition: border-color .15s, box-shadow .15s; }
+.guide-card:hover { border-color: var(--blue); box-shadow: 0 4px 14px rgba(26,86,219,.08); }
+.guide-card-kicker { font-size: 11px; letter-spacing: .07em; text-transform: uppercase; color: var(--gray-light); }
+.guide-card-title { font-weight: 600; font-size: 15.5px; margin: 5px 0 7px; line-height: 1.3; }
+.guide-card-stat { font-size: 13px; color: var(--gray); }
+@media (max-width: 768px) {
+  .guide-stats { grid-template-columns: repeat(2, 1fr); }
+  .guide-cards, .guide-sides { grid-template-columns: 1fr; }
+  .guide-wrap h1 { font-size: 27px; }
+}
