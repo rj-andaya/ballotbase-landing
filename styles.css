@@ -1539,3 +1539,18 @@ footer {
   .sol-preview-geo-amt { width: 40px; font-size: 11px; }
   .sol-preview-stat-val { font-size: 18px; }
 }
+
+
+/* Product figure — framed screenshot in the money-layers section */
+.money-figure { max-width: 940px; margin: 44px auto 10px; padding: 0 20px; }
+.money-figure img {
+  width: 100%; height: auto; display: block; background: #fff;
+  border: 1px solid #e2e8f0; border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(15,23,42,.12), 0 3px 10px rgba(15,23,42,.06);
+}
+.money-figure figcaption {
+  margin: 16px auto 0; max-width: 720px; text-align: center;
+  font-size: 14px; line-height: 1.55; color: #64748b;
+}
+.money-figure figcaption b { color: #334155; }
+@media (max-width: 640px) { .money-figure { margin-top: 28px; padding: 0 4px; } }
