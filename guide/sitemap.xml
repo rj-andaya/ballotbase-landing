@@ -25147,13 +25147,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ballotbase.io/guide/bill/ca/ab-130/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ballotbase.io/guide/bill/ca/sb-54/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/ca/ab-130/</loc>
+    <loc>https://ballotbase.io/guide/bill/ca/ab-339/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -25165,7 +25171,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/ca/ab-259/</loc>
+    <loc>https://ballotbase.io/guide/bill/ca/sb-707/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -25177,19 +25183,37 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/ca/sb-707/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://ballotbase.io/guide/bill/ca/sb-98/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/ca/ab-339/</loc>
+    <loc>https://ballotbase.io/guide/bill/ca/ab-259/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/guide/bill/ca/sb-346/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/guide/bill/ca/ab-794/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/guide/bill/ca/sb-72/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/guide/bill/ca/sb-65/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -25207,49 +25231,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/ca/sb-72/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ballotbase.io/guide/bill/ca/sb-908/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ballotbase.io/guide/bill/ca/ab-306/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ballotbase.io/guide/bill/ca/sb-346/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ballotbase.io/guide/bill/ca/sb-7/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ballotbase.io/guide/bill/ca/sb-540/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ballotbase.io/guide/bill/ca/sb-131/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ballotbase.io/guide/bill/ca/ab-104/</loc>
+    <loc>https://ballotbase.io/guide/bill/ca/ab-1207/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -25261,7 +25243,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/ca/ab-1207/</loc>
+    <loc>https://ballotbase.io/guide/bill/ca/sb-253/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/guide/bill/ca/sb-7/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -25273,19 +25261,37 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/ca/ab-1331/</loc>
+    <loc>https://ballotbase.io/guide/bill/ca/sb-540/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/ca/sb-253/</loc>
+    <loc>https://ballotbase.io/guide/bill/ca/ab-104/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/ca/sb-41/</loc>
+    <loc>https://ballotbase.io/guide/bill/ca/sb-63/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/guide/bill/ca/sb-496/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/guide/bill/ca/sb-908/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/guide/bill/ca/sb-131/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -25297,19 +25303,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/ca/sb-239/</loc>
+    <loc>https://ballotbase.io/guide/bill/ca/sb-71/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/ca/sb-254/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ballotbase.io/guide/bill/ca/ab-446/</loc>
+    <loc>https://ballotbase.io/guide/bill/ca/ab-1331/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -25327,7 +25327,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/us/hr-1968/</loc>
+    <loc>https://ballotbase.io/guide/bill/us/hr-3838/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -25339,7 +25339,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/us/hr-3838/</loc>
+    <loc>https://ballotbase.io/guide/bill/us/hr-1968/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -25381,13 +25381,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/us/hr-5342/</loc>
+    <loc>https://ballotbase.io/guide/bill/us/s-2354/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/us/s-2354/</loc>
+    <loc>https://ballotbase.io/guide/bill/us/hr-5342/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -25405,13 +25405,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/us/hr-4754/</loc>
+    <loc>https://ballotbase.io/guide/bill/us/hr-4553/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/us/hr-4553/</loc>
+    <loc>https://ballotbase.io/guide/bill/us/hr-4754/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -25429,13 +25429,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/us/hr-4121/</loc>
+    <loc>https://ballotbase.io/guide/bill/us/hr-4776/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/us/hr-4776/</loc>
+    <loc>https://ballotbase.io/guide/bill/us/hr-4121/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -25453,25 +25453,25 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://ballotbase.io/guide/bill/us/s-3293/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ballotbase.io/guide/bill/us/hr-6938/</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://ballotbase.io/guide/bill/us/hr-3633/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ballotbase.io/guide/bill/us/s-1071/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ballotbase.io/guide/bill/us/hr-471/</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ballotbase.io/guide/bill/us/hr-6938/</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
