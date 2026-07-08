@@ -10,8 +10,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Introducing the BallotBase Filing Tracker: Built for California Treasurers — BallotBase</title>
-<meta name="description" content="BallotBase now tells California campaign treasurers exactly what to file, when to file it, and what's missing — before the deadline hits."/>
+<title>Introducing the BallotBase Filing Tracker: Built for California Treasurers | BallotBase</title>
+<meta name="description" content="BallotBase now tells California campaign treasurers exactly what to file, when to file it, and what's missing, before the deadline hits."/>
 <meta name="author" content="RJ Andaya"/>
 <meta property="article:published_time" content="2026-04-16"/>
 <script type="application/ld+json">
@@ -19,7 +19,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": "Introducing the BallotBase Filing Tracker: Built for California Treasurers",
-  "description": "BallotBase now tells California campaign treasurers exactly what to file, when to file it, and what's missing — before the deadline hits.",
+  "description": "BallotBase now tells California campaign treasurers exactly what to file, when to file it, and what's missing, before the deadline hits.",
   "author": { "@type": "Person", "name": "RJ Andaya" },
   "datePublished": "2026-04-16",
   "publisher": { "@type": "Organization", "name": "BallotBase", "url": "https://ballotbase.io" }
@@ -47,13 +47,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="blog-post-body">
 
-      <p>BallotBase started as an analytics platform — a way to understand what the data inside FEC and Cal-Access actually means. Who your donors are. How your spending compares. Where your money is coming from.</p>
+      <p>BallotBase started as an analytics platform, a way to understand what the data inside FEC and Cal-Access actually means. Who your donors are. How your spending compares. Where your money is coming from.</p>
       <p>That is still the core. But there is another side of campaign finance that nobody has solved well, and it is the one that actually keeps treasurers up at night.</p>
       <p>Filing correctly. On time. With nothing missing.</p>
 
       <h2>The Problem with Filing</h2>
       <p>California FPPC compliance is not complicated in theory. Log your contributions. Log your expenditures. File on time. But in practice, there are enough rules, thresholds, and deadlines layered on top of each other that doing it manually is genuinely error-prone.</p>
-      <p>The threshold rules alone create constant friction. Contributions of $100 or more require employer and occupation. Contributions of $1,000 or more within 90 days of an election trigger Form 497, which must be filed within 24 hours of receipt. Independent expenditures in that same window trigger Form 496. And none of this is surfaced automatically in any existing tool — treasurers either know the rules cold, or they find out they missed something after the fact.</p>
+      <p>The threshold rules alone create constant friction. Contributions of $100 or more require employer and occupation. Contributions of $1,000 or more within 90 days of an election trigger Form 497, which must be filed within 24 hours of receipt. Independent expenditures in that same window trigger Form 496. And none of this is surfaced automatically in any existing tool, treasurers either know the rules cold, or they find out they missed something after the fact.</p>
       <p>The cost of getting it wrong is real. FPPC fines are not trivial. Late filings become public record. And for smaller campaigns without professional compliance support, there is no safety net. You either know the rules or you do not.</p>
 
       <h2>What We Built</h2>
@@ -61,15 +61,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <figure class="blog-post-figure">
         <img src="../../solutions/california/ca-filing-screenshot.png" alt="BallotBase California Filing Tracker showing a transaction ledger with Form 460 and Form 497 badges, inline compliance error flags for missing employer and occupation fields, and an export button blocked until all required fields are complete" />
-        <figcaption>The filing tracker in action — form assignment, inline validation flags, and a compliance summary before export.</figcaption>
+        <figcaption>The filing tracker in action, form assignment, inline validation flags, and a compliance summary before export.</figcaption>
       </figure>
 
       <p>Here is what it does:</p>
-      <p><strong>Automatic form assignment.</strong> Every transaction is classified automatically. A standard contribution in a non-election window goes on Form 460. A $1,500 contribution logged 60 days before the election gets flagged as a Form 497 trigger — and the system tells you the 24-hour filing clock has started. Each entry displays its form badge (F460, F497, F496) directly in the ledger so you always know what you are looking at.</p>
-      <p><strong>Threshold-aware validation.</strong> The system knows that employer and occupation are only required for contributions of $100 or more. Below that threshold, the fields are optional and labeled as such. At $100 and above, they flip to required — and the form shows a red asterisk before you save, not after. The validation logic is running as you type, not at export time.</p>
-      <p><strong>Inline compliance flags.</strong> Entries with missing required fields are highlighted directly in the transaction list — a red tint on the row and specific error labels underneath the entry name. You can see at a glance which records are incomplete. A compliance summary bar above the list shows the total error count, warning count, and any Form 497 triggers across all entries, so nothing hides in a long list.</p>
+      <p><strong>Automatic form assignment.</strong> Every transaction is classified automatically. A standard contribution in a non-election window goes on Form 460. A $1,500 contribution logged 60 days before the election gets flagged as a Form 497 trigger, and the system tells you the 24-hour filing clock has started. Each entry displays its form badge (F460, F497, F496) directly in the ledger so you always know what you are looking at.</p>
+      <p><strong>Threshold-aware validation.</strong> The system knows that employer and occupation are only required for contributions of $100 or more. Below that threshold, the fields are optional and labeled as such. At $100 and above, they flip to required, and the form shows a red asterisk before you save, not after. The validation logic is running as you type, not at export time.</p>
+      <p><strong>Inline compliance flags.</strong> Entries with missing required fields are highlighted directly in the transaction list, a red tint on the row and specific error labels underneath the entry name. You can see at a glance which records are incomplete. A compliance summary bar above the list shows the total error count, warning count, and any Form 497 triggers across all entries, so nothing hides in a long list.</p>
       <p><strong>Edit without losing your work.</strong> Every entry has an edit button that opens a pre-filled form. Fix the missing field, save, and the compliance flag clears immediately. No re-entry, no lost data. The workflow is: log fast, fill in what you have, come back and complete it later.</p>
-      <p><strong>Export gated on compliance.</strong> The .CAL file export does not run until all required fields are present. If there are blocking errors, the export button relabels itself to show exactly how many records need attention. When everything is valid, you export and you are done — a properly formatted Cal-Access .CAL file, ready to submit.</p>
+      <p><strong>Export gated on compliance.</strong> The .CAL file export does not run until all required fields are present. If there are blocking errors, the export button relabels itself to show exactly how many records need attention. When everything is valid, you export and you are done, a properly formatted Cal-Access .CAL file, ready to submit.</p>
 
       <h2>Why We Designed It This Way</h2>
       <p>We thought a lot about whether to block entry entirely when required fields are missing. The answer is no, for a reason that matters in the real world.</p>
@@ -82,7 +82,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p>The longer-term goal is to make this the compliance layer for every state we support. California is the template. Nevada and Oregon are next.</p>
 
       <h2>Who This Is For</h2>
-      <p>This is primarily built for California local campaigns — city council, county races, state legislative challengers — that do not have a dedicated compliance consultant and are managing their own filings. The candidates and treasurers who are doing this themselves, late at night, before a deadline, without a safety net.</p>
+      <p>This is primarily built for California local campaigns, city council, county races, state legislative challengers, that do not have a dedicated compliance consultant and are managing their own filings. The candidates and treasurers who are doing this themselves, late at night, before a deadline, without a safety net.</p>
       <p>If that is you, this is for you. And we want to hear exactly where it is falling short.</p>
 
       <div class="blog-share">
