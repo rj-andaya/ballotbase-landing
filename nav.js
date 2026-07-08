@@ -30,8 +30,14 @@
     '      </div>',
     '    </div>',
     '    <a href="/pricing/" class="nav-link">Pricing</a>',
-    '    <a href="/blog/" class="nav-link">Blog</a>',
-    '    <a href="mailto:rj@ballotbase.io" class="nav-link">Contact</a>',
+    '    <div class="nav-dropdown">',
+    '      <button class="nav-dropdown-trigger">Company ▾</button>',
+    '      <div class="nav-dropdown-menu">',
+    '        <a href="/company/about/" class="nav-dropdown-item">About</a>',
+    '        <a href="/blog/" class="nav-dropdown-item">Blog</a>',
+    '        <a href="mailto:rj@ballotbase.io" class="nav-dropdown-item">Contact</a>',
+    '      </div>',
+    '    </div>',
     '    <a href="/guide/" class="nav-cta-ghost">Voter Guide</a>',
     '    <a href="/#beta" class="nav-cta">Get a Live Demo</a>',
     '  </div>',
@@ -40,21 +46,23 @@
 
   document.currentScript.insertAdjacentHTML('beforebegin', html);
 
-  var dropdown = document.querySelector('.nav-dropdown');
-  if (!dropdown) return;
-  var menu = dropdown.querySelector('.nav-dropdown-menu');
-  var dropTimer;
   function isMobile() { return window.innerWidth <= 768; }
 
-  dropdown.addEventListener('mouseenter', function () { if (isMobile()) return; clearTimeout(dropTimer); menu.style.display = 'block'; });
-  dropdown.addEventListener('mouseleave', function () {
-    if (isMobile()) return;
-    dropTimer = setTimeout(function () { menu.style.display = ''; }, 150);
-  });
-  dropdown.querySelector('.nav-dropdown-trigger').addEventListener('click', function (e) {
-    if (!isMobile()) return;
-    e.stopPropagation();
-    menu.style.display = menu.style.display === 'block' ? '' : 'block';
+  var dropdowns = document.querySelectorAll('.nav-dropdown');
+  dropdowns.forEach(function (dropdown) {
+    var menu = dropdown.querySelector('.nav-dropdown-menu');
+    if (!menu) return;
+    var dropTimer;
+    dropdown.addEventListener('mouseenter', function () { if (isMobile()) return; clearTimeout(dropTimer); menu.style.display = 'block'; });
+    dropdown.addEventListener('mouseleave', function () {
+      if (isMobile()) return;
+      dropTimer = setTimeout(function () { menu.style.display = ''; }, 150);
+    });
+    dropdown.querySelector('.nav-dropdown-trigger').addEventListener('click', function (e) {
+      if (!isMobile()) return;
+      e.stopPropagation();
+      menu.style.display = menu.style.display === 'block' ? '' : 'block';
+    });
   });
 
   document.addEventListener('click', function (e) {
@@ -69,8 +77,7 @@ window.toggleMobileNav = function () {
   var nav = document.querySelector('nav');
   var isOpen = nav.classList.toggle('nav-open');
   if (!isOpen) {
-    var menu = document.querySelector('.nav-dropdown-menu');
-    if (menu) menu.style.display = '';
+    document.querySelectorAll('.nav-dropdown-menu').forEach(function (menu) { menu.style.display = ''; });
   }
 };
 
