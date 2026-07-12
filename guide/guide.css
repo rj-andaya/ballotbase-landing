@@ -16,6 +16,8 @@
 .guide-more summary { cursor: pointer; font-size: 13px; color: var(--gray); padding: 8px 0; user-select: none; }
 .guide-more summary:hover { color: var(--blue); }
 .guide-more[open] summary { margin-bottom: 10px; }
+.guide-district-finder { display: inline-block; font-size: 13px; color: var(--blue); text-decoration: none; margin: 2px 0 10px; padding: 6px 12px; background: #eff6ff; border-radius: 8px; }
+.guide-district-finder:hover { text-decoration: underline; }
 .guide-crumb { font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--gray-light); margin-bottom: 14px; }
 .guide-crumb a { color: var(--blue); text-decoration: none; }
 .guide-wrap h1 { font-size: 34px; line-height: 1.15; margin: 0 0 10px; }
