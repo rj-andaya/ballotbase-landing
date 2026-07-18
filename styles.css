@@ -26,7 +26,7 @@ nav {
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
-  padding: 0 48px; height: 64px;
+  padding: 0 max(40px, calc((100% - 1200px) / 2)); height: 64px;
   display: flex; align-items: center; justify-content: space-between;
 }
 .nav-hamburger {
@@ -1712,6 +1712,7 @@ footer {
 .hp-card {
   border: 1px solid var(--border); border-radius: 12px;
   padding: 30px 28px; background: var(--white); flex: 1;
+  display: flex; flex-direction: column;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .hp-card.flagship {
@@ -1726,11 +1727,6 @@ footer {
   text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue);
 }
 .hp-card:not(.flagship) .hp-card-eyebrow { color: var(--gray); margin-bottom: 12px; display: block; }
-.hp-flag-pill {
-  font-size: 10px; font-weight: 700; letter-spacing: 0.06em;
-  text-transform: uppercase; color: #fff; background: var(--blue);
-  padding: 2px 8px; border-radius: 5px;
-}
 .hp-card-title {
   font-size: 24px; font-weight: 700; color: var(--navy);
   margin-bottom: 12px; line-height: 1.2;
@@ -1739,11 +1735,16 @@ footer {
 .hp-card-desc {
   font-size: 14px; color: #475569; line-height: 1.7; margin-bottom: 16px;
 }
-.hp-card-link {
-  font-size: 14px; font-weight: 600; color: var(--gray); text-decoration: none;
+.hp-card-btn {
+  display: inline-block; align-self: flex-start;
+  margin-top: auto; padding: 11px 20px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; text-decoration: none;
+  border: 1px solid var(--border); background: var(--white); color: var(--navy);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
-.hp-card-link.flagship { color: var(--blue); }
-.hp-card-link:hover { text-decoration: underline; }
+.hp-card-btn:hover { border-color: var(--flag-border); background: var(--paper); }
+.hp-card-btn.primary { background: var(--blue); border-color: var(--blue); color: #fff; }
+.hp-card-btn.primary:hover { background: var(--blue-dark); border-color: var(--blue-dark); }
 
 /* Coded Prospect Map recreation */
 .pm-body { padding: 16px; }
