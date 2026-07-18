@@ -12,7 +12,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="description" content="BallotBase connects campaign finance to the people and bills it moves. Donor intelligence and race briefings for campaigns; bill tracking, money networks, and lobbying signals for lobbyists and advocacy teams."/>
 <title>BallotBase, Campaign Finance &amp; Legislation Intelligence</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
@@ -23,261 +23,144 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="/nav.js"></script>
 
-<div class="hero">
-  <div class="hero-left">
-    <div class="hero-badge">
-      <div class="hero-badge-dot"></div>
-      Now Live, 2026 Cycle
+<!-- Non-partisan bar -->
+<div class="np-bar">
+  <span class="np-bar-strong">NONPARTISAN BY DESIGN</span>
+  <span class="np-sep">·</span>
+  <span class="np-text">We map the money on every side</span>
+  <span class="np-split"><span class="np-split-d"></span><span class="np-split-r"></span></span>
+  <span class="np-split-label">D 50% · R 50%</span>
+</div>
+
+<!-- Hero -->
+<div class="hp-hero">
+  <div class="hp-hero-left">
+    <div class="hp-eyebrow">Legislation &amp; Campaign Finance Intelligence</div>
+    <h1 class="hp-hero-title">See the money behind every bill and vote.</h1>
+    <p class="hp-hero-sub">Bill trackers tell you what happened. BallotBase tells you who paid for it: every vote, hearing and lobbying filing joined to the campaign finance behind it. The same data also powers analyst-grade race and donor intelligence for campaigns.</p>
+    <div class="hp-hero-btns">
+      <a href="#beta" class="hp-btn-primary">Get a Live Demo →</a>
+      <a href="/guide/" class="hp-btn-link">Explore the free Voter Guide →</a>
     </div>
-    <h1 class="hero-title">The money layer of <span>American politics.</span></h1>
-    <p class="hero-sub">BallotBase connects campaign finance to the people and bills it moves. Donor networks, race intelligence, and client-ready briefings for campaigns. Bill tracking, money networks, and lobbying signals for the people working legislation.</p>
-    <div class="sol-hero-btns">
-      <a href="#beta" class="sol-btn-primary">Get a Live Demo →</a>
-      <a href="/guide/" class="sol-btn-secondary">Explore the free Voter Guide</a>
-    </div>
-    <p class="hero-note" style="margin-top:24px;">Built for campaigns, consultants, lobbying firms, advocacy groups, and journalists.</p>
   </div>
-  <div class="hero-right">
-    <div class="dashboard-preview">
-      <div class="db-accent"></div>
-      <div class="db-header-bar">
-        <div class="db-dot r"></div>
-        <div class="db-dot y"></div>
-        <div class="db-dot g"></div>
-        <div class="db-url">ballotbase.io/dashboard/C00030718</div>
+  <div class="hp-hero-right">
+    <div class="hp-frame">
+      <div class="hp-frame-chrome">
+        <span class="hp-frame-dot r"></span>
+        <span class="hp-frame-dot y"></span>
+        <span class="hp-frame-dot g"></span>
+        <span class="hp-frame-url">ballotbase.io/issues/water-infrastructure</span>
       </div>
-      <div class="db-body">
-        <div class="db-sidebar">
-          <div class="db-sidebar-logo">
-            <div class="db-sidebar-title">BallotBase</div>
-            <div class="db-sidebar-sub">CAMPAIGN INTELLIGENCE</div>
-          </div>
-          <div class="db-nav-item active"><div class="db-nav-dot"></div> Overview</div>
-          <div class="db-nav-item"><div class="db-nav-dot"></div> Donors</div>
-          <div class="db-nav-item"><div class="db-nav-dot"></div> Geography</div>
-          <div class="db-nav-item"><div class="db-nav-dot"></div> Spend</div>
-          <div class="db-nav-item"><div class="db-nav-dot"></div> Competitive</div>
+      <img src="ballotbase-kings.png" loading="eager"
+        alt="BallotBase Legislation Intelligence dashboard: the Water Infrastructure Funding issue portfolio tracking Oregon bills, session lobbying spend, and enacted counts, with a bill tracker showing pipeline status and lobbying org counts"/>
+    </div>
+    <p class="hp-hero-caption">Above: a live Legislation Intelligence issue portfolio: bills, pipeline, lobbying spend and enacted counts in one view.</p>
+  </div>
+</div>
+
+<!-- Data-source credibility strip -->
+<div class="hp-sources">
+  <div class="hp-sources-label">Built directly on official disclosure systems</div>
+  <div class="hp-chips">
+    <span class="hp-chip">FEC <span class="hp-chip-sub">· Federal</span></span>
+    <span class="hp-chip">Cal-Access <span class="hp-chip-sub">· California</span></span>
+    <span class="hp-chip">ORESTAR <span class="hp-chip-sub">· Oregon</span></span>
+    <span class="hp-chip">Lobbying &amp; bill records</span>
+  </div>
+</div>
+
+<!-- Two intelligence lines, legislation flagship -->
+<div class="hp-lines">
+  <div class="hp-lines-label">Two intelligence lines, one joined dataset</div>
+  <div class="hp-lines-grid">
+
+    <!-- LEGISLATION column (flagship) -->
+    <div class="hp-col">
+      <div class="hp-visual flagship">
+        <div class="hp-visual-head">
+          <span class="hp-visual-title">Money Network: Proposition 33</span>
+          <span class="hp-live"><span class="hp-live-dot"></span> Live Cal-Access data</span>
         </div>
-        <div class="db-content">
-          <div class="db-committee">
-            <div>
-              <div class="db-committee-name">NATIONAL ASSOCIATION OF REALTORS PAC</div>
-              <div class="db-committee-meta">C00030718 · Federal PAC · 2023–2024</div>
-            </div>
-            <div class="db-live"><div class="db-live-dot"></div> Live FEC data</div>
+        <img class="hp-visual-img" src="shot-money-network.png"
+          alt="BallotBase money-network graph tracing donors and funders through campaign committees to California Proposition 33"/>
+      </div>
+      <div class="hp-card flagship">
+        <div class="hp-card-eyebrow-row">
+          <span class="hp-card-eyebrow">Legislation Intelligence</span>
+          <span class="hp-flag-pill">Flagship</span>
+        </div>
+        <div class="hp-card-title">Bill tracking that knows where the money is</div>
+        <div class="hp-card-desc">Every vote, hearing and amendment enriched with each member's contribution history. Money networks from employer → lobbying firm → bill, plus registration signals before fights go public. Built for lobbying firms, advocacy groups and government agencies.</div>
+        <a href="/legislation/" class="hp-card-link flagship">Explore Legislation Intelligence →</a>
+      </div>
+    </div>
+
+    <!-- CAMPAIGN column -->
+    <div class="hp-col">
+      <div class="hp-visual">
+        <div class="hp-visual-head">
+          <span class="hp-visual-title">Prospect Map · NJ-12 · 2025–2026</span>
+          <span class="pm-zips">42 ZIPS</span>
+        </div>
+        <div class="pm-body">
+          <div class="pm-stats">
+            <div class="pm-stat"><div class="pm-stat-label">Total Zips</div><div class="pm-stat-val">42</div></div>
+            <div class="pm-stat"><div class="pm-stat-label">High Cap.</div><div class="pm-stat-val">18</div></div>
+            <div class="pm-stat"><div class="pm-stat-label">Avg Income</div><div class="pm-stat-val">$121K</div></div>
+            <div class="pm-stat blue"><div class="pm-stat-label">D-lean Cap</div><div class="pm-stat-val">100%</div></div>
           </div>
-          <div class="db-stats">
-            <div class="db-stat">
-              <div class="db-stat-label">Total Raised</div>
-              <div class="db-stat-val">$19.8M</div>
-              <div class="db-stat-sub">2023–2024 cycle</div>
-            </div>
-            <div class="db-stat">
-              <div class="db-stat-label">Total Spent</div>
-              <div class="db-stat-val">$18.2M</div>
-              <div class="db-stat-sub">92% deployed</div>
-            </div>
-            <div class="db-stat">
-              <div class="db-stat-label">Donors</div>
-              <div class="db-stat-val">14,991</div>
-              <div class="db-stat-sub">Nationwide</div>
-            </div>
-            <div class="db-stat">
-              <div class="db-stat-label">Top State</div>
-              <div class="db-stat-val">Florida</div>
-              <div class="db-stat-sub">$822K · 6,556 donors</div>
-            </div>
+          <div class="pm-box">
+            <div class="pm-box-label">Capacity Distribution</div>
+            <div class="pm-bar-row"><span class="pm-bar-name">High</span><span class="pm-track"><span class="pm-fill" style="width:86%;background:#10b981;"></span></span><span class="pm-bar-val">18</span></div>
+            <div class="pm-bar-row"><span class="pm-bar-name">Medium</span><span class="pm-track"><span class="pm-fill" style="width:100%;background:#3b82f6;"></span></span><span class="pm-bar-val">21</span></div>
+            <div class="pm-bar-row"><span class="pm-bar-name">Low</span><span class="pm-track"><span class="pm-fill" style="width:14%;background:#cbd5e1;"></span></span><span class="pm-bar-val">3</span></div>
           </div>
-          <div class="db-geo">
-            <div class="db-geo-title">Spend by Target, Bipartisan</div>
-            <div class="db-geo-row">
-              <div class="db-geo-state" style="color:#ef4444">Cruz, Ted (R-TX)</div>
-              <div class="db-geo-amount">$689K</div>
-              <div class="db-geo-bar-bg"><div class="db-geo-bar" style="width:100%;background:#ef4444"></div></div>
-              <div class="db-geo-pct">Support</div>
+          <div class="pm-2col">
+            <div class="pm-box">
+              <div class="pm-box-label">Partisan Lean</div>
+              <div class="pm-bar-row"><span class="pm-bar-name dem">Dem</span><span class="pm-track"><span class="pm-fill" style="width:98%;background:#3b82f6;"></span></span><span class="pm-bar-val">98%</span></div>
+              <div class="pm-bar-row"><span class="pm-bar-name rep">Rep</span><span class="pm-track"><span class="pm-fill" style="width:2%;background:#ef4444;"></span></span><span class="pm-bar-val">2%</span></div>
             </div>
-            <div class="db-geo-row">
-              <div class="db-geo-state" style="color:#ef4444">Cornyn, John (R-TX)</div>
-              <div class="db-geo-amount">$576K</div>
-              <div class="db-geo-bar-bg"><div class="db-geo-bar" style="width:84%;background:#ef4444"></div></div>
-              <div class="db-geo-pct">Support</div>
-            </div>
-            <div class="db-geo-row">
-              <div class="db-geo-state" style="color:#3b82f6">Brown, Sherrod (D-OH)</div>
-              <div class="db-geo-amount">$446K</div>
-              <div class="db-geo-bar-bg"><div class="db-geo-bar" style="width:65%;background:#3b82f6"></div></div>
-              <div class="db-geo-pct">Support</div>
-            </div>
-            <div class="db-geo-row">
-              <div class="db-geo-state" style="color:#ef4444">Gonzales, Tony (R-TX)</div>
-              <div class="db-geo-amount">$390K</div>
-              <div class="db-geo-bar-bg"><div class="db-geo-bar" style="width:57%;background:#ef4444"></div></div>
-              <div class="db-geo-pct">Support</div>
+            <div class="pm-box">
+              <div class="pm-box-label">Top Hotspot Zips</div>
+              <div class="pm-zip-row"><span class="pm-zip">08502</span><span class="pm-zip-inc">$223K</span><span class="pm-zip-lean">D-lean</span></div>
+              <div class="pm-zip-row"><span class="pm-zip">08550</span><span class="pm-zip-inc">$207K</span><span class="pm-zip-lean">D-lean</span></div>
+              <div class="pm-zip-row"><span class="pm-zip">08558</span><span class="pm-zip-inc">$241K</span><span class="pm-zip-lean">D-lean</span></div>
             </div>
           </div>
         </div>
       </div>
+      <div class="hp-card">
+        <div class="hp-card-eyebrow">Campaign Intelligence</div>
+        <div class="hp-card-title sm">We also cover race &amp; donor analytics</div>
+        <div class="hp-card-desc">The same joined data powers analyst-grade race intelligence for campaigns and consultants: prospect maps, donor targeting, IE tracking, and client-ready briefings in one click.</div>
+        <a href="/features/" class="hp-card-link">Explore campaign tools →</a>
+      </div>
     </div>
+
   </div>
 </div>
 
-<div class="gradient-line"></div>
-
-<!-- The Stack, the moat, made visible -->
-<div class="stack">
-  <div class="stack-inner">
-    <div class="section-eyebrow" style="text-align:center;">Why BallotBase</div>
-    <h2 class="section-title" style="text-align:center;">Every layer of political money. One system.</h2>
-    <p class="stack-sub">Disclosure data lives in silos, a federal database, fifty state systems, thousands of city clerks, each with its own format and its own walls. BallotBase joins the layers, so the money can be followed wherever it goes.</p>
-
-    <figure class="money-figure">
-      <img src="shot-money-network.png" width="1080" height="770" loading="lazy"
-        alt="BallotBase money-network graph tracing $88.8M from real-estate interests to the campaigns opposing California Proposition 33 rent control"/>
-      <figcaption><b>One view, real filings:</b> $88.8M from the California Apartment Association and other real-estate interests, traced to the campaigns that fought Prop&nbsp;33's rent-control measure. Every dollar from official disclosures.</figcaption>
-    </figure>
-
-    <div class="stack-layers">
-      <div class="stack-layer">
-        <div class="stack-layer-label">FEDERAL</div>
-        <div class="stack-layer-body"><b>FEC</b>, 100M+ contribution records, live independent-expenditure filings, all 50 states</div>
-      </div>
-      <div class="stack-connector">↓ joined ↓</div>
-      <div class="stack-layer">
-        <div class="stack-layer-label">STATE</div>
-        <div class="stack-layer-body"><b>California, Oregon, Nevada &amp; South Dakota</b>, campaign finance from each state's official system (Cal-Access, ORESTAR, AURORA, CFRS), plus state lobbying disclosures</div>
-      </div>
-      <div class="stack-connector">↓ joined ↓</div>
-      <div class="stack-layer">
-        <div class="stack-layer-label">COUNTY &amp; CITY</div>
-        <div class="stack-layer-body"><b>221 California local agencies</b>, council, mayor, supervisor, and school-board races, down to 24-hour late-money filings</div>
-      </div>
-      <div class="stack-connector">↓ joined ↓</div>
-      <div class="stack-layer accent">
-        <div class="stack-layer-label">LEGISLATION, VOTES &amp; LOBBYING</div>
-        <div class="stack-layer-body"><b>Bills, roll-call votes, and 850K+ lobbying disclosures</b>, connected to the money above them, so you can see who funded the members who cast each vote</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Two product lines -->
-<div class="doors">
-  <div class="doors-grid">
-    <div class="door-card campaigns">
-      <div class="door-eyebrow">For Campaigns &amp; Consultants</div>
-      <div class="door-title">Campaign Intelligence</div>
-      <div class="door-desc">Analyst-grade race intelligence for federal, state, county, and city races, without the data work.</div>
-      <ul class="door-points">
-        <li>Donor intelligence and prospect targeting by zip</li>
-        <li>Competitive benchmarking and IE tracking</li>
-        <li>Real-time alerts when the money moves, down to city hall</li>
-        <li>Client-ready AI briefings in one click</li>
-      </ul>
-      <a href="/features/" class="door-link">Explore campaign tools →</a>
-    </div>
-    <div class="door-card legislation">
-      <div class="door-eyebrow">For Lobbying Firms &amp; Advocacy</div>
-      <div class="door-title">Legislation Intelligence</div>
-      <div class="door-desc">Bill tracking that knows where the money is. The only platform that connects legislation to the campaign finance behind it.</div>
-      <ul class="door-points">
-        <li>Every vote enriched with contribution data</li>
-        <li>Money networks: employer → lobbying firm → bill</li>
-        <li>Lobbying registration signals before fights go public</li>
-        <li>Issue portfolios, contact tracking, and client reports</li>
-      </ul>
-      <a href="/legislation/" class="door-link">Explore legislation tools →</a>
-    </div>
-  </div>
-</div>
-
-<!-- Campaign glimpse, the Today screen story -->
-<div class="glimpse">
-  <div class="glimpse-inner">
-    <div>
-      <div class="section-eyebrow">For Campaigns</div>
-      <h2 class="section-title">Know your morning numbers.</h2>
-      <p class="glimpse-sub">The Today screen opens with everything a campaign manager asks before coffee: yesterday's take, pace against the filing deadline, money that moved against you overnight, and who to call today. Delivered to your inbox at 6:30am, too.</p>
-      <a href="/features/" class="door-link" style="color:var(--blue);">Explore Campaign Intelligence →</a>
-    </div>
-    <div class="glimpse-card">
-      <div class="glimpse-row urgent"><span class="glimpse-chip">9 days</span> FEC Q2 Quarterly, $184,220 raised this period</div>
-      <div class="glimpse-row"><b>Yesterday:</b> $4,310 · 38 gifts &nbsp;·&nbsp; <b>Pace:</b> <span style="color:#15803d;font-weight:700">ON PACE</span> (61% of goal)</div>
-      <div class="glimpse-row alert"><b>Money moved in your race:</b> outside committee IE, $25,000 opposing, filed yesterday</div>
-      <div class="glimpse-row"><b>Call list:</b> 8 lapsed donors worth a ring · $3,400 in open pledges</div>
-    </div>
-  </div>
-</div>
-
-<!-- Legislation Intelligence -->
-<div class="leg-band">
-  <div class="leg-band-inner">
-    <div class="leg-band-eyebrow">Legislation Intelligence</div>
-    <h2 class="leg-band-title">Bill trackers tell you what happened. BallotBase tells you who paid for it.</h2>
-    <p class="leg-band-sub">The only legislation platform built on campaign finance data. Track bills, votes, and hearings, then see the donors, lobbying firms, and money networks moving behind them.</p>
-    <div class="leg-band-grid">
-      <div class="leg-band-card">
-        <div class="leg-band-card-title">Money-aware bill tracking</div>
-        <div class="leg-band-card-desc">Every floor vote enriched with each legislator's contribution history. Stage, hearing, amendment, and vote alerts.</div>
-      </div>
-      <div class="leg-band-card">
-        <div class="leg-band-card-title">The full money network</div>
-        <div class="leg-band-card-desc">Employer → lobbying firm → bill → campaign contributions, traced across state and city disclosures.</div>
-      </div>
-      <div class="leg-band-card">
-        <div class="leg-band-card-title">Registration signals</div>
-        <div class="leg-band-card-desc">Know when new lobbying registrations, clients, and clusters form around your issues, before the fight is public.</div>
-      </div>
-      <div class="leg-band-card">
-        <div class="leg-band-card-title">Client-ready workflow</div>
-        <div class="leg-band-card-desc">Issue portfolios, coalition tracking, contact tracking, AI client reports, and compliance calendars in one place.</div>
-      </div>
-    </div>
-    <a href="/legislation/" class="leg-band-cta">Explore Legislation Intelligence →</a>
-    <a href="/solutions/lobbyists/" class="leg-band-cta-secondary">Built for lobbying firms →</a>
-  </div>
-</div>
-
-<!-- Who It's For -->
-<div class="sol-uses">
-  <div class="sol-uses-inner">
-    <h2 class="section-title">Built for everyone who works the money side of politics.</h2>
-    <div class="sol-uses-grid">
-      <div class="sol-use-card">
-        <div class="sol-use-title">Political Consultants</div>
-        <div class="sol-use-desc">Race briefings in minutes, not days. Donor intelligence your competitors don't have. Real-time alerts when the money moves. Workspaces to keep clients organized.</div>
-        <a href="/solutions/political-consultants/" style="display:inline-block;margin-top:16px;font-size:13px;font-weight:600;color:var(--blue);text-decoration:none;">See how it works for consultants →</a>
-      </div>
-      <div class="sol-use-card">
-        <div class="sol-use-title">Campaign Managers</div>
-        <div class="sol-use-desc">Know your numbers. Know your opponent's numbers. Understand your donor base. Get alerted when a major check drops on the other side.</div>
-        <a href="/solutions/campaign-managers/" style="display:inline-block;margin-top:16px;font-size:13px;font-weight:600;color:var(--blue);text-decoration:none;">See how it works for campaigns →</a>
-      </div>
-      <div class="sol-use-card">
-        <div class="sol-use-title">Lobbying Firms</div>
-        <div class="sol-use-desc">Track the bills. See the money behind them. Know when new players register around your issues. Ship client reports that write themselves.</div>
-        <a href="/solutions/lobbyists/" style="display:inline-block;margin-top:16px;font-size:13px;font-weight:600;color:var(--blue);text-decoration:none;">See how it works for lobbyists →</a>
-      </div>
-      <div class="sol-use-card">
-        <div class="sol-use-title">Advocacy Groups</div>
-        <div class="sol-use-desc">Take an idea from concept to introduced bill or ballot measure. See who's funding the opposition. Find the districts where your message lands.</div>
-        <a href="/solutions/advocacy/" style="display:inline-block;margin-top:16px;font-size:13px;font-weight:600;color:var(--blue);text-decoration:none;">See how it works for advocacy →</a>
-      </div>
-      <div class="sol-use-card">
-        <div class="sol-use-title">Journalists</div>
-        <div class="sol-use-desc">The FEC data is public. Getting to the story isn't. BallotBase makes it fast.</div>
-        <a href="/solutions/journalists/" style="display:inline-block;margin-top:16px;font-size:13px;font-weight:600;color:var(--blue);text-decoration:none;">See how it works for journalists →</a>
-      </div>
-    </div>
+<!-- Audience row -->
+<div class="hp-aud">
+  <div class="hp-aud-label">Who works the money side of politics with BallotBase</div>
+  <div class="hp-aud-pills">
+    <span class="hp-pill">Campaign Managers</span>
+    <span class="hp-pill">Political Consultants</span>
+    <span class="hp-pill">Lobbying Firms</span>
+    <span class="hp-pill">Advocacy Groups</span>
+    <span class="hp-pill">Journalists</span>
+    <span class="hp-pill gov">Government Agencies ✦</span>
   </div>
 </div>
 
 <div class="cta" id="beta">
   <div class="cta-inner">
-    <h2 class="cta-title">See BallotBase on a race you actually care about.</h2>
-    <p class="cta-sub">Request a demo and we'll walk you through a live race briefing. Donor intelligence, IE mapping, and Money Map output. A real race, real data.</p>
+    <h2 class="cta-title">See BallotBase on a bill you're already watching.</h2>
+    <p class="cta-sub">A live walkthrough on real disclosure data: the money behind the vote, lobbying signals, and Money Map output. We reach out within 24 hours.</p>
     <div class="cta-form" id="cta-form">
       <input type="email" id="cta-email" placeholder="Your work email" />
-      <button onclick="submitEmail('cta')">Get a Live Demo</button>
+      <button onclick="submitEmail('cta')">Get a Demo</button>
     </div>
     <div class="cta-success" id="cta-success">🎉 You're on the list! We'll reach out within 24 hours.</div>
     <p class="cta-note">No credit card required. We'll reach out personally within 24 hours.</p>
