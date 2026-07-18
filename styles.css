@@ -15,7 +15,6 @@
   --paper-alt: #eef1f6;
   --border-2: #eef1f5;
   --flag-border: #bcd0f2;
-  --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -1568,14 +1567,13 @@ footer {
 
 /* Non-partisan bar */
 .np-bar {
-  max-width: 1200px;
-  margin: 64px auto 0; /* clear the fixed 64px nav; align to page container */
+  margin-top: 64px; /* clear the fixed 64px nav */
   background: var(--paper-alt);
   border-bottom: 1px solid var(--border);
   padding: 10px 40px;
   display: flex; align-items: center; justify-content: center;
   gap: 16px; flex-wrap: wrap;
-  font-family: var(--mono); font-size: 12px; color: var(--gray);
+  font-size: 12px; color: var(--gray);
   letter-spacing: 0.02em;
 }
 .np-bar-strong { color: var(--navy); font-weight: 600; }
@@ -1592,12 +1590,13 @@ footer {
 .hp-hero {
   background: var(--paper);
   padding: 58px 40px 20px;
+}
+.hp-hero-inner {
   max-width: 1200px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 52px; align-items: center;
 }
 .hp-eyebrow {
-  font-family: var(--mono);
   font-size: 12px; font-weight: 500; letter-spacing: 0.16em;
   text-transform: uppercase; color: var(--blue); margin-bottom: 20px;
 }
@@ -1641,32 +1640,30 @@ footer {
 .hp-frame-dot.g { background: #28c840; }
 .hp-frame-url {
   flex: 1; margin-left: 6px; background: #f1f5f9; border-radius: 4px;
-  padding: 3px 10px; font-family: var(--mono); font-size: 10px; color: var(--gray-light);
+  padding: 3px 10px; font-size: 10px; color: var(--gray-light);
 }
 .hp-frame img { display: block; width: 100%; height: auto; }
 .hp-hero-caption {
-  font-family: var(--mono); font-size: 12px; color: var(--gray-light);
+  font-size: 12px; color: var(--gray-light);
   text-align: center; margin-top: 14px; line-height: 1.6;
 }
 
 /* Data-source credibility strip */
 .hp-sources {
-  max-width: 1200px;
-  margin: 0 auto;
   background: var(--paper-alt);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 22px 40px;
 }
 .hp-sources-label {
-  font-family: var(--mono); font-size: 10px; color: var(--gray-light);
+  font-size: 10px; color: var(--gray-light);
   letter-spacing: 0.14em; text-transform: uppercase; text-align: center;
   margin-bottom: 14px;
 }
 .hp-chips {
   display: flex; align-items: center; justify-content: center;
   gap: 14px; flex-wrap: wrap;
-  font-family: var(--mono); font-size: 13px; color: #334155;
+  font-size: 13px; color: #334155;
 }
 .hp-chip {
   border: 1px solid #d7dce4; background: var(--white);
@@ -1678,10 +1675,10 @@ footer {
 .hp-lines {
   background: var(--paper);
   padding: 56px 40px 24px;
-  max-width: 1200px; margin: 0 auto;
 }
+.hp-lines-inner { max-width: 1200px; margin: 0 auto; }
 .hp-lines-label {
-  font-family: var(--mono); font-size: 10px; color: var(--gray-light);
+  font-size: 10px; color: var(--gray-light);
   letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 18px;
 }
 .hp-lines-grid {
@@ -1714,7 +1711,7 @@ footer {
   display: block; width: 100%; height: 302px;
   object-fit: cover; object-position: left top;
 }
-.pm-zips { font-family: var(--mono); font-size: 10px; color: var(--gray-light); }
+.pm-zips { font-size: 10px; color: var(--gray-light); }
 
 /* Column text card */
 .hp-card {
@@ -1730,7 +1727,7 @@ footer {
 .hp-card.flagship:hover { box-shadow: 0 14px 40px -14px rgba(26,86,219,0.35); }
 .hp-card-eyebrow-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .hp-card-eyebrow {
-  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  font-size: 11px; font-weight: 600;
   text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue);
 }
 .hp-card:not(.flagship) .hp-card-eyebrow { color: var(--gray); margin-bottom: 12px; display: block; }
@@ -1762,7 +1759,7 @@ footer {
   font-size: 8px; color: var(--gray-light); text-transform: uppercase;
   letter-spacing: 0.06em; margin-bottom: 4px;
 }
-.pm-stat-val { font-family: var(--mono); font-size: 17px; font-weight: 600; color: var(--navy); }
+.pm-stat-val { font-size: 17px; font-weight: 600; color: var(--navy); }
 .pm-stat.blue .pm-stat-val { color: #3b82f6; }
 .pm-box { border: 1px solid var(--border-2); border-radius: 8px; padding: 12px; margin-bottom: 10px; }
 .pm-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
@@ -1773,7 +1770,7 @@ footer {
 }
 .pm-bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
 .pm-bar-row:last-child { margin-bottom: 0; }
-.pm-bar-name { width: 46px; font-family: var(--mono); font-size: 10px; color: #475569; }
+.pm-bar-name { width: 46px; font-size: 10px; color: #475569; }
 .pm-2col .pm-bar-row { gap: 6px; }
 .pm-2col .pm-bar-name { width: 26px; }
 .pm-bar-name.dem { color: #3b82f6; }
@@ -1781,13 +1778,13 @@ footer {
 .pm-track { flex: 1; height: 7px; background: #f1f5f9; border-radius: 4px; overflow: hidden; }
 .pm-fill { display: block; height: 100%; }
 .pm-bar-val {
-  font-family: var(--mono); font-size: 10px; color: var(--navy);
+  font-size: 10px; color: var(--navy);
   width: 18px; text-align: right;
 }
 .pm-2col .pm-bar-val { width: 26px; }
 .pm-zip-row {
   display: flex; align-items: center; justify-content: space-between;
-  font-family: var(--mono); font-size: 10px; margin-bottom: 5px;
+  font-size: 10px; margin-bottom: 5px;
 }
 .pm-zip-row:last-child { margin-bottom: 0; }
 .pm-zip { color: var(--navy); }
@@ -1795,9 +1792,9 @@ footer {
 .pm-zip-lean { color: #3b82f6; }
 
 /* Audience row */
-.hp-aud { max-width: 1200px; margin: 0 auto; background: var(--paper); padding: 44px 40px 56px; }
+.hp-aud { background: var(--paper); padding: 44px 40px 56px; }
 .hp-aud-label {
-  font-family: var(--mono); font-size: 10px; color: var(--gray-light);
+  font-size: 10px; color: var(--gray-light);
   letter-spacing: 0.14em; text-transform: uppercase; text-align: center;
   margin-bottom: 20px;
 }
@@ -1813,11 +1810,13 @@ footer {
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .hp-hero { padding: 48px 24px 20px; gap: 40px; }
+  .hp-hero { padding: 48px 24px 20px; }
+  .hp-hero-inner { gap: 40px; }
   .np-bar, .hp-sources, .hp-lines, .hp-aud { padding-left: 24px; padding-right: 24px; }
 }
 @media (max-width: 768px) {
-  .hp-hero { grid-template-columns: 1fr; padding: 40px 16px 16px; gap: 32px; }
+  .hp-hero { padding: 40px 16px 16px; }
+  .hp-hero-inner { grid-template-columns: 1fr; gap: 32px; }
   .hp-hero-title { font-size: 38px; }
   .hp-lines-grid { grid-template-columns: 1fr; }
   .hp-visual-img { height: auto; }
