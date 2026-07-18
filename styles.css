@@ -1568,7 +1568,8 @@ footer {
 
 /* Non-partisan bar */
 .np-bar {
-  margin-top: 64px; /* clear the fixed 64px nav */
+  max-width: 1200px;
+  margin: 64px auto 0; /* clear the fixed 64px nav; align to page container */
   background: var(--paper-alt);
   border-bottom: 1px solid var(--border);
   padding: 10px 40px;
@@ -1650,6 +1651,8 @@ footer {
 
 /* Data-source credibility strip */
 .hp-sources {
+  max-width: 1200px;
+  margin: 0 auto;
   background: var(--paper-alt);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
@@ -1792,7 +1795,7 @@ footer {
 .pm-zip-lean { color: #3b82f6; }
 
 /* Audience row */
-.hp-aud { background: var(--paper); padding: 44px 40px 56px; }
+.hp-aud { max-width: 1200px; margin: 0 auto; background: var(--paper); padding: 44px 40px 56px; }
 .hp-aud-label {
   font-family: var(--mono); font-size: 10px; color: var(--gray-light);
   letter-spacing: 0.14em; text-transform: uppercase; text-align: center;
