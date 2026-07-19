@@ -14,51 +14,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="description" content="Bill tracking built on campaign finance data. Track bills, votes, and hearings, then see the donors, lobbying firms, and money networks moving behind them. For lobbying firms and advocacy groups."/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="../styles.css"/>
-<style>
-  .sol-features .section-eyebrow,
-  .sol-features .section-title,
-  .sol-features .section-sub,
-  .sol-uses-inner > .section-eyebrow,
-  .sol-uses-inner > .section-title,
-  .sol-uses-inner > h2 { text-align: center; }
-  .sol-features .section-sub { margin-left: auto; margin-right: auto; }
-  .chain-section { padding: 88px 48px; background: var(--light); }
-  .chain-section-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
-  .chain-note { font-size: 13px; color: var(--gray); max-width: 560px; margin: 0 auto; line-height: 1.7; }
-
-  /* Money Tripwire */
-  .trip-section { padding: 96px 48px; background: var(--navy); position: relative; overflow: hidden; }
-  .trip-section::before { content:""; position:absolute; inset:0; background:
-    radial-gradient(680px 340px at 80% -10%, rgba(14,159,110,0.18), transparent 70%),
-    radial-gradient(560px 300px at 10% 120%, rgba(59,130,246,0.14), transparent 70%); pointer-events:none; }
-  .trip-inner { max-width: 1000px; margin: 0 auto; position: relative; text-align: center; }
-  .trip-eyebrow { display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:600;
-    letter-spacing:0.14em; text-transform:uppercase; color:#5eead4; margin-bottom:22px; }
-  .trip-eyebrow .trip-new { background: var(--green); color:#04241a; font-weight:700; letter-spacing:0.06em;
-    font-size:10px; padding:2px 7px; border-radius:999px; text-transform:uppercase; }
-  .trip-headline { font-size: 42px; line-height: 1.1; font-weight: 500; color: #fff; margin: 0 auto 20px; max-width: 760px; letter-spacing:-0.02em; }
-  .trip-sub { font-size: 17px; line-height: 1.8; color: #cbd5e1; max-width: 640px; margin: 0 auto 44px; }
-  .trip-hit { background: rgba(255,255,255,0.04); border: 1px solid rgba(148,163,184,0.22); border-radius: 16px;
-    max-width: 560px; margin: 0 auto; text-align: left; box-shadow: 0 24px 60px -30px rgba(0,0,0,0.8); backdrop-filter: blur(4px); }
-  .trip-hit-head { display:flex; align-items:center; justify-content:space-between; padding: 12px 18px;
-    border-bottom: 1px solid rgba(148,163,184,0.18); font-size:12px; font-weight:600; color:#94a3b8; letter-spacing:0.04em; text-transform:uppercase; }
-  .trip-hit-pill { display:inline-flex; align-items:center; gap:6px; background: rgba(245,158,11,0.14); color:#fbbf24;
-    border:1px solid rgba(245,158,11,0.3); font-size:11px; font-weight:700; padding:3px 9px; border-radius:999px; letter-spacing:0.02em; text-transform:none; }
-  .trip-hit-body { padding: 16px 18px 18px; }
-  .trip-flow { display:flex; align-items:center; gap:12px; }
-  .trip-chip { flex:1; min-width:0; }
-  .trip-chip-label { font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#64748b; margin-bottom:3px; }
-  .trip-chip-name { font-size:15px; font-weight:500; color:#f1f5f9; line-height:1.25; }
-  .trip-flow-arrow { color:#5eead4; font-size:20px; flex-shrink:0; }
-  .trip-amt { font-size:20px; font-weight:600; color:#34d399; flex-shrink:0; }
-  .trip-hit-note { margin-top:14px; padding-top:13px; border-top:1px solid rgba(148,163,184,0.14);
-    font-size:12.5px; color:#94a3b8; line-height:1.6; }
-  .trip-quote { margin: 48px auto 0; max-width: 640px; }
-  .trip-quote-line { font-size: 22px; font-weight: 500; color:#fff; line-height:1.4; letter-spacing:-0.01em; }
-  .trip-quote-line .hl { color:#5eead4; }
-  .trip-quote-sub { font-size:15px; color:#94a3b8; line-height:1.75; margin-top:14px; }
-  @media (max-width:720px){ .trip-headline{font-size:32px;} .trip-section{padding:72px 24px;} }
-</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -68,274 +23,370 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="/nav.js"></script>
 
+<!-- Non-partisan bar -->
+<div class="np-bar">
+  <span class="np-bar-strong">NONPARTISAN BY DESIGN</span>
+  <span class="np-sep">·</span>
+  <span class="np-text">We map the money on every side of every bill</span>
+  <span class="np-split"><span class="np-split-d"></span><span class="np-split-r"></span></span>
+</div>
+
 <!-- HERO -->
-<div class="sol-hero">
-  <div class="sol-eyebrow">Legislation Intelligence</div>
-  <h1>Follow the whole fight, from the first draft to the final vote.</h1>
-  <p>Every bill and ballot measure, the money and lobbying moving it, and an alert when the players you're watching make their move. The full lifecycle of a policy fight, in one system.</p>
-  <div class="sol-hero-btns">
-    <a href="/#beta" class="sol-btn-primary">Get a Live Demo →</a>
-    <a href="/solutions/lobbyists/" class="sol-btn-secondary">Built for Lobbying Firms</a>
+<div class="leg-hero">
+  <div class="leg-hero-inner">
+    <div class="leg-hero-grid">
+      <div>
+        <div class="leg-eyebrow">Legislation Intelligence</div>
+        <h1 class="leg-hero-title">Follow the whole fight, from the first draft to the final vote.</h1>
+        <p class="leg-hero-sub">Every bill and ballot measure, the money and lobbying moving it, and an alert when the players you're watching make their move. The full lifecycle of a policy fight, in one place.</p>
+        <div class="leg-hero-btns">
+          <a href="#beta" class="hp-btn-primary">Get a Live Demo →</a>
+          <a href="/solutions/lobbyists/" class="hp-btn-link">Built for lobbying firms →</a>
+        </div>
+      </div>
+      <div class="hp-frame">
+        <div class="hp-frame-chrome">
+          <span class="hp-frame-dot r"></span>
+          <span class="hp-frame-dot y"></span>
+          <span class="hp-frame-dot g"></span>
+          <span class="hp-frame-url">ballotbase.io/bill/CA/AB-1414</span>
+        </div>
+        <img class="leg-hero-img" src="bill-overview.png"
+          alt="BallotBase bill page for AB 1414 showing status pipeline, vote analytics, bill summary and coalition map"/>
+      </div>
+    </div>
+    <p class="leg-hero-caption">A real tracked bill: AB 1414, a landlord-tenant broadband fight with a dozen organizations lobbying both sides.</p>
   </div>
 </div>
 
 <!-- THE MONEY NETWORK -->
-<div class="chain-section">
-  <div class="chain-section-inner">
-    <div class="section-eyebrow">The Money Network</div>
-    <h2 class="section-title">Follow one bill all the way through the money.</h2>
-    <div class="chain">
-      <div class="chain-node">
-        <div class="chain-node-label">Interest</div>
-        <div class="chain-node-value">Industry Trade Association</div>
-        <div class="chain-node-sub">Registered lobbyist employer</div>
+<div class="net-section">
+  <div class="net-inner">
+    <div class="net-eyebrow">The Money Network</div>
+    <h2 class="net-title">Follow one bill all the way through the money.</h2>
+    <div class="net-chain">
+      <div class="net-node">
+        <div class="net-node-label">Interest</div>
+        <div class="net-node-value">Industry Trade Association</div>
+        <div class="net-node-sub">Registered lobbyist employer</div>
       </div>
-      <div class="chain-arrow">→</div>
-      <div class="chain-node">
-        <div class="chain-node-label">Hires</div>
-        <div class="chain-node-value">Capitol Lobbying Firm</div>
-        <div class="chain-node-sub">$35,000 in quarterly fees</div>
+      <div class="net-arrow">→</div>
+      <div class="net-node">
+        <div class="net-node-label">Hires</div>
+        <div class="net-node-value">Capitol Lobbying Firm</div>
+        <div class="net-node-sub fee">$35,000 a quarter</div>
       </div>
-      <div class="chain-arrow">→</div>
-      <div class="chain-node">
-        <div class="chain-node-label">Lobbies</div>
-        <div class="chain-node-value">AB 1234, Housing</div>
-        <div class="chain-node-sub">Named in quarterly disclosures</div>
+      <div class="net-arrow">→</div>
+      <div class="net-node">
+        <div class="net-node-label">Lobbies</div>
+        <div class="net-node-value">AB 1234, Housing</div>
+        <div class="net-node-sub">Named in quarterly disclosures</div>
       </div>
-      <div class="chain-arrow">→</div>
-      <div class="chain-node">
-        <div class="chain-node-label">Meanwhile</div>
-        <div class="chain-node-value">$12,500 in contributions</div>
-        <div class="chain-node-sub">To members voting on the bill</div>
+      <div class="net-arrow">→</div>
+      <div class="net-node hl">
+        <div class="net-node-label">Meanwhile</div>
+        <div class="net-node-value">$12,500 contributed</div>
+        <div class="net-node-sub">To members voting on the bill</div>
       </div>
     </div>
-    <p class="chain-note">Every link in this chain is public record, scattered across registration filings, quarterly disclosures, and campaign reports at the state and city level. BallotBase joins them into one picture, automatically.</p>
+    <p class="net-note">Every link is public record, scattered across registration filings, quarterly disclosures, and campaign reports at the state and city level. BallotBase joins them into one picture, automatically.</p>
   </div>
 </div>
 
-<!-- PRODUCT, REAL SCREENSHOTS -->
-<div class="peek">
-  <div class="section-eyebrow" style="text-align:center;">Inside the Product</div>
-  <h2 class="section-title" style="text-align:center;">What your team sees.</h2>
-  <p class="section-sub" style="text-align:center;margin-left:auto;margin-right:auto;">Live data from a real tracked bill, AB 1414, a landlord-tenant broadband fight with a dozen organizations lobbying both sides.</p>
-
-  <div style="max-width:1000px;margin:40px auto 14px;">
-    <div class="wf-img-wrap">
-      <img src="bill-overview.png" alt="BallotBase bill page for AB 1414 showing status pipeline, financial landscape, coalition map, and lobbying activity" />
-      <span class="wf-img-badge">Bill page, AB 1414</span>
-    </div>
-    <p class="wf-zoom-hint">Click image to zoom</p>
+<!-- INSIDE THE PRODUCT -->
+<div class="leg-prod">
+  <div class="leg-sec-head">
+    <div class="leg-eyebrow">Inside the Product</div>
+    <h2 class="leg-sec-title">What your team sees.</h2>
+    <p class="leg-sec-sub">Real data from AB 1414: who's lobbying, how the money maps to the vote, and the signals that fire before a fight goes public.</p>
   </div>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:1000px;margin:0 auto;" class="peek-shot-pair">
+  <!-- two real screenshots -->
+  <div class="leg-prod-grid">
     <div>
-      <div class="wf-img-wrap">
-        <img src="lobbying-panel.png" alt="Who's lobbying this bill panel: 13 organizations and 28 filings with lobbying firms and fees per employer" />
-        <span class="wf-img-badge">Who's lobbying this bill</span>
+      <div class="leg-frame">
+        <div class="leg-frame-head">
+          <span class="leg-frame-title">Who's lobbying this bill</span>
+          <span class="leg-frame-tag">13 ORGS · 28 FILINGS</span>
+        </div>
+        <img class="leg-shot-img" src="lobbying-panel.png"
+          alt="Who's lobbying AB 1414: 13 organizations and 28 filings with the firms they hired and fees paid"/>
       </div>
-      <p class="peek-caption">13 organizations, 28 filings, every employer, the firm they hired, and what they paid.</p>
+      <p class="leg-cap">Every employer, the firm they hired, and what they paid.</p>
     </div>
     <div>
-      <div class="wf-img-wrap">
-        <img src="issue-portfolio.png" alt="Issue portfolio view with bill tracker, legislators, and coalition tabs" />
-        <span class="wf-img-badge">Issue portfolio</span>
+      <div class="leg-frame">
+        <div class="leg-frame-head">
+          <span class="leg-frame-title">Issue portfolio</span>
+          <span class="leg-frame-tag">BILL TRACKER</span>
+        </div>
+        <img class="leg-shot-img left" src="issue-portfolio.png"
+          alt="Issue portfolio with bill tracker, legislators and coalition, organized by client"/>
       </div>
-      <p class="peek-caption">Your issues, bills, legislators, and coalition, organized the way a practice actually runs.</p>
+      <p class="leg-cap">Your issues, bills, legislators and coalition, organized the way a practice actually runs.</p>
     </div>
   </div>
-  <style>@media (max-width:900px){.peek-shot-pair,.peek-grid{grid-template-columns:1fr !important;}}</style>
 
-  <div class="peek-grid" style="grid-template-columns:1fr 1fr;max-width:1000px;margin-left:auto;margin-right:auto;">
-
+  <!-- coded peek panels -->
+  <div class="leg-prod-grid panels">
     <div>
-      <div class="peek-panel">
-        <div class="peek-panel-head">Contradictions, AB 1234 <span class="peek-pill red">2 flagged</span></div>
-        <div class="peek-body">
-          <div class="peek-row">
-            <div class="peek-row-top">
-              <span class="peek-name">Asm. Member, D-14 <span class="peek-flag">VOTED NO</span></span>
-              <span class="peek-amt red">$42,500</span>
+      <div class="leg-frame">
+        <div class="leg-panel-head">
+          <span class="leg-panel-label">Contradictions · AB 1234</span>
+          <span class="leg-pill red">2 flagged</span>
+        </div>
+        <div class="leg-panel-body">
+          <div class="leg-panel-row">
+            <div class="leg-panel-row-top">
+              <span class="leg-panel-name">Asm. Member, D-14 <span class="leg-chip-inline">VOTED NO</span></span>
+              <span class="leg-amt-red">$42,500</span>
             </div>
-            <div class="peek-sub">Received from 3 organizations lobbying this bill · last gift 11 days before floor vote</div>
+            <div class="leg-panel-desc">From 3 orgs lobbying this bill, last gift 11 days before the floor vote</div>
           </div>
-          <div class="peek-row">
-            <div class="peek-row-top">
-              <span class="peek-name">Sen. Member, R-08 <span class="peek-flag">ABSTAINED</span></span>
-              <span class="peek-amt red">$18,000</span>
+          <div class="leg-panel-row">
+            <div class="leg-panel-row-top">
+              <span class="leg-panel-name">Sen. Member, R-08 <span class="leg-chip-inline">ABSTAINED</span></span>
+              <span class="leg-amt-red">$18,000</span>
             </div>
-            <div class="peek-sub">Employer PAC is the member's #2 career donor</div>
+            <div class="leg-panel-desc">Employer PAC is the member's #2 career donor</div>
           </div>
-          <div class="peek-row">
-            <div class="peek-row-top">
-              <span class="peek-name">116 of 119 voters</span>
-              <span class="peek-amt">money mapped</span>
+          <div class="leg-panel-row">
+            <div class="leg-panel-row-top">
+              <span class="leg-panel-name">116 of 119 voters</span>
+              <span class="leg-mapped">money mapped</span>
             </div>
-            <div class="peek-sub">Every floor vote joined to contribution history, automatically</div>
+            <div class="leg-panel-desc">Every floor vote joined to contribution history, automatically</div>
           </div>
         </div>
       </div>
-      <p class="peek-caption">Votes and money, cross-referenced on every tracked bill.</p>
+      <p class="leg-cap">Votes and money, cross-referenced on every tracked bill.</p>
     </div>
-
     <div>
-      <div class="peek-panel">
-        <div class="peek-panel-head">Lobbying Signals <span class="peek-pill green">3 new</span></div>
-        <div class="peek-body">
-          <div class="peek-row">
-            <div class="peek-row-top">
-              <span class="peek-name">⚡ Cluster forming, "Housing"</span>
+      <div class="leg-frame">
+        <div class="leg-panel-head">
+          <span class="leg-panel-label">Lobbying Signals</span>
+          <span class="leg-pill green">3 new</span>
+        </div>
+        <div class="leg-panel-body">
+          <div class="leg-panel-row">
+            <div class="leg-panel-row-flex">
+              <span class="leg-sig-chip blue">CLUSTER</span>
+              <span class="leg-panel-name">Forming around "Housing"</span>
             </div>
-            <div class="peek-sub">4 new registrations matched your issue in 14 days</div>
+            <div class="leg-panel-desc">4 new registrations matched your issue in 14 days</div>
           </div>
-          <div class="peek-row">
-            <div class="peek-row-top">
-              <span class="peek-name">🤝 New client retained</span>
+          <div class="leg-panel-row">
+            <div class="leg-panel-row-flex">
+              <span class="leg-sig-chip blue">NEW CLIENT</span>
+              <span class="leg-panel-name">Delivery platform retained Capitol firm</span>
             </div>
-            <div class="peek-sub">Delivery platform retained Capitol firm · activity names 2 of your tracked bills</div>
+            <div class="leg-panel-desc">Activity names 2 of your tracked bills</div>
           </div>
-          <div class="peek-row">
-            <div class="peek-row-top">
-              <span class="peek-name">💰 Money + lobbying combo</span>
-              <span class="peek-amt green">action</span>
+          <div class="leg-panel-row">
+            <div class="leg-panel-row-flex">
+              <span class="leg-sig-chip green">MONEY + LOBBYING</span>
+              <span class="leg-panel-name">Combined signal</span>
             </div>
-            <div class="peek-sub">New registrant also contributed to 2 committee members within 30 days</div>
+            <div class="leg-panel-desc">New registrant also gave to 2 committee members within 30 days</div>
           </div>
         </div>
       </div>
-      <p class="peek-caption">Daily alerts from the registration record, matched to your issues.</p>
+      <p class="leg-cap">Daily signals from the registration record, matched to your issues.</p>
     </div>
-
   </div>
 </div>
 
 <!-- FEATURES -->
-<div class="sol-features">
-  <div class="section-eyebrow">What's Inside</div>
-  <h2 class="section-title">Everything a government affairs practice runs on.</h2>
-  <p class="section-sub">Built with the money layer underneath, so every bill, vote, and stakeholder comes with financial context no other tracker has.</p>
-  <div class="sol-features-grid">
-    <div class="sol-feature-card">
-      <div class="sol-feature-icon">📜</div>
-      <div class="sol-feature-title">Money-Aware Bill Tracking</div>
-      <div class="sol-feature-desc">Track any California or federal bill. Stage changes, hearings, amendments, and votes arrive as alerts. Every floor vote is enriched with each legislator's contribution history, so a vote count is also a money map.</div>
+<div class="leg-feat">
+  <div class="leg-feat-head">
+    <div class="leg-eyebrow">What's Inside</div>
+    <h2 class="leg-sec-title">Everything a government affairs practice runs on.</h2>
+    <p class="leg-sec-sub">Built with the money layer underneath, so every bill, vote and stakeholder comes with financial context no other tracker has.</p>
+  </div>
+  <div class="leg-feat-grid">
+
+    <!-- 01 -->
+    <div class="feat-card">
+      <div class="feat-viz">
+        <div class="feat-pipe">
+          <span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="off"></span><span class="off"></span>
+        </div>
+        <div class="feat-pipe-labels"><span>Drafted</span><span>Floor Vote</span><span>Signed</span></div>
+        <div class="feat-alert-row"><span class="k">Floor vote alert</span><span class="v">+$12.5K to voters</span></div>
+      </div>
+      <div class="feat-num">01</div>
+      <div class="feat-title">Money-Aware Bill Tracking</div>
+      <div class="feat-desc">Track any California, Oregon, or federal bill. Every vote arrives with the legislator's donor history already attached.</div>
     </div>
-    <div class="sol-feature-card">
-      <div class="sol-feature-icon">⚖️</div>
-      <div class="sol-feature-title">Contradiction Detection</div>
-      <div class="sol-feature-desc">BallotBase cross-references who's lobbying a bill against who's funding the members voting on it. When a legislator takes money from an organization lobbying a bill they voted on, it gets flagged, automatically, from public data.</div>
+
+    <!-- 02 -->
+    <div class="feat-card">
+      <div class="feat-viz gap">
+        <div class="feat-contra"><span class="k">Voted NO on AB 1234</span><span class="v">$42,500</span></div>
+        <div class="feat-note-sm">Took money from 3 orgs lobbying the bill</div>
+        <div class="feat-flag"><span class="dot"></span><span>Contradiction flagged</span></div>
+      </div>
+      <div class="feat-num">02</div>
+      <div class="feat-title">Contradiction Detection</div>
+      <div class="feat-desc">When a member takes money from an org lobbying a bill they voted on, we flag it. Automatically, from public data.</div>
     </div>
-    <div class="sol-feature-card">
-      <div class="sol-feature-icon">🕸️</div>
-      <div class="sol-feature-title">The Full Money Network</div>
-      <div class="sol-feature-desc">Expand any organization into its complete network: the lobbying firms it hires and what it pays them, the bills those firms work, the firm's other clients, and campaign contributions flowing to sitting legislators, across state and city disclosures.</div>
+
+    <!-- 03 -->
+    <div class="feat-card">
+      <div class="feat-viz center">
+        <div class="feat-net-tile">
+          <div class="feat-net-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1a56db" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V4h12v17"/><path d="M9 8h2M13 8h2M9 12h2M13 12h2M9 16h2M13 16h2"/></svg></div>
+          <div class="feat-net-lbl">Org</div>
+        </div>
+        <span class="feat-net-arrow">→</span>
+        <div class="feat-net-tile">
+          <div class="feat-net-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1a56db" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7 21h10M4 7h16"/><path d="M6 7l-2.5 6h5zM18 7l-2.5 6h5z"/></svg></div>
+          <div class="feat-net-lbl">Firm</div>
+        </div>
+        <span class="feat-net-arrow">→</span>
+        <div class="feat-net-tile">
+          <div class="feat-net-ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1a56db" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 15h5"/></svg></div>
+          <div class="feat-net-lbl">Bill</div>
+        </div>
+        <span class="feat-net-arrow">→</span>
+        <div class="feat-net-tile">
+          <div class="feat-net-ico green">$</div>
+          <div class="feat-net-lbl">Member</div>
+        </div>
+      </div>
+      <div class="feat-num">03</div>
+      <div class="feat-title">The Full Money Network</div>
+      <div class="feat-desc">Open any org into its full web: the firms it pays, the bills they work, and the checks flowing to sitting legislators.</div>
     </div>
-    <div class="sol-feature-card">
-      <div class="sol-feature-icon">📡</div>
-      <div class="sol-feature-title">Registration Signals</div>
-      <div class="sol-feature-desc">Know who entered the fight before the fight is public. Alerts when a new lobbying registration matches your issues, when an organization retains a new firm, and when a cluster of registrations forms around a policy area within days of each other.</div>
+
+    <!-- 04 -->
+    <div class="feat-card">
+      <div class="feat-viz gap">
+        <div class="feat-reg-row"><span class="leg-sig-chip blue">NEW REG</span><span class="feat-reg-txt">Matched your issue</span></div>
+        <div class="feat-reg-row"><span class="leg-sig-chip blue">CLUSTER</span><span class="feat-reg-txt">4 registrations in 14 days</span></div>
+      </div>
+      <div class="feat-num">04</div>
+      <div class="feat-title">Registration Signals</div>
+      <div class="feat-desc">See who entered the fight before it's public, the moment a new registration matches your issues.</div>
     </div>
-    <div class="sol-feature-card">
-      <div class="sol-feature-icon">🎯</div>
-      <div class="sol-feature-title">Tripwire: money early warning</div>
-      <div class="sol-feature-desc">Put a watch on a bill and BallotBase watches the money both ways. Inside money, when a donor you're tracking gives to a legislator whose vote you need. And outside money, when an independent expenditure starts spending to support or oppose the bill. Either way it fires the day it lands, across state, federal, and city filings, and names who is really behind the money, the bills they lobby, and the coalitions they fund, so you see the intent, not just a dollar amount.</div>
+
+    <!-- 05 -->
+    <div class="feat-card">
+      <div class="feat-viz gap-lg">
+        <div><span class="feat-amber-pill">⚡ Tripwire fired</span></div>
+        <div class="feat-trip-flow">
+          <div class="feat-trip-box">Trade Assoc. PAC</div>
+          <span class="feat-net-arrow">→</span>
+          <div class="feat-trip-box">Asm. D-14</div>
+          <span class="feat-trip-amt">$25K</span>
+        </div>
+      </div>
+      <div class="feat-num">05</div>
+      <div class="feat-title">Tripwire: money early warning</div>
+      <div class="feat-desc">Watch a bill and we watch the money both ways. It fires the day it lands and names who's behind it.</div>
     </div>
-    <div class="sol-feature-card">
-      <div class="sol-feature-icon">🌱</div>
-      <div class="sol-feature-title">Initiative Lifecycle</div>
-      <div class="sol-feature-desc">Manage policy from idea to outcome. Draft language with version history, build the coalition, track signature gathering, then convert the initiative into a tracked bill or ballot measure with the full history carried forward.</div>
+
+    <!-- 06 -->
+    <div class="feat-card">
+      <div class="feat-viz fill">
+        <div class="feat-report">
+          <div class="feat-report-lbl">CLIENT REPORT</div>
+          <div class="feat-report-line w80"></div>
+          <div class="feat-report-line"></div>
+          <div class="feat-report-line w92"></div>
+          <div class="feat-ai-chip">Generated by AI</div>
+        </div>
+      </div>
+      <div class="feat-num">06</div>
+      <div class="feat-title">Client-Ready Workflow</div>
+      <div class="feat-desc">Portfolios, contacts, and activity by client, plus AI reports that write themselves from the work you logged.</div>
     </div>
-    <div class="sol-feature-card">
-      <div class="sol-feature-icon">🗂️</div>
-      <div class="sol-feature-title">Client-Ready Workflow</div>
-      <div class="sol-feature-desc">Issue portfolios, legislator tracking, contact tracking, and activity logs organized by client. AI-drafted client reports compile bill status, votes, money context, and your logged work into a deliverable. Compliance calendars keep quarterly deadlines visible.</div>
-    </div>
+
   </div>
 </div>
 
 <!-- DATA COVERAGE -->
-<div class="sol-uses">
-  <div class="sol-uses-inner">
-    <div class="section-eyebrow">Data Coverage</div>
-    <h2 class="section-title">Depth other trackers don't have. Layers they can't join.</h2>
-    <div class="sol-uses-grid">
-      <div class="sol-use-card">
-        <div class="sol-use-title">California, Full Stack</div>
-        <div class="sol-use-desc">Complete Cal-Access campaign finance and lobbying data, refreshed daily. Every bill, vote, and amendment back to 2013. 850K+ lobbying disclosure records linked to bills and employers.</div>
+<div class="cov-section">
+  <div class="cov-head">
+    <div class="leg-eyebrow">Data Coverage</div>
+    <h2 class="leg-sec-title">Depth other trackers don't have. Layers they can't join.</h2>
+  </div>
+  <div class="cov-grid">
+    <div class="cov-card">
+      <div class="cov-card-label">Federal, All 50 States</div>
+      <div class="cov-card-desc">Congress.gov bill tracking paired with FEC contributions and federal lobbying disclosures, for every state in the country.</div>
+    </div>
+    <div class="cov-card full">
+      <div class="cov-card-head">
+        <span class="cov-card-label" style="margin-bottom:0;">California</span>
+        <span class="cov-tag">Full stack</span>
       </div>
-      <div class="sol-use-card">
-        <div class="sol-use-title">Federal</div>
-        <div class="sol-use-desc">Congress.gov bill tracking paired with FEC contribution data and federal lobbying disclosures, the same money-to-legislation join, at the federal level.</div>
+      <div class="cov-card-desc">Cal-Access campaign finance and lobbying, every bill, vote and amendment, down to city and county races and municipal lobbyist filings.</div>
+    </div>
+    <div class="cov-card full">
+      <div class="cov-card-head">
+        <span class="cov-card-label" style="margin-bottom:0;">Oregon</span>
+        <span class="cov-tag">Full stack</span>
       </div>
-      <div class="sol-use-card">
-        <div class="sol-use-title">City &amp; County, Full Stack</div>
-        <div class="sol-use-desc">The layer everyone else skips: campaign finance for 221 California cities and counties (council, mayor, supervisor races, synced daily with 24-hour late filings), plus municipal lobbyist disclosures including the campaign contributions lobbyists report to city clerks.</div>
-      </div>
+      <div class="cov-card-desc">ORESTAR finance, OGEC lobbying and OLIS bills, joined the same way, so you can follow Oregon money from donor to vote.</div>
     </div>
   </div>
-</div>
-
-<!-- POSITIONING -->
-<div class="sol-uses" style="padding-top:0;">
-  <div class="sol-uses-inner">
-    <h2 class="section-title">Money moves before bills do.</h2>
-    <p style="font-size:17px;color:#374151;line-height:1.8;max-width:680px;margin:0 auto 20px;text-align:center;">A new lobbying registration, a fresh retainer, contributions landing in committee members' accounts, these show up in the disclosure record weeks or months before a hearing makes the news. Traditional trackers start paying attention when a bill moves. BallotBase starts when the money does.</p>
-    <p style="font-size:17px;color:#374151;line-height:1.8;max-width:680px;margin:0 auto;text-align:center;">That's the difference between reacting to the fight and seeing it form.</p>
-  </div>
+  <p class="cov-foot">Federal coverage spans all 50 states, with full-stack depth in California and Oregon.</p>
 </div>
 
 <!-- MONEY TRIPWIRE -->
-<div class="trip-section">
-  <div class="trip-inner">
-    <div class="trip-eyebrow">Money Tripwire <span class="trip-new">New</span></div>
-    <h2 class="trip-headline">Know the instant opposition money moves toward your fight.</h2>
-    <p class="trip-sub">Name the legislators a vote hinges on. Name the organizations you expect to move against you. BallotBase watches the public record and fires the moment their money reaches your targets, while there's still time to do something about it.</p>
+<div class="tripwire">
+  <div class="tripwire-inner">
+    <div class="tripwire-eyebrow">Money Tripwire <span class="tripwire-new">NEW</span></div>
+    <h2 class="tripwire-title">Know the instant opposition money moves toward your fight.</h2>
+    <p class="tripwire-sub">Name the legislators a vote hinges on. Name the organizations you expect to move against you. BallotBase watches the public record and fires the moment their money reaches your targets, while there's still time to do something about it.</p>
 
-    <div class="trip-hit">
-      <div class="trip-hit-head">
-        <span>Tripwire, AB 1414</span>
-        <span class="trip-hit-pill">⚡ Tripwire fired</span>
+    <div class="tripwire-card">
+      <div class="tripwire-card-head">
+        <span class="tripwire-card-label">Tripwire · AB 1414</span>
+        <span class="tripwire-fired">⚡ Tripwire fired</span>
       </div>
-      <div class="trip-hit-body">
-        <div class="trip-flow">
-          <div class="trip-chip">
-            <div class="trip-chip-label">Source you're watching</div>
-            <div class="trip-chip-name">Statewide Trade Association PAC</div>
+      <div class="tripwire-card-body">
+        <div class="tripwire-flow">
+          <div class="tripwire-col">
+            <div class="tripwire-col-label">Source you're watching</div>
+            <div class="tripwire-col-name">Statewide Trade Association PAC</div>
           </div>
-          <div class="trip-flow-arrow">→</div>
-          <div class="trip-chip" style="text-align:right;">
-            <div class="trip-chip-label">Target you're watching</div>
-            <div class="trip-chip-name">Asm. Member, D-14</div>
+          <div class="tripwire-arrow">→</div>
+          <div class="tripwire-col right">
+            <div class="tripwire-col-label">Target you're watching</div>
+            <div class="tripwire-col-name">Asm. Member, D-14</div>
           </div>
-          <div class="trip-amt">$25,000</div>
+          <div class="tripwire-amt">$25,000</div>
         </div>
-        <div class="trip-hit-note">A source you're watching gave to a target you're watching, flagged the day it hit the disclosure record, across state, federal, and city filings.</div>
+        <div class="tripwire-note">A source you're watching gave to a target you're watching. Flagged the day it hit the disclosure record, across state, federal and city filings.</div>
       </div>
     </div>
 
-    <div class="trip-quote">
-      <div class="trip-quote-line">Mine an old fight for the players. <span class="hl">Aim them at your active target.</span></div>
-      <p class="trip-quote-sub">Every historical bill shows you the funders who bankrolled the last version of your fight. Add them to the bill you're working now, and you'll know the moment they resurface. The other side reuses its playbook. So should you.</p>
+    <div class="tripwire-quote">
+      <div class="tripwire-quote-line">Mine an old fight for the players. <span class="hl">Aim them at your active target.</span></div>
+      <p class="tripwire-quote-sub">Every historical bill shows you the funders who bankrolled the last version of your fight. Add them to the bill you're working now, and you'll know the moment they resurface. The other side reuses its playbook. So should you.</p>
     </div>
   </div>
 </div>
 
-<!-- Integrations -->
-<section style="padding:60px 24px;text-align:center;border-top:1px solid #eef0f2;">
-  <div class="section-eyebrow">Integrations</div>
-  <h2 class="section-title">Real-time donation sync</h2>
-  <p style="font-size:15px;line-height:1.6;color:#6b7280;max-width:540px;margin:10px auto 34px;">Connect your fundraising platform and every gift lands in your dashboard the moment it hits &mdash; pacing, refcodes, and pledges included.</p>
-  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:46px;">
-    <img src="/logos/actblue.svg" alt="ActBlue" style="height:26px;object-fit:contain;" />
-    <img src="/logos/winred.png" alt="WinRed" style="height:24px;object-fit:contain;" />
-    <img src="/logos/anedot.svg" alt="Anedot" style="height:24px;object-fit:contain;" />
+<!-- INTEGRATIONS -->
+<div class="leg-intg">
+  <div class="leg-eyebrow">Integrations</div>
+  <h2 class="leg-intg-title">Real-time donation sync</h2>
+  <p class="leg-intg-sub">Connect your fundraising platform and every gift lands in your dashboard as it's reported. Pacing, refcodes and pledges included.</p>
+  <div class="leg-intg-logos">
+    <img src="/logos/actblue.svg" alt="ActBlue" style="height:26px;"/>
+    <img src="/logos/winred.png" alt="WinRed" style="height:24px;"/>
+    <img src="/logos/anedot.svg" alt="Anedot" style="height:24px;"/>
   </div>
-</section>
+</div>
 
 <!-- CTA -->
-<div class="cta">
+<div class="cta" id="beta">
   <div class="cta-inner">
     <h2 class="cta-title">See it on an issue you're actually working.</h2>
-    <p class="cta-sub">Request a demo and we'll walk through a live issue portfolio, real bills, real lobbying disclosures, real money networks.</p>
+    <p class="cta-sub">Request a demo and we'll walk through a live issue portfolio: real bills, real lobbying disclosures, real money networks.</p>
     <div class="cta-form" id="cta-form">
       <input type="email" id="cta-email" placeholder="Your work email" />
       <button onclick="submitEmail('cta')">Get a Live Demo</button>
@@ -344,8 +395,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="cta-note">No credit card required. We'll reach out personally within 24 hours.</p>
   </div>
 </div>
-
-
 
 <footer>
   <div class="footer-logo"></div>
