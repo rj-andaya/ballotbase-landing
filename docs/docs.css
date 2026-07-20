@@ -1,0 +1,147 @@
+/* Data & Sourcing docs. Reference-manual register: quiet, dense, checkable.
+   Reuses site tokens from styles.css (--navy, --green, --gray, etc.). */
+
+/* two-column shell: sticky left tree + content */
+.docs-shell {
+  max-width: 1300px; margin: 0 auto; display: flex; gap: 48px;
+  padding: 124px 40px 0; align-items: flex-start;
+}
+.docs-sidebar {
+  flex: 0 0 232px; position: sticky; top: 96px; align-self: flex-start;
+  max-height: calc(100vh - 112px); overflow-y: auto; padding: 12px 0 40px;
+}
+.docs-body { flex: 1 1 auto; min-width: 0; max-width: 900px; padding: 4px 0 96px; }
+
+/* page header (replaces the old full-width hero) */
+.docs-page-head { margin-bottom: 12px; }
+.docs-eyebrow {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--green); margin-bottom: 14px;
+}
+.docs-page-head h1 {
+  font-size: 34px; line-height: 1.15; letter-spacing: -0.02em;
+  color: var(--navy); font-weight: 600; margin: 0 0 16px;
+}
+
+/* left tree nav. NOTE: reset the global `nav { position:fixed; display:flex; ... }`
+   rule from styles.css, which would otherwise hijack this <nav> element. */
+.docs-nav {
+  position: static; display: block; height: auto; top: auto; z-index: auto;
+  padding: 0; background: none; backdrop-filter: none; border: none; box-shadow: none;
+  align-items: initial; justify-content: initial; font-size: 14px;
+}
+.docs-nav-group { margin-bottom: 20px; }
+.docs-nav-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase;
+  color: var(--gray-light); padding: 0 12px; margin-bottom: 6px;
+}
+.docs-nav-link {
+  display: block; color: var(--ink-2); text-decoration: none;
+  padding: 7px 12px; border-radius: 8px; line-height: 1.4;
+}
+.docs-nav-link:hover { background: var(--paper); color: var(--navy); }
+.docs-nav-link.active { background: var(--green-light); color: var(--green); font-weight: 600; }
+.docs-body h2 {
+  font-size: 21px; font-weight: 600; color: var(--navy);
+  margin: 48px 0 12px; letter-spacing: -0.01em;
+  padding-top: 20px; border-top: 1px solid #eef1f5;
+}
+.docs-body h2:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+.docs-body h3 {
+  font-size: 15px; font-weight: 600; color: var(--navy-2);
+  margin: 26px 0 6px; letter-spacing: -0.005em;
+}
+.docs-body p { font-size: 16px; line-height: 1.8; color: #374151; margin: 0 0 14px; }
+.docs-body ul { margin: 0 0 16px; padding-left: 22px; }
+.docs-body li { font-size: 16px; line-height: 1.75; color: #374151; margin: 0 0 8px; }
+.docs-body strong { color: var(--navy); font-weight: 600; }
+.docs-body a { color: var(--green); text-decoration: none; }
+.docs-body a:hover { text-decoration: underline; }
+
+.docs-lead {
+  font-size: 18px !important; color: var(--navy) !important;
+  line-height: 1.75 !important; margin-bottom: 10px !important;
+}
+.docs-affil {
+  font-size: 13px; color: var(--gray); font-style: italic;
+  line-height: 1.7; margin: 0 0 8px;
+}
+
+/* coverage tables */
+.docs-body table {
+  width: 100%; border-collapse: collapse; margin: 8px 0 20px;
+  font-size: 14px;
+}
+.docs-body th {
+  text-align: left; font-weight: 600; color: var(--navy);
+  border-bottom: 2px solid var(--border); padding: 8px 12px 8px 0;
+}
+.docs-body td {
+  border-bottom: 1px solid #eef1f5; padding: 9px 12px 9px 0;
+  color: #374151; vertical-align: top;
+}
+.docs-table-wrap { overflow-x: auto; }
+.todo { color: var(--amber-text); background: var(--amber-bg); padding: 1px 6px; border-radius: 4px; font-size: 13px; font-weight: 500; }
+
+/* coverage matrix (hub centerpiece) */
+.docs-matrix-wrap { overflow-x: auto; margin: 20px 0 8px; }
+table.docs-matrix { min-width: 640px; font-size: 14px; }
+table.docs-matrix th { white-space: nowrap; }
+table.docs-matrix td:first-child, table.docs-matrix th:first-child { font-weight: 600; color: var(--navy); padding-right: 20px; }
+table.docs-matrix td { color: var(--ink-2); }
+.cov-src { color: var(--navy-2); font-weight: 500; }
+.cov-none { color: var(--gray-light); }
+.cov-soon { color: var(--gray); font-style: italic; font-size: 13px; }
+
+/* nested sub-rows: SF + other CA locals grouped under California */
+table.docs-matrix tr.cov-parent td { border-bottom: none; }
+table.docs-matrix tr.cov-child td { border-bottom: none; }
+table.docs-matrix tr.cov-child-last td { border-bottom: 1px solid #eef1f5; }
+table.docs-matrix tr.cov-child td:first-child { font-weight: 400; color: var(--ink-2); padding-left: 8px; }
+.cov-branch { color: var(--gray-light); margin-right: 8px; font-weight: 400; }
+
+/* good-to-know callout (light, not legal) */
+.docs-limits {
+  background: var(--paper); border: 1px solid var(--border-2);
+  border-radius: 12px; padding: 4px 24px 8px; margin: 16px 0 8px;
+}
+.docs-limits h3:first-child { margin-top: 22px; }
+
+/* quoted disclaimer */
+.docs-quote {
+  border-left: 3px solid var(--border); padding: 2px 0 2px 18px;
+  margin: 4px 0 16px; color: var(--ink-2); font-size: 15px; line-height: 1.75;
+}
+
+/* jurisdiction card grid (hub) */
+.docs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0 8px; }
+.docs-card {
+  display: block; border: 1px solid var(--border); border-radius: 14px;
+  padding: 22px 24px; text-decoration: none !important; transition: border-color .15s, box-shadow .15s;
+}
+.docs-card:hover { border-color: var(--green-border); box-shadow: 0 6px 20px rgba(15,23,42,.06); }
+.docs-card h3 { margin: 0 0 6px; font-size: 17px; color: var(--navy); }
+.docs-card p { margin: 0; font-size: 14px; line-height: 1.6; color: var(--gray); }
+.docs-card .docs-card-sys { display: block; margin-top: 10px; font-size: 12px; color: var(--gray-light); letter-spacing: .01em; }
+
+.docs-note {
+  font-size: 13px; color: var(--gray); margin-top: 48px;
+  padding-top: 20px; border-top: 1px solid #e5e7eb; line-height: 1.7;
+}
+.docs-crumb { font-size: 13px; color: var(--gray); margin: 0 0 4px; }
+.docs-crumb a { color: var(--gray); }
+
+@media (max-width: 900px) {
+  .docs-shell { flex-direction: column; gap: 0; padding: 92px 22px 0; }
+  .docs-sidebar {
+    position: static; flex-basis: auto; width: 100%; max-height: none;
+    overflow: visible; padding: 8px 0 16px; margin-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .docs-nav { display: flex; flex-wrap: wrap; gap: 4px; }
+  .docs-nav-group { margin-bottom: 0; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+  .docs-nav-label { display: none; }
+  .docs-body { max-width: none; padding: 8px 0 64px; }
+  .docs-page-head h1 { font-size: 28px; }
+  .docs-grid { grid-template-columns: 1fr; }
+}

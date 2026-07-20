@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWWDM8RP');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>City &amp; County Data Sources | BallotBase</title>
+<meta name="description" content="How BallotBase sources local campaign finance and lobbying disclosure: each city and county's own public filings, including San Francisco's open-data portal (DataSF). Sourced as public record, not from an aggregator."/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/styles.css"/>
+<link rel="stylesheet" href="/docs/docs.css"/>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWWDM8RP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script src="/nav.js"></script>
+
+<div class="docs-shell">
+  <aside class="docs-sidebar"><nav class="docs-nav" id="docs-tree"></nav></aside>
+  <main class="docs-body">
+    <header class="docs-page-head">
+      <div class="docs-eyebrow">Data &amp; Sourcing / Cities &amp; counties</div>
+      <h1>Local: the city's own filings.</h1>
+      <p class="docs-lead">BallotBase sources local campaign finance and lobbying disclosure from each jurisdiction's own public record. Where a city publishes its filings through an open-data portal, we take them from there. The data belongs to the government, not to any filing vendor.</p>
+    </header>
+  <p class="docs-affil">BallotBase is not affiliated with or endorsed by any of these agencies. We name their systems because that is where the public records live. Data reviewed as accessed 2026-07-20.</p>
+
+  <p>Local disclosure is ingested directly from each jurisdiction as a public record. No third-party political-data aggregators are used. For why direct sourcing matters, see the <a href="/docs/">Data &amp; Sourcing overview</a>.</p>
+
+  <h2>City and county filings, generally</h2>
+  <h3>What it is</h3>
+  <p>California cities and counties disclose campaign contributions, expenditures, and lobbying activity as public record. Many use an electronic filing vendor to collect these filings, but the disclosures themselves belong to the jurisdiction, not to the vendor.</p>
+
+  <h3>Sourcing</h3>
+  <p>Primary source: the filing city or county, as the record's custodian. Where the jurisdiction offers a public data export, we use it directly. We name the agency as the source of the record, not the filing vendor. Ingested directly, no political-data aggregator.</p>
+
+  <div class="docs-limits">
+  <h3>Good to know</h3>
+  <ul>
+    <li><strong>Detail is set by the source.</strong> Some jurisdictions publish contributor street addresses only on request and leave them out of the online export. We carry only what the jurisdiction publishes.</li>
+    <li><strong>Coverage varies city to city.</strong> Local disclosure is not uniform. A record present in one city may not exist in another, because each ordinance differs.</li>
+    <li><strong>Lobbying spend is organization-level, not per-bill.</strong> Same as the state sources: no per-bill lobbying number is invented.</li>
+  </ul>
+  </div>
+
+  <h2>San Francisco &mdash; DataSF open-data portal</h2>
+  <h3>What it is</h3>
+  <p>The San Francisco Ethics Commission publishes the city's campaign finance and lobbyist disclosure through DataSF, San Francisco's official open-data portal.</p>
+
+  <h3>What BallotBase ingests</h3>
+  <div class="docs-table-wrap">
+  <table>
+    <thead><tr><th>Record type</th><th>Coverage</th><th>Historical range</th></tr></thead>
+    <tbody>
+      <tr><td>Lobbyist registrations and activity</td><td>City and County of San Francisco</td><td>2010 to present <span class="todo">confirm</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Sourcing</h3>
+  <p>Primary source: San Francisco Ethics Commission, published via DataSF. Official access point: <a href="https://datasf.org/opendata/" target="_blank" rel="noopener">datasf.org/opendata</a>. Ingested directly from the official open-data portal, no aggregator.</p>
+
+  <div class="docs-limits">
+  <h3>Good to know</h3>
+  <ul>
+    <li><strong>Published for open public use.</strong> DataSF releases these datasets for public reuse. We present them as published.</li>
+    <li><strong>Used for analysis, not outreach.</strong> We use SF disclosure for money-and-influence analysis, not to contact individuals.</li>
+    <li><strong>Lobbying spend is organization-level, not per-bill.</strong> As with every lobbying source, no per-bill spend is invented.</li>
+  </ul>
+  </div>
+
+  <p class="docs-note">Every figure on this page traces to a public local source that can be checked independently. Questions about a specific figure or its source? Reach out at <a href="mailto:rj@ballotbase.io">rj@ballotbase.io</a>.</p>
+
+  </main>
+</div>
+
+<script src="/docs/docs-nav.js"></script>
+
+<footer>
+  <div class="footer-logo"></div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/features/">Features</a>
+    <a href="/legislation/">Legislation</a>
+    <a href="/solutions/lobbyists/">For Lobbyists</a>
+    <a href="/solutions/advocacy/">For Advocacy</a>
+    <a href="/pricing/">Pricing</a>
+    <a href="/company/about/">About</a>
+    <a href="/company/methodology/">Methodology</a>
+    <a href="/docs/">Data &amp; Sourcing</a>
+    <a href="/guide/">Voter Guide</a>
+    <a href="mailto:rj@ballotbase.io">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 BallotBase. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

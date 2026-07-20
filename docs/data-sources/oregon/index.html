@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWWDM8RP');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Oregon Data Sources | BallotBase</title>
+<meta name="description" content="How BallotBase sources Oregon political money and legislative data: ORESTAR campaign finance, OGEC lobbying disclosure, and OLIS legislative data, directly from the state's own systems."/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/styles.css"/>
+<link rel="stylesheet" href="/docs/docs.css"/>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWWDM8RP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script src="/nav.js"></script>
+
+<div class="docs-shell">
+  <aside class="docs-sidebar"><nav class="docs-nav" id="docs-tree"></nav></aside>
+  <main class="docs-body">
+    <header class="docs-page-head">
+      <div class="docs-eyebrow">Data &amp; Sourcing / Oregon</div>
+      <h1>Oregon: ORESTAR, OGEC, OLIS.</h1>
+      <p class="docs-lead">BallotBase ingests Oregon campaign finance (ORESTAR), lobbying disclosure (OGEC), and legislative data (OLIS) directly from the state's own systems. Oregon lobbying expenditures are reported quarterly at the organization level and are not broken out by bill.</p>
+    </header>
+  <p class="docs-affil">BallotBase is not affiliated with or endorsed by any of these agencies. We name their systems because that is where the public records live. Data reviewed as accessed 2026-07-19.</p>
+
+  <p>Each system below lists the primary source and the official access point so any figure can be checked independently. BallotBase ingests directly from the primary source. No third-party aggregators are used. For why direct sourcing matters, see the <a href="/docs/">Data &amp; Sourcing overview</a>.</p>
+
+  <h2>ORESTAR &mdash; Oregon campaign finance</h2>
+  <h3>What it is</h3>
+  <p>ORESTAR is Oregon's campaign finance disclosure system, maintained by the Oregon Secretary of State, Elections Division. It holds political committee registrations, itemized contributions, and expenditures filed by candidates, political committees, and independent spenders.</p>
+
+  <h3>What BallotBase ingests</h3>
+  <div class="docs-table-wrap">
+  <table>
+    <thead><tr><th>Record type</th><th>Coverage</th><th>Historical range</th></tr></thead>
+    <tbody>
+      <tr><td>Committee registrations</td><td>Statewide and local</td><td>2007 to present <span class="todo">confirm</span></td></tr>
+      <tr><td>Itemized contributions</td><td>Statewide and local</td><td>2007 to present <span class="todo">confirm</span></td></tr>
+      <tr><td>Expenditures</td><td>Statewide and local</td><td>2007 to present <span class="todo">confirm</span></td></tr>
+      <tr><td>Independent expenditures</td><td>Statewide and local</td><td>2007 to present <span class="todo">confirm</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Sourcing</h3>
+  <p>Primary source: Oregon Secretary of State, ORESTAR. Official access point: <a href="https://secure.sos.state.or.us/orestar/" target="_blank" rel="noopener">secure.sos.state.or.us/orestar</a>. Ingested directly from the state system, no aggregator.</p>
+
+  <div class="docs-limits">
+  <h3>Good to know</h3>
+  <ul>
+    <li><strong>Shown as filed.</strong> Figures come straight from the filer's disclosure. We report the record; we do not adjust it.</li>
+    <li><strong>Individual donor detail is handled with care.</strong> Named individual detail sits inside your authenticated tools. Public and map views stay at the ZIP or aggregate level.</li>
+    <li><strong>Timing follows the filing calendar.</strong> Records appear on the state's disclosure deadlines, not in real time.</li>
+  </ul>
+  </div>
+
+  <h2>OGEC &mdash; Oregon lobbying disclosure</h2>
+  <h3>What it is</h3>
+  <p>The Oregon Government Ethics Commission (OGEC) administers lobbying disclosure. Registered lobbyists and the organizations that employ them file registrations and quarterly expenditure reports. OGEC is an independent commission, separate from the Secretary of State.</p>
+
+  <h3>What BallotBase ingests</h3>
+  <div class="docs-table-wrap">
+  <table>
+    <thead><tr><th>Record type</th><th>Coverage</th><th>Historical range</th></tr></thead>
+    <tbody>
+      <tr><td>Lobbyist and client registrations</td><td>Statewide</td><td>2015 to present <span class="todo">confirm</span></td></tr>
+      <tr><td>Quarterly expenditure reports (organization level)</td><td>Statewide</td><td>2015 to present <span class="todo">confirm</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Sourcing</h3>
+  <p>Primary source: Oregon Government Ethics Commission, Electronic Filing System (<a href="https://apps.oregon.gov/OGEC/" target="_blank" rel="noopener">apps.oregon.gov/OGEC</a>). Ingested directly from the state system, no aggregator.</p>
+
+  <div class="docs-limits">
+  <h3>Good to know</h3>
+  <ul>
+    <li><strong>Lobbying spend is reported quarterly, per organization, not per bill.</strong> An organization reports one total for the quarter across every issue it worked. That is how lobbying disclosure is structured everywhere, so <strong>we never divide a quarterly total across bills to invent a per-bill number.</strong> What we do show is real: who registered to lobby on a subject, how many did, the sectors they came from, and how that shifts over time.</li>
+    <li><strong>Patterns, not conclusions.</strong> Registration and spend are shown as observed patterns. We do not assert that any spend caused any outcome.</li>
+  </ul>
+  </div>
+
+  <h2>OLIS &mdash; Oregon legislative data</h2>
+  <h3>What it is</h3>
+  <p>The Oregon Legislative Information System (OLIS) is the Legislature's system of record for bills and measures, committees, agendas, public testimony, sponsors, votes, and amendments. The Legislature also publishes the Oregon Legislature Open Data Service, an official documented API over this data.</p>
+
+  <h3>What BallotBase ingests</h3>
+  <div class="docs-table-wrap">
+  <table>
+    <thead><tr><th>Record type</th><th>Coverage</th><th>Historical range</th></tr></thead>
+    <tbody>
+      <tr><td>Measures (bills), sponsors, status and history</td><td>Statewide legislative</td><td>2025 session onward <span class="todo">confirm sessions</span></td></tr>
+      <tr><td>Committee votes and measure votes</td><td>Statewide legislative</td><td>2025 session onward <span class="todo">confirm</span></td></tr>
+      <tr><td>Public testimony (position label, submitter, document)</td><td>Statewide legislative</td><td>2025 session onward <span class="todo">confirm</span></td></tr>
+      <tr><td>Committee meetings, agendas, posted dates</td><td>Statewide legislative</td><td>2025 session onward <span class="todo">confirm</span></td></tr>
+      <tr><td>Proposed amendments and printed version list</td><td>Statewide legislative</td><td>2025 session onward <span class="todo">confirm</span></td></tr>
+      <tr><td>Legislative Concept (LC) draft references (pre-bill)</td><td>Statewide legislative</td><td>2025 session onward <span class="todo">confirm</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Sourcing</h3>
+  <p>Primary source: Oregon Legislature Open Data Service, the Legislature's official documented data API. Structured data is obtained from the Open Data Service. The full text of documents that the service references but does not itself contain, such as a bill or amendment PDF or a testimony filing, is retrieved directly from the official Oregon Legislature source by the document's own address. No aggregator, and no third party sits between BallotBase and the Legislature.</p>
+
+  <div class="docs-limits">
+  <h3>Good to know</h3>
+  <ul>
+    <li><strong>Testimony positions are the submitter's own label.</strong> Support, oppose, and neutral come from the position recorded on each submission in OLIS. We do not re-derive a position from the text.</li>
+    <li><strong>Timing follows the legislative calendar.</strong> Agendas, testimony, and version documents appear when the Legislature posts them.</li>
+  </ul>
+  </div>
+
+  <p class="docs-note">Every figure on this page traces to a public Oregon source that can be checked independently. Questions about a specific figure or its source? Reach out at <a href="mailto:rj@ballotbase.io">rj@ballotbase.io</a>.</p>
+
+  </main>
+</div>
+
+<script src="/docs/docs-nav.js"></script>
+
+<footer>
+  <div class="footer-logo"></div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/features/">Features</a>
+    <a href="/legislation/">Legislation</a>
+    <a href="/solutions/lobbyists/">For Lobbyists</a>
+    <a href="/solutions/advocacy/">For Advocacy</a>
+    <a href="/pricing/">Pricing</a>
+    <a href="/company/about/">About</a>
+    <a href="/company/methodology/">Methodology</a>
+    <a href="/docs/">Data &amp; Sourcing</a>
+    <a href="/guide/">Voter Guide</a>
+    <a href="mailto:rj@ballotbase.io">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 BallotBase. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

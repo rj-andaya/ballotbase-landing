@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWWDM8RP');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>California Data Sources | BallotBase</title>
+<meta name="description" content="How BallotBase sources California legislative and political money data: bills, votes, and analyses from the Legislature (leginfo), and campaign finance and lobbying from the Secretary of State (Cal-Access)."/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/styles.css"/>
+<link rel="stylesheet" href="/docs/docs.css"/>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWWDM8RP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script src="/nav.js"></script>
+
+<div class="docs-shell">
+  <aside class="docs-sidebar"><nav class="docs-nav" id="docs-tree"></nav></aside>
+  <main class="docs-body">
+    <header class="docs-page-head">
+      <div class="docs-eyebrow">Data &amp; Sourcing / California</div>
+      <h1>California: leginfo and Cal-Access.</h1>
+      <p class="docs-lead">BallotBase sources California legislative data (bills, votes, analyses) from the Legislature's own system, and California campaign finance and lobbying from the Secretary of State. These are two separate government systems, and we keep them clearly apart.</p>
+    </header>
+  <p class="docs-affil">BallotBase is not affiliated with or endorsed by any of these agencies. We name their systems because that is where the public records live. Data reviewed as accessed 2026-07-19.</p>
+
+  <p>Both systems are ingested directly from the primary source. No third-party aggregators are used. For why direct sourcing matters, see the <a href="/docs/">Data &amp; Sourcing overview</a>.</p>
+
+  <h2>leginfo &mdash; California legislative data</h2>
+  <h3>What it is</h3>
+  <p>California Legislative Information (leginfo) is the Legislature's official system for bill text and versions, bill history, committee and floor analyses, votes, and the state codes. It is maintained by the Legislative Counsel of California.</p>
+
+  <h3>What BallotBase ingests</h3>
+  <div class="docs-table-wrap">
+  <table>
+    <thead><tr><th>Record type</th><th>Coverage</th><th>Historical range</th></tr></thead>
+    <tbody>
+      <tr><td>Bill text and versions</td><td>Statewide legislative</td><td><span class="todo">confirm sessions</span></td></tr>
+      <tr><td>Bill history and status</td><td>Statewide legislative</td><td><span class="todo">confirm</span></td></tr>
+      <tr><td>Committee and floor analyses</td><td>Statewide legislative</td><td><span class="todo">confirm</span></td></tr>
+      <tr><td>Roll-call votes (per legislator)</td><td>Statewide legislative</td><td><span class="todo">confirm</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Sourcing</h3>
+  <p>Primary source: California Legislative Information, maintained by the Legislative Counsel. Official access point: <a href="https://leginfo.legislature.ca.gov/" target="_blank" rel="noopener">leginfo.legislature.ca.gov</a>, with bulk data published through the site's official Downloadable Data Files. Ingested directly from the official data files, no aggregator and no scraping.</p>
+
+  <div class="docs-limits">
+  <h3>Good to know</h3>
+  <ul>
+    <li><strong>The Legislature's own record.</strong> Vote codes, analyses, and histories are shown as the Legislature published them, never re-derived.</li>
+    <li><strong>Timing follows the legislative calendar.</strong> Versions, analyses, and vote records appear when the Legislature publishes them.</li>
+    <li><strong>Legislative only.</strong> This covers bills, votes, and analyses. California campaign finance and lobbying come from a separate system, described next.</li>
+  </ul>
+  </div>
+
+  <h2>Cal-Access &mdash; California campaign finance and lobbying</h2>
+  <h3>What it is</h3>
+  <p>Cal-Access is California's campaign finance and lobbying disclosure system, run by the California Secretary of State under the Political Reform Act. It holds contributions, expenditures, independent expenditures, and lobbying activity filed by committees, candidates, and lobbying entities.</p>
+
+  <h3>What BallotBase ingests</h3>
+  <div class="docs-table-wrap">
+  <table>
+    <thead><tr><th>Record type</th><th>Coverage</th><th>Historical range</th></tr></thead>
+    <tbody>
+      <tr><td>Contributions and expenditures</td><td>Statewide</td><td><span class="todo">confirm</span></td></tr>
+      <tr><td>Independent expenditures</td><td>Statewide</td><td><span class="todo">confirm</span></td></tr>
+      <tr><td>Lobbying activity and payments</td><td>Statewide</td><td><span class="todo">confirm</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Sourcing</h3>
+  <p>Primary source: California Secretary of State, Cal-Access. Official access point: the Secretary of State's raw campaign finance and lobbying activity data files, published at <a href="https://www.sos.ca.gov/campaign-lobbying/" target="_blank" rel="noopener">sos.ca.gov/campaign-lobbying</a>. Ingested directly from the official bulk raw-data files, no aggregator and no scraping.</p>
+
+  <div class="docs-limits">
+  <h3>Good to know</h3>
+  <ul>
+    <li><strong>Shown as filed.</strong> Figures come straight from what committees and lobbying entities filed with the state. We report the record; we do not adjust it.</li>
+    <li><strong>Individual donor detail is handled with care.</strong> Named individual detail sits inside your authenticated tools; public and map views stay at the ZIP or aggregate level.</li>
+    <li><strong>Lobbying spend is organization-level, not per-bill.</strong> Same as Oregon: we never split a lobbying total across bills to invent a per-bill number.</li>
+    <li><strong>System transition ahead.</strong> California is replacing Cal-Access with a successor system expected after November 2026. This page describes the current system, and we will update it when the new one is live.</li>
+  </ul>
+  </div>
+
+  <p class="docs-note">Every figure on this page traces to a public California source that can be checked independently. Questions about a specific figure or its source? Reach out at <a href="mailto:rj@ballotbase.io">rj@ballotbase.io</a>.</p>
+
+  </main>
+</div>
+
+<script src="/docs/docs-nav.js"></script>
+
+<footer>
+  <div class="footer-logo"></div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/features/">Features</a>
+    <a href="/legislation/">Legislation</a>
+    <a href="/solutions/lobbyists/">For Lobbyists</a>
+    <a href="/solutions/advocacy/">For Advocacy</a>
+    <a href="/pricing/">Pricing</a>
+    <a href="/company/about/">About</a>
+    <a href="/company/methodology/">Methodology</a>
+    <a href="/docs/">Data &amp; Sourcing</a>
+    <a href="/guide/">Voter Guide</a>
+    <a href="mailto:rj@ballotbase.io">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 BallotBase. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

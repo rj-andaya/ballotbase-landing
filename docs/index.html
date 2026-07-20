@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWWDM8RP');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Data &amp; Sourcing | BallotBase</title>
+<meta name="description" content="Where every number on BallotBase comes from. Each figure traces to an official government disclosure, sourced directly, no third-party aggregators. Data coverage by jurisdiction: campaign finance, lobbying, bills, votes, and testimony."/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/styles.css"/>
+<link rel="stylesheet" href="/docs/docs.css"/>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWWDM8RP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script src="/nav.js"></script>
+
+<div class="docs-shell">
+  <aside class="docs-sidebar"><nav class="docs-nav" id="docs-tree"></nav></aside>
+  <main class="docs-body">
+    <header class="docs-page-head">
+      <div class="docs-eyebrow">Data &amp; Sourcing</div>
+      <h1>Where every number comes from.</h1>
+      <p class="docs-lead">Every figure on BallotBase traces back to an official government disclosure, sourced directly from the system of record. This section is the public account of what we ingest, from which official source, and what each record can and cannot support.</p>
+    </header>
+
+  <h2>Why we source direct, not through an aggregator</h2>
+  <p class="docs-lead">BallotBase pulls straight from each government's own disclosure system. No third-party aggregator sits anywhere in the pipeline, and that is exactly what lets us give you the fullest, most flexible analysis, answerable to nothing but the public record itself.</p>
+  <p>Buying a vendor's pre-packaged copy of the data quietly caps what the analysis can do. Sourcing direct removes those caps. Seven of them:</p>
+  <ul>
+    <li><strong>The full record, not a flattened one.</strong> We read the government's raw filing, so we keep every field an aggregator drops or simplifies on the way through.</li>
+    <li><strong>Complete coverage.</strong> We take everything the source discloses, not the slice a vendor decided was worth carrying.</li>
+    <li><strong>Room for records that live in only one place.</strong> A national tool forces every state into one schema, and whatever does not fit falls out. State-native records, like Oregon's pre-bill Legislative Concept drafts, survive here because we never flatten them into a common mold.</li>
+    <li><strong>Freshness on the government's clock.</strong> We update when the source updates, not on a vendor's refresh cycle stacked on top of it.</li>
+    <li><strong>Connections we compute ourselves.</strong> The links between money, bills, and votes are built from the raw records, not inherited from a middle layer that may never have drawn them.</li>
+    <li><strong>Every number is checkable.</strong> Each figure traces back to the official system, so anyone can follow it to the source and confirm it. Your trust never has to route through a copy we are asking you to take on faith.</li>
+    <li><strong>No middleman to be exposed to.</strong> When an aggregator raises its price, rewrites its terms, gets acquired, or loses access to a source, its customers inherit the shock. A direct pipeline carries none of that dependency.</li>
+  </ul>
+  <p>The result is analysis that is more complete, more flexible, and beholden to no one but the public record.</p>
+
+  <h2>Data coverage</h2>
+  <p>What we cover today, and the official system each layer comes from. Depth varies by jurisdiction; each detail page lists the exact record types and how far back they go.</p>
+
+  <div class="docs-matrix-wrap">
+  <table class="docs-matrix">
+    <thead>
+      <tr>
+        <th>Jurisdiction</th>
+        <th>Campaign finance</th>
+        <th>Lobbying</th>
+        <th>Bills, votes &amp; analyses</th>
+        <th>Testimony &amp; pre-bill</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Federal</td>
+        <td><span class="cov-src">FEC</span></td>
+        <td><span class="cov-src">LDA.gov</span></td>
+        <td><span class="cov-src">Congress.gov</span></td>
+        <td class="cov-none">&mdash;</td>
+      </tr>
+      <tr class="cov-parent">
+        <td>California</td>
+        <td><span class="cov-src">Cal-Access</span></td>
+        <td><span class="cov-src">Cal-Access</span></td>
+        <td><span class="cov-src">leginfo</span></td>
+        <td class="cov-none">&mdash;</td>
+      </tr>
+      <tr class="cov-child">
+        <td><span class="cov-branch">&#8627;</span>San Francisco</td>
+        <td><span class="cov-src">SF Ethics</span></td>
+        <td><span class="cov-src">SF Ethics</span></td>
+        <td class="cov-none">&mdash;</td>
+        <td class="cov-none">&mdash;</td>
+      </tr>
+      <tr class="cov-child cov-child-last">
+        <td><span class="cov-branch">&#8627;</span>Other CA cities &amp; counties</td>
+        <td><span class="cov-src">Agency filings</span></td>
+        <td><span class="cov-src">Agency filings</span></td>
+        <td class="cov-none">&mdash;</td>
+        <td class="cov-none">&mdash;</td>
+      </tr>
+      <tr>
+        <td>Oregon</td>
+        <td><span class="cov-src">ORESTAR</span></td>
+        <td><span class="cov-src">OGEC</span></td>
+        <td><span class="cov-src">OLIS</span></td>
+        <td><span class="cov-src">OLIS</span></td>
+      </tr>
+      <tr>
+        <td>Nevada</td>
+        <td><span class="cov-src">NV SoS (Aurora)</span></td>
+        <td class="cov-none">&mdash;</td>
+        <td class="cov-none">&mdash;</td>
+        <td class="cov-none">&mdash;</td>
+      </tr>
+      <tr>
+        <td>Texas, New York</td>
+        <td colspan="4" class="cov-soon">Coming soon</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>By jurisdiction</h2>
+  <p>Each page names the primary source and the official access point, so any figure can be checked independently.</p>
+
+  <div class="docs-grid">
+    <a class="docs-card" href="/docs/data-sources/federal/">
+      <h3>Federal</h3>
+      <p>Federal campaign finance and federal lobbying disclosure, from the official documented APIs.</p>
+      <span class="docs-card-sys">FEC / OpenFEC &middot; LDA.gov</span>
+    </a>
+    <a class="docs-card" href="/docs/data-sources/california/">
+      <h3>California</h3>
+      <p>Bills, votes, and analyses from the Legislature; campaign finance and lobbying from the Secretary of State.</p>
+      <span class="docs-card-sys">leginfo &middot; Cal-Access</span>
+    </a>
+    <a class="docs-card" href="/docs/data-sources/oregon/">
+      <h3>Oregon</h3>
+      <p>Campaign finance, lobbying, and the full legislative record, including testimony and the pre-bill layer.</p>
+      <span class="docs-card-sys">ORESTAR &middot; OGEC &middot; OLIS</span>
+    </a>
+    <a class="docs-card" href="/docs/data-sources/local/">
+      <h3>Cities &amp; counties</h3>
+      <p>Local campaign finance and lobbying disclosure, sourced from each jurisdiction as a public record.</p>
+      <span class="docs-card-sys">SF Ethics &middot; agency filings</span>
+    </a>
+  </div>
+
+  <p class="docs-note">Every figure on BallotBase traces to a public government source you can check yourself. For how scores and signals are built on top of these sources, see <a href="/company/methodology/">Methodology</a>. Questions about a specific figure or its source? Reach out at <a href="mailto:rj@ballotbase.io">rj@ballotbase.io</a>.</p>
+
+  </main>
+</div>
+
+<script src="/docs/docs-nav.js"></script>
+
+<footer>
+  <div class="footer-logo"></div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/features/">Features</a>
+    <a href="/legislation/">Legislation</a>
+    <a href="/solutions/lobbyists/">For Lobbyists</a>
+    <a href="/solutions/advocacy/">For Advocacy</a>
+    <a href="/pricing/">Pricing</a>
+    <a href="/company/about/">About</a>
+    <a href="/company/methodology/">Methodology</a>
+    <a href="/docs/">Data &amp; Sourcing</a>
+    <a href="/guide/">Voter Guide</a>
+    <a href="mailto:rj@ballotbase.io">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 BallotBase. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
