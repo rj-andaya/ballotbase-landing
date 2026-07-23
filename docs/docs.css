@@ -145,3 +145,21 @@ table.docs-matrix tr.cov-child td:first-child { font-weight: 400; color: var(--i
   .docs-page-head h1 { font-size: 28px; }
   .docs-grid { grid-template-columns: 1fr; }
 }
+
+/* Phone: the top nav is sticky + in-flow at this width (styles.css), so the
+   docs content no longer needs the 92px offset that cleared the fixed bar.
+   Also tighten type + tables so nothing overflows the viewport. */
+@media (max-width: 768px) {
+  .docs-shell { padding: 20px 18px 0; }
+  .docs-sidebar {
+    margin: 0 -18px 12px; padding: 8px 18px 12px;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+  }
+  .docs-page-head h1 { font-size: 24px; }
+  .docs-lead { font-size: 16px !important; }
+  .docs-body p, .docs-body li { font-size: 15px; }
+  .docs-body h2 { font-size: 19px; margin-top: 36px; }
+  .docs-body table { font-size: 13px; }
+  .docs-body th, .docs-body td { padding-right: 10px; }
+  .docs-limits { padding: 4px 16px 8px; }
+}

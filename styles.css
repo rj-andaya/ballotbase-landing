@@ -837,7 +837,8 @@ footer {
     padding: 0 16px;
     flex-direction: row;
     align-items: center;
-    position: relative;
+    position: sticky;
+    top: 0;
   }
 
   .nav-logo img {
