@@ -24,6 +24,7 @@
     '        <div class="nav-dropdown-section-label">Data Coverage</div>',
     '        <a href="/solutions/federal/" class="nav-dropdown-item">Federal</a>',
     '        <a href="/solutions/california/" class="nav-dropdown-item">California</a>',
+    '        <a href="/solutions/oregon/" class="nav-dropdown-item">Oregon</a>',
     '        <a href="/solutions/nevada/" class="nav-dropdown-item">Nevada</a>',
     '        <span class="nav-dropdown-item disabled">Texas — Coming Soon</span>',
     '        <span class="nav-dropdown-item disabled">New York — Coming Soon</span>',

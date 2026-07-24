@@ -1192,6 +1192,7 @@ footer {
 .sol-eyebrow.federal { background: var(--blue-light); color: var(--blue); }
 .sol-eyebrow.california { background: var(--green-light); color: var(--green); }
 .sol-eyebrow.nevada { background: #f3e8ff; color: #7c3aed; }
+.sol-eyebrow.oregon { background: #e6f4ea; color: #1b6e47; }
 .sol-eyebrow.consultant { background: #ccfbf1; color: #0d9488; }
 .sol-eyebrow.campaign-manager { background: #fff7ed; color: #ea580c; }
 .sol-eyebrow.journalist { background: #eff6ff; color: #2563eb; }
