@@ -2043,10 +2043,10 @@ footer {
 .cov-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1080px; margin: 0 auto; }
 .cov-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 28px 26px; }
 .cov-card.full { border-color: var(--flag-border); box-shadow: 0 10px 30px -18px rgba(26,86,219,0.28); }
-.cov-card-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
+.cov-card-label { font-size: 19px; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); margin-bottom: 10px; line-height: 1.25; }
 .cov-card-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-.cov-tag { font-size: 9px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #fff; background: var(--blue); padding: 2px 7px; border-radius: 5px; }
-.cov-card-desc { font-size: 14px; color: var(--ink-2); line-height: 1.7; }
+.cov-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #fff; background: var(--blue); padding: 2px 7px; border-radius: 5px; }
+.cov-card-desc { font-size: 15px; color: var(--ink-2); line-height: 1.7; }
 .cov-foot { font-size: 12px; color: var(--gray-light); text-align: center; margin: 24px auto 0; }
 
 /* Money Tripwire (navy-950) */
