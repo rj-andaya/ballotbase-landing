@@ -37,6 +37,7 @@
     '      <div class="nav-dropdown-menu">',
     '        <a href="/company/about/" class="nav-dropdown-item">About</a>',
     '        <a href="/docs/" class="nav-dropdown-item">Docs</a>',
+    '        <a href="/legislation/datasheet/" class="nav-dropdown-item">Datasheet</a>',
     '        <a href="/blog/" class="nav-dropdown-item">Blog</a>',
     '        <a href="mailto:rj@ballotbase.io" class="nav-dropdown-item">Contact</a>',
     '      </div>',

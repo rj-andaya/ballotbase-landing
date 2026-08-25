@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWWDM8RP');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Legislation Intelligence Datasheet | BallotBase</title>
+<meta name="description" content="The BallotBase Legislation Intelligence datasheet: every feature before, during and after the bill, coverage by jurisdiction, alert types, delivery channels, sourcing rules and security. Built for government affairs teams, agencies, advocacy groups and lobbying firms."/>
+<meta property="og:title" content="Legislation Intelligence Datasheet | BallotBase"/>
+<meta property="og:description" content="Every feature before, during and after the bill, coverage by jurisdiction, alert types, delivery channels, sourcing rules and security, in one PDF."/>
+<link rel="canonical" href="https://ballotbase.io/legislation/datasheet/"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../../styles.css"/>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWWDM8RP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script src="/nav.js"></script>
+
+<div class="sol-hero">
+  <div class="sol-eyebrow oregon">Datasheet</div>
+  <h1>BallotBase Legislation Intelligence,<br>on one sheet</h1>
+  <p>Intelligence on the whole legislation lifecycle, from draft to vote to the money and people behind it. The datasheet is the version you forward to your manager, attach to a procurement file, or hand a client: every capability, what it is sourced from, and what it will not do.</p>
+</div>
+
+<div class="ds-wrap">
+  <div>
+    <div class="section-eyebrow">What's in the PDF</div>
+    <h2 class="section-title" style="text-align:left;margin-bottom:4px;">Everything a buyer asks, answered once.</h2>
+    <ul class="ds-list">
+      <li><strong>Before, during and after the bill</strong>Twelve capabilities laid out on the lifecycle: pre-bill drafts and interim hearings, registration signals, tripwires, version diffs, testimony and the spoken record, positions and briefings, roll calls joined to money, contradictions, lookalike bills, reports.</li>
+      <li><strong>Coverage by jurisdiction</strong>What is covered federally, in California and in Oregon, down to city lobbying filings and local council and county meetings, with the official system each layer comes from.</li>
+      <li><strong>Alert types and delivery</strong>Every alert the platform fires, and where it lands: in-app, email digest, Slack, calendar feed.</li>
+      <li><strong>Connect your AI</strong>What the MCP server answers, which assistants it works with, and the questions it refuses.</li>
+      <li><strong>Sourcing rules</strong>Official record only, positions as filed, quotes not summaries, no inference of motive or outcome. The standard every figure on the platform is held to.</li>
+      <li><strong>Security and tenancy</strong>Two-factor authentication, per-organization data isolation, module entitlements, and how client data is kept apart from public disclosure data.</li>
+      <li><strong>Who it's for</strong>Cities, counties, special districts and state agencies; advocacy organizations and coalitions; lobbying firms and trade associations.</li>
+    </ul>
+  </div>
+
+  <div class="ds-card">
+    <div id="ds-form">
+      <h3>Get the datasheet</h3>
+      <p>Tell us who you are and the PDF is yours. We will follow up personally, once, and never share your details.</p>
+      <div class="ds-field">
+        <label for="ds-email">Work email</label>
+        <input type="email" id="ds-email" placeholder="you@city.gov" autocomplete="email"/>
+      </div>
+      <div class="ds-field">
+        <label for="ds-org">Organization</label>
+        <input type="text" id="ds-org" placeholder="City of, County of, Association of" autocomplete="organization"/>
+      </div>
+      <div class="ds-field">
+        <label for="ds-role">Which best describes you?</label>
+        <select id="ds-role">
+          <option value="">Select one</option>
+          <option value="gov">City, county or special district</option>
+          <option value="agency">State agency</option>
+          <option value="advocacy">Advocacy organization or coalition</option>
+          <option value="association">Trade association</option>
+          <option value="lobbying">Lobbying firm</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <button class="ds-submit" onclick="submitDatasheet()">Send me the datasheet</button>
+      <div class="ds-fine">No credit card, no drip campaign. One human follow-up from RJ, the founder.</div>
+    </div>
+    <div class="ds-success" id="ds-success">
+      <h3>It's yours.</h3>
+      <p>Open the datasheet below. RJ will follow up personally within a day.</p>
+      <a class="ds-dl" id="ds-link" href="/legislation/datasheet/ballotbase-legislation-intelligence-datasheet.pdf" target="_blank" rel="noopener">Open the datasheet (PDF) →</a>
+      <div class="ds-fine" style="margin-top:16px;">Want it on an issue you actually own? <a href="/#beta">Get a live demo →</a></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo"></div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/legislation/">Legislation</a>
+    <a href="/solutions/government/">Government</a>
+    <a href="/solutions/advocacy/">Advocacy</a>
+    <a href="/solutions/lobbyists/">Lobbying Firms</a>
+    <a href="/pricing/">Pricing</a>
+    <a href="mailto:rj@ballotbase.io">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 BallotBase, LLC. All rights reserved.</div>
+</footer>
+
+<script>
+const SUPABASE_URL = 'https://mvyrtnhkebnxnpmlhzlk.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_6vCYy76ka4tlVPalGU_tag_qw72BVPd';
+async function submitDatasheet() {
+  const emailEl = document.getElementById('ds-email');
+  const orgEl = document.getElementById('ds-org');
+  const roleEl = document.getElementById('ds-role');
+  const email = emailEl.value.trim();
+  const org = orgEl.value.trim().slice(0, 80);
+  const role = roleEl.value;
+  let ok = true;
+  [[emailEl, email && email.includes('@')], [roleEl, !!role]].forEach(([el, good]) => {
+    if (!good) { ok = false; el.style.borderColor = '#ef4444'; setTimeout(() => el.style.borderColor = '', 2000); }
+  });
+  if (!ok) return;
+  try {
+    await fetch(`${SUPABASE_URL}/rest/v1/beta_signups`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}`, 'Prefer': 'return=minimal' },
+      body: JSON.stringify({ email, source: 'datasheet|' + role + '|' + org })
+    });
+  } catch(e) { console.log(e); }
+  if (window.dataLayer) window.dataLayer.push({ event: 'datasheet_request', role });
+  document.getElementById('ds-form').style.display = 'none';
+  document.getElementById('ds-success').style.display = 'block';
+}
+document.querySelectorAll('#ds-form input').forEach(input => {
+  input.addEventListener('keypress', e => { if (e.key === 'Enter') submitDatasheet(); });
+});
+</script>
+</body>
+</html>
