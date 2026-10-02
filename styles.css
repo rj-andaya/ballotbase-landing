@@ -1348,7 +1348,7 @@ footer {
 .blog-post-body a { color: var(--blue); text-decoration: underline; }
 .blog-post-body a.sol-btn-primary { color: white; text-decoration: none; }
 .blog-post-figure { margin: 40px 0; }
-.blog-post-figure img { width: 100%; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+.blog-post-figure img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
 .blog-post-figure figcaption { text-align: center; font-size: 13px; color: var(--gray-light); margin-top: 10px; }
 .blog-share { display: flex; align-items: center; gap: 16px; margin: 48px 0 0; padding-top: 32px; border-top: 1px solid var(--border); flex-wrap: wrap; }
 .blog-share-label { font-size: 13px; font-weight: 600; color: var(--gray); white-space: nowrap; }
