@@ -2,7 +2,7 @@
   var html = [
     '<nav>',
     '  <div class="nav-logo">',
-    '    <a href="/" class="nav-wordmark" aria-label="PolicySpan home"><img src="/policyspan-logo.svg" alt="PolicySpan" width="106" height="20"/></a>',
+    '    <a href="/" class="nav-wordmark" aria-label="PolicySpan home"><img src="/policyspan-logo.svg" alt="PolicySpan" width="95" height="18"/></a>',
     '  </div>',
     '  <button class="nav-hamburger" onclick="toggleMobileNav()" aria-label="Toggle navigation">',
     '    <span class="nav-menu-label">MENU</span>',
