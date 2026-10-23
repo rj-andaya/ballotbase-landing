@@ -2,7 +2,7 @@
   var html = [
     '<nav>',
     '  <div class="nav-logo">',
-    '    <a href="/"><img src="/ballotbase-web-logo.png" alt="PolicySpan" /></a>',
+    '    <a href="/" class="nav-wordmark" aria-label="PolicySpan home">PolicySpan</a>',
     '  </div>',
     '  <button class="nav-hamburger" onclick="toggleMobileNav()" aria-label="Toggle navigation">',
     '    <span class="nav-menu-label">MENU</span>',

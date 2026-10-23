@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.policyspan.ai/sitemap.xml
-Sitemap: https://www.policyspan.ai/guide/sitemap.xml
+Sitemap: https://policyspan.ai/sitemap.xml
+Sitemap: https://policyspan.ai/guide/sitemap.xml
