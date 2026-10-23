@@ -6,7 +6,7 @@
       "permanent": true
     },
     {
-      "source": "/guide/:path*",
+      "source": "/guide/(.*)",
       "destination": "/",
       "permanent": true
     }
