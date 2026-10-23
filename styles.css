@@ -65,6 +65,7 @@ nav.nav-open .nav-bars span:nth-child(3) { transform: translateY(-7px) rotate(-4
 /* Interim text wordmark until the PolicySpan logo lands (2026-10-23). */
 .nav-wordmark { font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 22px; letter-spacing: -0.02em; color: var(--navy); text-decoration: none; line-height: 40px; display: inline-block; }
 .nav-wordmark:hover { color: var(--blue); }
+.nav-wordmark img { height: 26px; width: auto; display: block; }
 .nav-right { display: flex; align-items: center; gap: 24px; }
 .nav-link { font-size: 14px; color: var(--gray); text-decoration: none; font-weight: 400; transition: color 0.2s; }
 .nav-link:hover { color: var(--navy); }
@@ -848,6 +849,7 @@ footer {
     height: 34px;
   }
   .nav-wordmark { font-size: 19px; line-height: 34px; }
+  .nav-wordmark img { height: 22px; }
 
   .nav-hamburger {
     display: flex;
