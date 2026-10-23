@@ -96,17 +96,17 @@ It should not be.
 
 ---
 
-## How BallotBase fits into this work
+## How PolicySpan fits into this work
 
-BallotBase pulls from public FEC and Cal-Access filings and surfaces the financial patterns that matter: who is funding which campaigns, how money moves through committee structures before it reaches its final destination, and where observed donor behavior contradicts an organization's stated positions. The same analysis runs on all sides of a fight, with the same sourcing standards applied throughout.
+PolicySpan pulls from public FEC and Cal-Access filings and surfaces the financial patterns that matter: who is funding which campaigns, how money moves through committee structures before it reaches its final destination, and where observed donor behavior contradicts an organization's stated positions. The same analysis runs on all sides of a fight, with the same sourcing standards applied throughout.
 
-For advocacy organizations tracking a ballot measure, BallotBase surfaces the financial infrastructure forming around it before the campaign launches publicly. For policy advocates working a bill through committee, it maps the financial relationships between industry donors and the legislators who will decide the bill's fate. For voters who want to understand what they are actually voting on, it puts the money story in plain language next to the ballot language.
+For advocacy organizations tracking a ballot measure, PolicySpan surfaces the financial infrastructure forming around it before the campaign launches publicly. For policy advocates working a bill through committee, it maps the financial relationships between industry donors and the legislators who will decide the bill's fate. For voters who want to understand what they are actually voting on, it puts the money story in plain language next to the ballot language.
 
 The Redwood City fight is one example. There are hundreds of ballot measures and thousands of bills moving through California and federal processes at any given time. The financial data behind all of them is public. Most of it goes unread.
 
-If you are working on a policy initiative, a ballot measure, or a legislative campaign and want to understand the financial landscape before the opposition does, that is the work BallotBase is built for.
+If you are working on a policy initiative, a ballot measure, or a legislative campaign and want to understand the financial landscape before the opposition does, that is the work PolicySpan is built for.
 
-ballotbase.io
+policyspan.ai
 
 ---
 

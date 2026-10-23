@@ -2,7 +2,7 @@
   var html = [
     '<nav>',
     '  <div class="nav-logo">',
-    '    <a href="/"><img src="/ballotbase-web-logo.png" alt="BallotBase" /></a>',
+    '    <a href="/"><img src="/ballotbase-web-logo.png" alt="PolicySpan" /></a>',
     '  </div>',
     '  <button class="nav-hamburger" onclick="toggleMobileNav()" aria-label="Toggle navigation">',
     '    <span class="nav-menu-label">MENU</span>',
@@ -39,7 +39,7 @@
     '        <a href="/docs/" class="nav-dropdown-item">Docs</a>',
     '        <a href="/legislation/datasheet/" class="nav-dropdown-item">Datasheet</a>',
     '        <a href="/blog/" class="nav-dropdown-item">Blog</a>',
-    '        <a href="mailto:rj@ballotbase.io" class="nav-dropdown-item">Contact</a>',
+    '        <a href="mailto:rj@policyspan.ai" class="nav-dropdown-item">Contact</a>',
     '      </div>',
     '    </div>',
     '    <a href="/guide/" class="nav-cta-ghost">Voter Guide</a>',
