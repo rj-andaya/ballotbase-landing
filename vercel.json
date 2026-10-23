@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/guide",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/guide/:path*",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}

@@ -42,7 +42,6 @@
     '        <a href="mailto:rj@policyspan.ai" class="nav-dropdown-item">Contact</a>',
     '      </div>',
     '    </div>',
-    '    <a href="/guide/" class="nav-cta-ghost">Voter Guide</a>',
     '    <a href="/#beta" class="nav-cta">Get a Live Demo</a>',
     '  </div>',
     '</nav>'
