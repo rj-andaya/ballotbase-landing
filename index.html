@@ -29,51 +29,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script src="/nav.js"></script>
 
-<!-- Non-partisan bar -->
-<div class="np-bar">
-  <span class="np-bar-strong">NONPARTISAN BY DESIGN</span>
-  <span class="np-sep">·</span>
-  <span class="np-text">We map the money on every side</span>
-  <span class="np-split"><span class="np-split-d"></span><span class="np-split-r"></span></span>
-  <span class="np-split-label">D 50% · R 50%</span>
-</div>
-
 <!-- Hero -->
 <div class="hp-hero">
   <div class="hp-hero-inner">
   <div class="hp-hero-left">
-    <div class="hp-eyebrow">Legislative Intelligence &amp; Policy Management</div>
     <h1 class="hp-hero-title">Bring me a policy issue. <span class="hp-hero-accent">I'll show you what the connected data says.</span></h1>
-    <p class="hp-hero-sub">Bills, hearings, lobbying disclosures, campaign finance and agency rules, connected in one platform. Ask Polly, the policy research agent, and follow every answer to the dated source. Built for lean policy teams in government agencies, lobbying firms, trade associations and government affairs.</p>
+    <p class="hp-hero-sub">Bills, hearings, lobbying disclosures, campaign finance and agency rules, connected in one platform. Built for lean policy teams in government agencies, lobbying firms, trade associations and government affairs.</p>
     <div class="hp-hero-btns">
       <a href="#beta" class="hp-btn-primary">Get a Live Demo →</a>
-      <a href="#polly" class="hp-btn-link">See how Polly answers ↓</a>
     </div>
   </div>
-  <div class="hp-hero-right" id="polly">
-    <div class="hp-frame">
-      <div class="hp-frame-chrome">
-        <span class="hp-frame-dot r"></span>
-        <span class="hp-frame-dot y"></span>
-        <span class="hp-frame-dot g"></span>
-        <span class="hp-frame-url">policyspan.ai/ca/overview</span>
-      </div>
-      <div class="hp-polly">
-        <div class="hp-polly-head">
-          <span class="hp-polly-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2l1.8 5.4L19 9l-5.2 1.6L12 16l-1.8-5.4L5 9l5.2-1.6L12 2zm7 12l.9 2.6L22.5 17.5l-2.6.9L19 21l-.9-2.6-2.6-.9 2.6-.9L19 14zM5 15l.7 2 2 .7-2 .7L5 20.5l-.7-2-2-.7 2-.7.7-2.1z"/></svg></span>
-          <div>
-            <div class="hp-polly-title">Ask Polly</div>
-            <div class="hp-polly-subtitle">Your policy research analyst for California. Every finding links to the record.</div>
+  <div class="hp-hero-right">
+    <div class="hp-carousel" id="hp-carousel" aria-roledescription="carousel" aria-label="PolicySpan screens">
+      <div class="hp-frame">
+        <div class="hp-frame-chrome">
+          <span class="hp-frame-dot r"></span>
+          <span class="hp-frame-dot y"></span>
+          <span class="hp-frame-dot g"></span>
+          <span class="hp-frame-url" id="hp-carousel-url">policyspan.ai/ca/measures/prop-33</span>
+        </div>
+        <div class="hp-carousel-stage">
+          <div class="hp-slide is-active" data-url="policyspan.ai/ca/measures/prop-33" data-caption="Money Network: donors and funders traced through campaign committees to California Proposition 33.">
+            <img src="money-network-prop33.png" loading="eager" alt="PolicySpan money network tracing donors and funders through campaign committees to California Proposition 33"/>
+          </div>
+          <div class="hp-slide" data-url="policyspan.ai/ca/overview" data-caption="Polly, the research agent inside the platform: a cited answer on California SB 79, exactly as given on Oct 19, 2026.">
+            <div class="hp-polly">
+              <div class="hp-polly-head">
+                <span class="hp-polly-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2l1.8 5.4L19 9l-5.2 1.6L12 16l-1.8-5.4L5 9l5.2-1.6L12 2zm7 12l.9 2.6L22.5 17.5l-2.6.9L19 21l-.9-2.6-2.6-.9 2.6-.9L19 14zM5 15l.7 2 2 .7-2 .7L5 20.5l-.7-2-2-.7 2-.7.7-2.1z"/></svg></span>
+                <div>
+                  <div class="hp-polly-title">Ask Polly</div>
+                  <div class="hp-polly-subtitle">Your policy research analyst for California. Every finding links to the record.</div>
+                </div>
+              </div>
+              <div class="hp-polly-q">What are the published fiscal estimates for California SB 79 (2025–26)? In under 100 words, identify the dated source, summarize one estimate, link the evidence, and flag limitations.</div>
+              <p class="hp-polly-a">The <span class="hp-polly-cite">Senate Appropriations analysis from May 13, 2025</span> has the published fiscal estimate for <span class="hp-polly-cite">SB 79</span>. It says the Department of Housing and Community Development expects about $369,000 a year in ongoing General Fund costs. That money would cover technical assistance and handling complaints. Committee staff add possible review costs in the low hundreds of thousands a year. They also list unknown court costs and unknown local mandated costs. These are estimates, not spending.</p>
+              <p class="hp-polly-a muted">Gaps: Only 1 of 17 analyses on file has fiscal text. The July 17, 2025 Assembly Appropriations analysis showed none.</p>
+              <div class="hp-polly-chips"><span>SB 79 Senate Appropriations analysis, 2025-05-13</span><span>SB 79</span><span>source ↗</span></div>
+              <div class="hp-polly-note">Answers cite the official record. A filing or contribution is a disclosure, not motive. Polly researches; you decide.</div>
+            </div>
+          </div>
+          <div class="hp-slide" data-url="policyspan.ai/ca/regulations" data-caption="Regulatory intelligence: California rulemaking notices with comment deadlines, hearings and the statutes each notice cites.">
+            <img src="regulations-oal.png" loading="lazy" alt="PolicySpan regulations view: California rulemaking notices with comment deadlines, hearings and the statutes each notice cites"/>
+          </div>
+          <div class="hp-slide" data-url="policyspan.ai/or/bills/sb-973" data-caption="Spoken record: a searchable hearing transcript, timestamped and linked back to the committee video.">
+            <img src="legislation-record.png" loading="lazy" alt="PolicySpan spoken record: a searchable hearing transcript with timestamps linking back to the committee video"/>
           </div>
         </div>
-        <div class="hp-polly-q">What are the published fiscal estimates for California SB 79 (2025–26)? In under 100 words, identify the dated source, summarize one estimate, link the evidence, and flag limitations.</div>
-        <p class="hp-polly-a">The <span class="hp-polly-cite">Senate Appropriations analysis from May 13, 2025</span> has the published fiscal estimate for <span class="hp-polly-cite">SB 79</span>. It says the Department of Housing and Community Development expects about $369,000 a year in ongoing General Fund costs. That money would cover technical assistance and handling complaints. Committee staff add possible review costs in the low hundreds of thousands a year. They also list unknown court costs and unknown local mandated costs. These are estimates, not spending.</p>
-        <p class="hp-polly-a muted">Gaps: Only 1 of 17 analyses on file has fiscal text. The July 17, 2025 Assembly Appropriations analysis showed none.</p>
-        <div class="hp-polly-chips"><span>SB 79 Senate Appropriations analysis, 2025-05-13</span><span>SB 79</span><span>source ↗</span></div>
-        <div class="hp-polly-note">Answers cite the official record. A filing or contribution is a disclosure, not motive. Polly researches; you decide.</div>
+      </div>
+      <div class="hp-carousel-foot">
+        <p class="hp-hero-caption" id="hp-carousel-caption">Money Network: donors and funders traced through campaign committees to California Proposition 33.</p>
+        <div class="hp-carousel-dots" role="tablist" aria-label="Choose a screen">
+          <button class="hp-dot is-active" type="button" aria-label="Money Network"></button>
+          <button class="hp-dot" type="button" aria-label="Ask Polly"></button>
+          <button class="hp-dot" type="button" aria-label="Regulations"></button>
+          <button class="hp-dot" type="button" aria-label="Spoken record"></button>
+        </div>
       </div>
     </div>
-    <p class="hp-hero-caption">Above: Polly's answer on California SB 79, exactly as the platform gave it on Oct 19, 2026. Every claim links to the dated record.</p>
   </div>
   </div>
 </div>
@@ -91,42 +103,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<!-- One question, five systems -->
-<div class="hp-five">
-  <div class="hp-five-inner">
-    <div class="hp-section-label">One question. Five different systems.</div>
-    <h2 class="hp-section-title">A policy issue is bigger than any single bill.</h2>
-    <p class="hp-section-sub">To answer "what changed on housing, and what might it cost," a team has to piece together five separate systems. The records are public. The connections are the hard part.</p>
-    <div class="hp-five-grid">
-      <div class="hp-five-item"><span class="hp-five-num">01</span><span class="hp-five-name">Bills + amendments</span></div>
-      <div class="hp-five-item"><span class="hp-five-num">02</span><span class="hp-five-name">Committee + hearing records</span></div>
-      <div class="hp-five-item"><span class="hp-five-num">03</span><span class="hp-five-name">Lobbying disclosures</span></div>
-      <div class="hp-five-item"><span class="hp-five-num">04</span><span class="hp-five-name">Campaign finance</span></div>
-      <div class="hp-five-item"><span class="hp-five-num">05</span><span class="hp-five-name">Agency rulemaking</span></div>
-    </div>
-    <p class="hp-five-close">PolicySpan makes the connections, so one question gets one answer with the sources attached.</p>
-  </div>
-</div>
-
-<!-- Proof: real screens, real numbers -->
+<!-- Proof: real records, real numbers -->
 <div class="hp-proof">
   <div class="hp-proof-inner">
     <div class="hp-section-label">A working platform, built on real records</div>
-    <h2 class="hp-section-title">Actual screens from PolicySpan.</h2>
-    <div class="hp-proof-grid">
-      <div class="hp-visual">
-        <div class="hp-visual-head"><span class="hp-visual-title">Money Network | Proposition 33</span><span class="hp-visual-src">Campaign contribution networks</span></div>
-        <img class="hp-visual-img" src="money-network-prop33.png" loading="lazy" alt="PolicySpan money network tracing donors and funders through campaign committees to California Proposition 33"/>
-      </div>
-      <div class="hp-visual">
-        <div class="hp-visual-head"><span class="hp-visual-title">Regulatory intelligence</span><span class="hp-visual-src">California rulemaking notices</span></div>
-        <img class="hp-visual-img" src="regulations-oal.png" loading="lazy" alt="PolicySpan regulations view: California rulemaking notices with comment deadlines, hearings and the statutes each notice cites"/>
-      </div>
-      <div class="hp-visual">
-        <div class="hp-visual-head"><span class="hp-visual-title">Legislative intelligence</span><span class="hp-visual-src">Transcripts, version diffs, timestamps</span></div>
-        <img class="hp-visual-img" src="legislation-record.png" loading="lazy" alt="PolicySpan spoken record: a searchable hearing transcript with timestamps linking back to the committee video"/>
-      </div>
-    </div>
+    <h2 class="hp-section-title">Legislation, hearings, political money, regulations and issue management. One platform.</h2>
     <div class="hp-stats">
       <div class="hp-stat"><div class="hp-stat-val">Federal + State</div><div class="hp-stat-label">Nationwide legislative coverage</div></div>
       <div class="hp-stat"><div class="hp-stat-val">356 <span>cities</span></div><div class="hp-stat-label">Campaign finance, California and Oregon</div></div>
@@ -248,6 +229,40 @@ document.querySelectorAll('input[type="email"]').forEach(input => {
     if (e.key === 'Enter') submitEmail(input.id.replace('-email', ''));
   });
 });
+</script>
+<script>
+(function () {
+  var root = document.getElementById('hp-carousel');
+  if (!root) return;
+  var slides = root.querySelectorAll('.hp-slide');
+  var dots = root.querySelectorAll('.hp-dot');
+  var url = document.getElementById('hp-carousel-url');
+  var cap = document.getElementById('hp-carousel-caption');
+  var i = 0, timer = null, HOLD = 6500;
+  function show(n) {
+    i = (n + slides.length) % slides.length;
+    for (var k = 0; k < slides.length; k++) {
+      slides[k].classList.toggle('is-active', k === i);
+      dots[k].classList.toggle('is-active', k === i);
+      dots[k].setAttribute('aria-selected', k === i ? 'true' : 'false');
+    }
+    url.textContent = slides[i].getAttribute('data-url');
+    cap.textContent = slides[i].getAttribute('data-caption');
+  }
+  function start() { stop(); timer = setInterval(function () { show(i + 1); }, HOLD); }
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+  for (var d = 0; d < dots.length; d++) {
+    (function (n) { dots[n].addEventListener('click', function () { show(n); start(); }); })(d);
+  }
+  root.addEventListener('mouseenter', stop);
+  root.addEventListener('mouseleave', start);
+  root.addEventListener('focusin', stop);
+  root.addEventListener('focusout', start);
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  show(0);
+  if (!reduce) start();
+})();
+
 </script>
 </body>
 </html>
