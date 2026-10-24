@@ -2154,7 +2154,7 @@ footer {
 
 /* ── Homepage 2026-10-24: pitch-first sections ───────────────────────────── */
 .hp-hero-title { font-size: 46px; }
-.hp-hero-accent { color: var(--blue); }
+.hp-hero-accent { color: var(--blue); display: block; }
 .hp-polly { padding: 16px 18px 14px; font-size: 12.5px; line-height: 1.55; color: var(--navy); background: #fff; }
 .hp-polly-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .hp-polly-icon { width: 30px; height: 30px; border-radius: 8px; background: var(--blue); color: #fff; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
