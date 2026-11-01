@@ -13,11 +13,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" href="/favicon.ico" sizes="32x32"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <meta name="description" content="Bring PolicySpan a policy issue and see what the connected data says. Bills, hearings, lobbying disclosures, campaign finance and agency rules in one platform, with Polly, the policy research agent, citing the dated record. Built for lean policy teams in government, lobbying firms, trade associations and advocacy."/>
-<meta property="og:title" content="PolicySpan | Legislative Intelligence &amp; Policy Management"/>
+<meta property="og:title" content="PolicySpan | Legislation &amp; Policy Intelligence"/>
 <meta property="og:description" content="The AI-native policy intelligence platform. Legislation, hearings, political money, regulations and issue management, connected, with every finding tied to the dated record."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://policyspan.ai/"/>
-<title>PolicySpan | Legislative Intelligence &amp; Policy Management</title>
+<title>PolicySpan | Legislation &amp; Policy Intelligence</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
 </head>
@@ -35,9 +35,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="hp-hero-left">
     <h1 class="hp-hero-title">The AI-native <span class="hp-hero-accent">policy intelligence platform.</span></h1>
     <p class="hp-hero-sub">Legislation, hearings, political money, regulations and issue management, connected in one place, with every finding tied to the dated record. Built for lean policy teams in government agencies, lobbying firms, trade associations and government affairs.</p>
-    <div class="hp-hero-btns">
-      <a href="#beta" class="hp-btn-primary">Get a Live Demo →</a>
+    <div class="hero-form" id="hero-form">
+      <input type="email" id="hero-email" placeholder="Your work email" />
+      <button onclick="submitEmail('hero')">Get a Live Demo →</button>
     </div>
+    <div class="success-msg" id="hero-success">🎉 You're on the list! We'll reach out within 24 hours.</div>
+    <p class="hero-note">A live walkthrough on your issue. We reach out personally within 24 hours.</p>
   </div>
   <div class="hp-hero-right">
     <div class="hp-carousel" id="hp-carousel" aria-roledescription="carousel" aria-label="PolicySpan screens">
@@ -216,8 +219,8 @@ async function submitEmail(source) {
       body: JSON.stringify({ email, source })
     });
   } catch(e) { console.log(e); }
-  const form = document.getElementById('cta-form');
-  const success = document.getElementById('cta-success');
+  const form = document.getElementById(source + '-form');
+  const success = document.getElementById(source + '-success');
   if (form) form.style.display = 'none';
   if (success) success.style.display = 'block';
 }

@@ -1,14 +1,12 @@
 {
-  "redirects": [
+  "rewrites": [
     {
       "source": "/guide",
-      "destination": "/",
-      "permanent": true
+      "destination": "/api/gone"
     },
     {
       "source": "/guide/(.*)",
-      "destination": "/",
-      "permanent": true
+      "destination": "/api/gone"
     }
   ]
 }
