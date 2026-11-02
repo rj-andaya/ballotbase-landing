@@ -161,6 +161,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://policyspan.ai/docs/data-sources/research/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://policyspan.ai/docs/data-sources/local/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

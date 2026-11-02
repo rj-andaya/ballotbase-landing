@@ -10,6 +10,7 @@
       { t: "California", h: "/docs/data-sources/california/" },
       { t: "Oregon", h: "/docs/data-sources/oregon/" },
       { t: "Cities & counties", h: "/docs/data-sources/local/" },
+      { t: "Research & statistics", h: "/docs/data-sources/research/" },
     ] },
     { label: null, items: [
       { t: "Methodology", h: "/company/methodology/" },
