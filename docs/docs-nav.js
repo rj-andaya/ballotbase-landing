@@ -12,6 +12,9 @@
       { t: "Cities & counties", h: "/docs/data-sources/local/" },
       { t: "Research & statistics", h: "/docs/data-sources/research/" },
     ] },
+    { label: "Developers", items: [
+      { t: "API reference", h: "/docs/api/" },
+    ] },
     { label: null, items: [
       { t: "Methodology", h: "/company/methodology/" },
     ] },

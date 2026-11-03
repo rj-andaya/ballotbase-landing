@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NWWDM8RP');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" href="/favicon.ico" sizes="32x32"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<title>API Reference | PolicySpan</title>
+<meta name="description" content="The PolicySpan API: read-only access to the same evidence layer the product reads. Bills, hearings and the spoken record, rulemaking, lobbying and campaign finance connected to policy, published fiscal evidence, and the research corpus of reports, tables and official statistics. Every record carries its source and date."/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/styles.css"/>
+<link rel="stylesheet" href="/docs/docs.css"/>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWWDM8RP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script src="/nav.js"></script>
+
+<div class="docs-shell">
+  <aside class="docs-sidebar"><nav class="docs-nav" id="docs-tree"></nav></aside>
+  <main class="docs-body">
+    <header class="docs-page-head">
+      <div class="docs-eyebrow">Data &amp; Sourcing / API</div>
+      <h1>The PolicySpan API.</h1>
+      <p class="docs-lead">Read-only access to the same evidence layer the product reads: bills, hearings and the spoken record, rulemaking, lobbying and campaign finance connected to policy, published fiscal evidence, and the research corpus of reports, tables and official statistics. Response bodies are identical to what the application reads, so a field you see in the product is the field you get here. Every record carries its source and date.</p>
+    </header>
+  <p class="docs-affil">Base URL <code>https://api.policyspan.ai/api/v1</code>. 26 endpoints, generated from the live OpenAPI specification on 2026-11-02. The machine-readable spec is at <code>/api/v1/openapi.json</code> and the interactive reference at <code>/api/v1/docs</code>.</p>
+
+  <h2>Authenticate</h2>
+  <p>Keys belong to your organization, not to a person, and are scoped to the jurisdictions in your license. Send the key on every request, either way:</p>
+  <pre><code>X-API-Key: ps_live_...
+Authorization: Bearer ps_live_...</code></pre>
+  <p>Start with <code>/me</code>. It returns the organization, the key's scopes, the licensed jurisdictions, the per-minute and per-month limits, and month-to-date usage. If this call works, everything else will.</p>
+  <pre><code>curl -s https://api.policyspan.ai/api/v1/me -H "X-API-Key: $PS_KEY"</code></pre>
+  <p>The key is shown once at issue time; we store only a hash. If a key leaks, ask for it to be revoked and a new one issued; revocation takes effect within a minute. Jurisdictions today: <code>or</code> (Oregon) and <code>ca</code> (California); <code>GET /jurisdictions</code> lists them with <code>licensed</code> true or false for your key. Keys are issued with a license; <a href="mailto:rj@policyspan.ai">ask for one</a>.</p>
+
+  <h2>Limits and headers</h2>
+  <p>Limits are guardrails on a flat-rate license, not a meter. Every response carries:</p>
+  <pre><code>X-RateLimit-Limit        requests allowed per minute
+X-RateLimit-Remaining    left in the current minute
+X-Quota-Remaining        left this month (absent when the key has no ceiling)
+X-Request-Id             quote this when reporting a problem</code></pre>
+  <p>Bulk reads: <code>GET /{jur}/bills</code> returns the whole catalog in one call. Pull it once a day, then poll <code>GET /{jur}/alerts</code> for what moved. Do not crawl bill detail for every bill on a schedule; ask for an export if you need that.</p>
+
+  <h2>Errors</h2>
+  <p>Errors are JSON with a stable <code>error</code> code and a plain-language <code>message</code>.</p>
+  <div class="docs-table-wrap">
+  <table>
+    <thead><tr><th>Status</th><th>error</th><th>Meaning</th></tr></thead>
+    <tbody>
+      <tr><td>401</td><td><code>api_key_required</code></td><td>No key sent</td></tr>
+      <tr><td>401</td><td><code>api_key_invalid</code></td><td>Unknown, revoked, expired, or the organization is not active</td></tr>
+      <tr><td>403</td><td><code>jurisdiction_not_licensed</code></td><td>The key&#x27;s scopes do not include this jurisdiction</td></tr>
+      <tr><td>404</td><td><code>not_found</code></td><td>Unknown jurisdiction or record</td></tr>
+      <tr><td>429</td><td><code>rate_limited</code></td><td>Over the per-minute limit; honor Retry-After</td></tr>
+      <tr><td>429</td><td><code>quota_exceeded</code></td><td>Over the monthly ceiling; contact us</td></tr>
+      <tr><td>503</td><td><code>service_unavailable</code></td><td>Mid-deploy or a migration pending; retry shortly</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Endpoints</h2>
+  <p><code>{jur}</code> is a jurisdiction code. Paths without it read across every state the key is licensed for.</p>
+  <h3 id="account">Account</h3>
+  <p>Who you are and what the key can read.</p>
+  <div class="docs-table-wrap">
+  <table class="docs-api">
+    <thead><tr><th>Endpoint</th><th>Returns</th><th>Query parameters</th></tr></thead>
+    <tbody>
+      <tr><td><code>GET /jurisdictions</code></td><td>Jurisdictions this key can read</td><td><span class="docs-muted">none</span></td></tr>
+      <tr><td><code>GET /me</code></td><td>Who am I, what can I read, how much have I used</td><td><span class="docs-muted">none</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <h3 id="legislation">Legislation</h3>
+  <p>The bill record for a state: catalog, search, one bill with its history, versions, votes, money and filed positions, legislators, what moved.</p>
+  <div class="docs-table-wrap">
+  <table class="docs-api">
+    <thead><tr><th>Endpoint</th><th>Returns</th><th>Query parameters</th></tr></thead>
+    <tbody>
+      <tr><td><code>GET /bills</code></td><td>Bill catalog across every licensed state (canonical policy record)</td><td><code>topic</code><br/><code>entity</code><br/><code>limit</code> <span class="docs-muted">default 200</span></td></tr>
+      <tr><td><code>GET /{jur}/alerts</code></td><td>What moved on the record in the last N days</td><td><code>days</code> <span class="docs-muted">default 7</span><br/><code>topic</code><br/><code>entity</code></td></tr>
+      <tr><td><code>GET /{jur}/bills</code></td><td>Bill catalog (filterable)</td><td><code>topic</code> <span class="docs-muted">topic tag or keyword list</span><br/><code>entity</code> <span class="docs-muted">an organization name to match in positions/lobbying</span><br/><code>session</code> <span class="docs-muted">session id; default = current</span><br/><code>limit</code> <span class="docs-muted">default 500</span></td></tr>
+      <tr><td><code>GET /{jur}/bills/search</code></td><td>Search bills by number or words</td><td><code>q</code><br/><code>limit</code> <span class="docs-muted">default 40</span></td></tr>
+      <tr><td><code>GET /{jur}/legislators</code></td><td>Legislator directory from the official record</td><td><code>session</code></td></tr>
+      <tr><td><code>GET /{jur}/sessions</code></td><td>Session windows and today&#x27;s status</td><td><span class="docs-muted">none</span></td></tr>
+      <tr><td><code>GET /{jur}/bills/{prefix}/{number}</code></td><td>One bill: record, history, money, positions</td><td><code>session</code></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <h3 id="meetings">Hearings and the spoken record</h3>
+  <p>Posted meetings, every recorded meeting a bill came up in, and full-text search over verbatim transcripts with timestamped video links.</p>
+  <div class="docs-table-wrap">
+  <table class="docs-api">
+    <thead><tr><th>Endpoint</th><th>Returns</th><th>Query parameters</th></tr></thead>
+    <tbody>
+      <tr><td><code>GET /{jur}/meetings</code></td><td>Posted hearings and meetings in a window around today</td><td><code>topic</code><br/><code>bodies</code> <span class="docs-muted">comma list of body codes</span><br/><code>window_days</code> <span class="docs-muted">default 180</span><br/><code>include_past_days</code> <span class="docs-muted">default 240</span><br/><code>limit</code> <span class="docs-muted">default 120</span></td></tr>
+      <tr><td><code>GET /{jur}/spoken-record/search</code></td><td>Full-text search over hearing transcripts</td><td><code>q</code><br/><code>session</code><br/><code>bodies</code><br/><code>limit</code> <span class="docs-muted">default 40</span></td></tr>
+      <tr><td><code>GET /{jur}/bills/{prefix}/{number}/spoken-record</code></td><td>Every recorded meeting where this bill came up, with verbatim transcript segments</td><td><code>session</code> <span class="docs-muted">session id</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <h3 id="signals">Pre-bill signals</h3>
+  <p>What is forming before a bill exists: the spoken record, drafts and money, by topic.</p>
+  <div class="docs-table-wrap">
+  <table class="docs-api">
+    <thead><tr><th>Endpoint</th><th>Returns</th><th>Query parameters</th></tr></thead>
+    <tbody>
+      <tr><td><code>GET /{jur}/signals</code></td><td>Pre-bill signals from the spoken record, bills and money</td><td><code>topic</code><br/><code>window_days</code> <span class="docs-muted">default 90</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <h3 id="regulatory">Rulemaking</h3>
+  <p>Notices from the official register and their explicit bill citations.</p>
+  <div class="docs-table-wrap">
+  <table class="docs-api">
+    <thead><tr><th>Endpoint</th><th>Returns</th><th>Query parameters</th></tr></thead>
+    <tbody>
+      <tr><td><code>GET /{jur}/regulations</code></td><td>Rulemaking notices from the official register</td><td><code>q</code><br/><code>section</code><br/><code>agency</code><br/><code>open_only</code> <span class="docs-muted">default </span><br/><code>since</code><br/><code>limit</code> <span class="docs-muted">default 100</span></td></tr>
+      <tr><td><code>GET /{jur}/regulations/{znum}</code></td><td>One notice with its explicit bill citations</td><td><span class="docs-muted">none</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <h3 id="economics">Fiscal and economic evidence</h3>
+  <p>The Legislature&#x27;s published fiscal statements for a bill and official indicators for the state or a county.</p>
+  <div class="docs-table-wrap">
+  <table class="docs-api">
+    <thead><tr><th>Endpoint</th><th>Returns</th><th>Query parameters</th></tr></thead>
+    <tbody>
+      <tr><td><code>GET /{jur}/economics/counties</code></td><td>Counties with indicator coverage</td><td><span class="docs-muted">none</span></td></tr>
+      <tr><td><code>GET /{jur}/economics/snapshot</code></td><td>Official indicators for the state or one county</td><td><code>fips</code> <span class="docs-muted">default 06</span></td></tr>
+      <tr><td><code>GET /{jur}/bills/{prefix}/{number}/fiscal</code></td><td>Published fiscal evidence for a bill</td><td><span class="docs-muted">none</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <h3 id="research">Research and official statistics</h3>
+  <p>Published research and audit reports as full text with their tables, the scholarly literature by catalog, and official statistical series down to the county and the city, each with its license and exact source.</p>
+  <div class="docs-table-wrap">
+  <table class="docs-api">
+    <thead><tr><th>Endpoint</th><th>Returns</th><th>Query parameters</th></tr></thead>
+    <tbody>
+      <tr><td><code>GET /research/metrics</code></td><td>Latest value of every series for a geography, with the U.S. comparison</td><td><code>geo</code> <span class="docs-muted">default US</span><br/><code>topic</code></td></tr>
+      <tr><td><code>GET /research/publishers</code></td><td>Publishers in the research corpus, with what each is</td><td><span class="docs-muted">none</span></td></tr>
+      <tr><td><code>GET /research/search</code></td><td>Search research documents (bm25 over abstracts and full text)</td><td><code>q</code><br/><code>topic</code><br/><code>publisher</code><br/><code>since</code><br/><code>limit</code> <span class="docs-muted">default 10</span></td></tr>
+      <tr><td><code>GET /research/series</code></td><td>Official statistical series available (by topic)</td><td><code>topic</code></td></tr>
+      <tr><td><code>GET /research/documents/{doc_id}</code></td><td>One document: matching sections (with pages) and its transcribed tables</td><td><code>q</code><br/><code>sections</code> <span class="docs-muted">default 6</span><br/><code>tables</code> <span class="docs-muted">default 12</span><br/><code>rows</code> <span class="docs-muted">default 60</span></td></tr>
+      <tr><td><code>GET /research/documents/{doc_id}/tables</code></td><td>Every table transcribed from a document (verbatim cells, units, notes, page, PDF link, verified flag)</td><td><code>rows</code> <span class="docs-muted">default 200</span></td></tr>
+      <tr><td><code>GET /research/series/{series_id}</code></td><td>Observations of one series for a geography</td><td><code>geo</code> <span class="docs-muted">&#x27;US&#x27;, a state name or FIPS, or a county · default US</span></td></tr>
+      <tr><td><code>GET /{jur}/bills/{prefix}/{number}/research</code></td><td>Research and official metrics tied to a bill: documented references first, then topical matches</td><td><code>session</code></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Examples</h2>
+  <pre><code># What moved on the Oregon record this week
+curl -s "$BASE/or/alerts?days=7" -H "X-API-Key: $PS_KEY"
+
+# One California bill with its history, votes, money and filed positions
+curl -s "$BASE/ca/bills/AB/1414" -H "X-API-Key: $PS_KEY"
+
+# Research tied to a bill: documented references first, then topical matches and the state's metrics
+curl -s "$BASE/or/bills/HB/2658/research" -H "X-API-Key: $PS_KEY"
+
+# Every official series for a county, with the sites behind the water figures one call away
+curl -s "$BASE/research/metrics?geo=Fresno%20County,%20California" -H "X-API-Key: $PS_KEY"
+curl -s "$BASE/research/series/ca_dwr_gw_depth_to_water?geo=Fresno%20County,%20California" -H "X-API-Key: $PS_KEY"
+
+# A GAO table, cell for cell, with the page it came from
+curl -s "$BASE/research/documents/gao:GAO-27-108496/tables" -H "X-API-Key: $PS_KEY"</code></pre>
+
+  <div class="docs-limits">
+  <h3>Reading the records</h3>
+  <ul>
+    <li><strong>Positions are filed labels.</strong> The record says an organization filed support or is on record opposing. It never says why.</li>
+    <li><strong>Lobbying rows are disclosed filings.</strong> They are not evidence of influence, and no spend figure is attached to a single bill unless the filing attaches it.</li>
+    <li><strong>Transcripts are verbatim machine output.</strong> Speaker labels are diarization numbers, not names. Confirm wording against the linked video before quoting formally.</li>
+    <li><strong>Research is documented or topical.</strong> A document is attached to a bill as documented only when the document names the bill (a CBO cost estimate, an LAO analysis). Everything else is a topical match on the bill&#x27;s subject, labeled as such.</li>
+    <li><strong>Tables are the publisher&#x27;s cells.</strong> Each carries its caption, units and Source line, a link that opens the PDF at that page, and a verified flag that means every number in the grid was found in the page text. Quote figures from verified tables only. Nothing is computed, rounded or converted.</li>
+    <li><strong>Series state their method.</strong> Every value carries the exact source call it came from; shares carry their denominator as universe. ACS and CHAS figures are survey estimates without margins of error.</li>
+    <li><strong>Water series are network roll-ups.</strong> A county figure is the median across the wells or gages a network monitors; universe is their count, and the series endpoint lists the sites behind the latest value. Where a state and the federal network both cover a county, both are returned and named.</li>
+    <li><strong>Housing production is by place.</strong> Permit rows are permits authorized, not units built; RHNA rows are one per planning cycle; the unincorporated part of a county is its own row. Place ids are the 7-digit state plus FIPS place code.</li>
+  </ul>
+  </div>
+
+  <h2>MCP</h2>
+  <p>The same records are available as tools for Claude, ChatGPT and other MCP hosts, remote at <code>https://mcp.policyspan.ai/mcp</code> with your key as <code>Authorization: Bearer ps_live_...</code>. The tools carry the same names as the endpoint groups above and the same reading rules.</p>
+
+  <p class="docs-note">What each source is and how to read it is on the <a href="/docs/">Data &amp; Sourcing</a> pages, including <a href="/docs/data-sources/research/">Research &amp; statistics</a>. Questions, a key, or an export? Reach out at <a href="mailto:rj@policyspan.ai">rj@policyspan.ai</a>.</p>
+
+  </main>
+</div>
+
+<script src="/docs/docs-nav.js"></script>
+
+<footer>
+  <div class="footer-logo"></div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/features/">Features</a>
+    <a href="/legislation/">Legislation</a>
+    <a href="/solutions/lobbyists/">For Lobbyists</a>
+    <a href="/solutions/advocacy/">For Advocacy</a>
+    <a href="/pricing/">Pricing</a>
+    <a href="/company/about/">About</a>
+    <a href="/company/methodology/">Methodology</a>
+    <a href="/docs/">Data &amp; Sourcing</a>
+    <a href="mailto:rj@policyspan.ai">Contact</a>
+  </div>
+  <div class="footer-copy">© 2026 BallotBase, LLC. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

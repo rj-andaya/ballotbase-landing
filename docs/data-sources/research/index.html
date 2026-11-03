@@ -59,12 +59,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <table>
     <thead><tr><th>Publisher</th><th>What we hold</th><th>License</th></tr></thead>
     <tbody>
-      <tr><td>Congressional Research Service</td><td>Every report in the catalog (23,594); summary, CRS topics and full text in sections for reports on a policy topic since 2016</td><td>U.S. Government work, public domain</td></tr>
-      <tr><td>U.S. Government Accountability Office</td><td>New reports from GAO's feed: sections with page numbers and every captioned table transcribed</td><td>U.S. Government work, public domain</td></tr>
+      <tr><td>Congressional Research Service</td><td>Every report in the catalog (23,594); summary, CRS topics and full text in sections for reports on a policy topic since 2016. Every federal issue: housing, health, energy, labor, immigration, defense, taxes</td><td>U.S. Government work, public domain</td></tr>
+      <tr><td>U.S. Government Accountability Office</td><td>New reports from GAO's feed: sections with page numbers and every captioned table transcribed. Federal programs across every issue</td><td>U.S. Government work, public domain</td></tr>
       <tr><td>Congressional Budget Office</td><td>Cost estimates as documented links to the bills they score (summaries and links; the PDFs sit behind an access check)</td><td>U.S. Government work, public domain</td></tr>
-      <tr><td>California Legislative Analyst's Office</td><td>Publications with their tables, and documented links to the bills they name</td><td>California public record</td></tr>
-      <tr><td>California State Auditor</td><td>Audit reports: sections from the report, each table from its own PDF</td><td>California public record</td></tr>
-      <tr><td>Oregon Secretary of State, Audits Division</td><td>Audit reports from the state's open list: sections and tables from the PDFs</td><td>Oregon public record</td></tr>
+      <tr><td>California Legislative Analyst's Office</td><td>Publications with their tables, and documented links to the bills they name. The state budget and every spending area: housing, health, education, transportation, climate</td><td>California public record</td></tr>
+      <tr><td>California State Auditor</td><td>Audit reports: sections from the report, each table from its own PDF. State and local programs, whichever the Legislature asks about</td><td>California public record</td></tr>
+      <tr><td>Oregon Secretary of State, Audits Division</td><td>Audit reports from the state's open list: sections and tables from the PDFs. State agencies and programs across issues</td><td>Oregon public record</td></tr>
     </tbody>
   </table>
   </div>
@@ -74,7 +74,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h2>Scholarly literature &mdash; by catalog</h2>
   <h3>What it is</h3>
-  <p>Peer-reviewed articles and reviews on the questions policy arguments turn on: housing supply and rent regulation, minimum wage effects, Medicaid expansion outcomes, and about seventy more across the topic taxonomy.</p>
+  <p>Peer-reviewed articles and reviews on the questions policy arguments turn on, about seventy-five across the topic taxonomy. Housing: supply elasticity, rent regulation, zoning reform, homelessness interventions. Health: Medicaid expansion, coverage and outcomes, overdose policy. Labor and economy: minimum wage employment effects, paid leave, gig work. Climate and energy, education, public safety, immigration, taxes and the rest follow the same pattern: the questions a committee analyst would ask, answered by the literature as published.</p>
 
   <h3>What PolicySpan ingests</h3>
   <div class="docs-table-wrap">
@@ -89,26 +89,68 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h3>Sourcing</h3>
   <p>The OpenAlex catalog and the journals' own open-access copies. The paper stays with its journal; PolicySpan links to it by DOI and reads its text only where the license allows.</p>
 
-  <h2>Official statistics &mdash; nation, state, county, city</h2>
+  <h2>Official statistics &mdash; by issue</h2>
   <h3>What they are</h3>
-  <p>Series published by the federal statistical agencies and, where the state's own network is deeper than the federal one, by California and Oregon agencies. Each series states its computation in words, and every value carries the exact source it came from.</p>
+  <p>Series published by the federal statistical agencies and, where the state's own network is deeper than the federal one, by California and Oregon agencies. Each series states its computation in words, and every value carries the exact source it came from. Grouped here by the issue a bill would turn on; the same series are filterable by topic in the product and the API.</p>
 
-  <h3>What PolicySpan ingests</h3>
+  <h3>Housing</h3>
   <div class="docs-table-wrap">
   <table>
     <thead><tr><th>Publisher</th><th>Series</th><th>Geography</th></tr></thead>
     <tbody>
-      <tr><td>U.S. Census Bureau, American Community Survey</td><td>Renter and owner cost burden at 30% and 50% of income, median gross rent, median home value, renter share, uninsured share</td><td>Nation, states, California and Oregon counties</td></tr>
-      <tr><td>HUD (HUD USER)</td><td>CHAS cost burden by income band and tenure; Fair Market Rents</td><td>Nation, states, counties</td></tr>
-      <tr><td>FRED (Federal Reserve Bank of St. Louis)</td><td>Permits, starts, house prices, vacancy, mortgage rate, CPI, unemployment, income, population, GDP, each with its original source named</td><td>Nation, every state</td></tr>
-      <tr><td>CMS, CDC, EIA, BLS, BTS</td><td>Medicaid and CHIP enrollment; drug overdose deaths; electricity prices and renewable share; pay and employment; transit ridership</td><td>Nation, states</td></tr>
+      <tr><td>U.S. Census Bureau, American Community Survey</td><td>Renter and owner cost burden at 30% and 50% of income, median gross rent, median home value, renter share</td><td>Nation, states, California and Oregon counties</td></tr>
+      <tr><td>HUD (HUD USER)</td><td>CHAS cost burden by income band and tenure; Fair Market Rents, one and two bedroom</td><td>Nation, states, counties</td></tr>
+      <tr><td>FRED (Federal Reserve Bank of St. Louis)</td><td>Building permits, housing starts, house price index, rental and homeowner vacancy, mortgage rate, median new home price, shelter CPI, each with its original source named</td><td>Nation, every state</td></tr>
+      <tr><td>U.S. Census Bureau, Building Permits Survey</td><td>Housing units permitted and the multifamily share, 2010 to the latest year</td><td>Every permit-issuing city in California and Oregon, counties, states</td></tr>
+      <tr><td>California Department of Housing and Community Development</td><td>Progress against each jurisdiction's Regional Housing Needs Allocation, all incomes and lower income</td><td>All 539 California cities and counties, by planning cycle</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Water</h3>
+  <div class="docs-table-wrap">
+  <table>
+    <thead><tr><th>Publisher</th><th>Series</th><th>Geography</th></tr></thead>
+    <tbody>
       <tr><td>U.S. Geological Survey Water Data</td><td>Depth to groundwater and its five-year change, streamflow as a percentile of each gage's record, wells with nitrate above the drinking-water limit</td><td>California and Oregon counties and states</td></tr>
-      <tr><td>California Department of Water Resources</td><td>The same water measures from the state's own networks: DWR well levels (CASGEM and SGMA), CDEC gage flow</td><td>California counties and the state</td></tr>
+      <tr><td>California Department of Water Resources</td><td>The same measures from the state's own networks: DWR well levels (CASGEM and SGMA), CDEC gage flow</td><td>California counties and the state</td></tr>
       <tr><td>California State Water Resources Control Board (GAMA)</td><td>Wells with nitrate above the limit, from the state's groundwater quality programs, public water system wells included</td><td>California counties and the state</td></tr>
       <tr><td>Oregon Water Resources Department</td><td>The state's observation wells and gages, same measures</td><td>Oregon counties and the state</td></tr>
       <tr><td>Oregon Department of Environmental Quality</td><td>Wells with nitrate above the limit, through the federal Water Quality Portal</td><td>Oregon counties and the state</td></tr>
-      <tr><td>U.S. Census Bureau, Building Permits Survey</td><td>Housing units permitted and the multifamily share, 2010 to the latest year</td><td>Every permit-issuing city in California and Oregon, counties, states</td></tr>
-      <tr><td>California Department of Housing and Community Development</td><td>Progress against each jurisdiction's Regional Housing Needs Allocation, all incomes and lower income</td><td>All 539 California cities and counties, by planning cycle</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Health</h3>
+  <div class="docs-table-wrap">
+  <table>
+    <thead><tr><th>Publisher</th><th>Series</th><th>Geography</th></tr></thead>
+    <tbody>
+      <tr><td>U.S. Census Bureau, American Community Survey</td><td>Uninsured share of the population</td><td>Nation, states</td></tr>
+      <tr><td>Centers for Medicare &amp; Medicaid Services</td><td>Medicaid and CHIP enrollment, monthly</td><td>Nation, states</td></tr>
+      <tr><td>CDC National Center for Health Statistics</td><td>Drug overdose deaths, 12-month-ending count, monthly</td><td>Nation, states</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Economy and labor</h3>
+  <div class="docs-table-wrap">
+  <table>
+    <thead><tr><th>Publisher</th><th>Series</th><th>Geography</th></tr></thead>
+    <tbody>
+      <tr><td>FRED (Federal Reserve Bank of St. Louis)</td><td>Unemployment rate, real median household income, per capita personal income, population, GDP, CPI all items</td><td>Nation, every state</td></tr>
+      <tr><td>U.S. Bureau of Labor Statistics</td><td>Average annual pay and covered employment, all industries (QCEW)</td><td>Nation, states</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Energy and transportation</h3>
+  <div class="docs-table-wrap">
+  <table>
+    <thead><tr><th>Publisher</th><th>Series</th><th>Geography</th></tr></thead>
+    <tbody>
+      <tr><td>U.S. Energy Information Administration</td><td>Average residential electricity price; renewable share of generation</td><td>Nation, states</td></tr>
+      <tr><td>U.S. Bureau of Transportation Statistics</td><td>Transit ridership, unlinked passenger trips, monthly</td><td>Nation</td></tr>
     </tbody>
   </table>
   </div>
