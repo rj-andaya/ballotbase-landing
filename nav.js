@@ -42,6 +42,8 @@
     '        <a href="mailto:rj@policyspan.ai" class="nav-dropdown-item">Contact</a>',
     '      </div>',
     '    </div>',
+    '    <a href="https://app.policyspan.ai/login" class="nav-link nav-signin">Sign in</a>',
+    '    <a href="https://app.policyspan.ai/signup" class="nav-cta-ghost">Sign up</a>',
     '    <a href="/#beta" class="nav-cta">Get a Live Demo</a>',
     '  </div>',
     '</nav>'

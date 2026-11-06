@@ -83,6 +83,7 @@ nav.nav-open .nav-bars span:nth-child(3) { transform: translateY(-7px) rotate(-4
   text-decoration: none; transition: background 0.2s, color 0.2s;
 }
 .nav-cta-ghost:hover { background: var(--blue); color: white; }
+.nav-signin { color: var(--navy); font-weight: 500; }
 
 /* NAV DROPDOWN */
 .nav-dropdown { position: relative; }
